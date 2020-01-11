@@ -85,6 +85,9 @@
     <Compile Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\SepiaToneEffect.cs" />
     <Compile Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\TwirlEffect.cs" />
     <Compile Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\VortexEffect.cs" />
+    <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_StartScenes.cs" />
+    <Compile Include="Assets\Scripts\Global\FadeInAndOut.cs" />
+    <Compile Include="Assets\Scripts\View\Scenes\View_StartScenes.cs" />
     <None Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
     <None Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
     <None Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
@@ -154,61 +157,61 @@
     <None Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
     <None Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f3/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -388,13 +391,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f3/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Family/Desktop/DungeonsAndDragons/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Family/Documents/GameProduction/DungeonsAndDragons/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f3/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
