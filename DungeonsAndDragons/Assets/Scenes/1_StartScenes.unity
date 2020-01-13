@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf6afbb38fd7d54a8d633dee37e0500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloColorChangeSpeed: 0.3
+  FloColorChangeSpeed: 0.5
   goRawImage: {fileID: 1864344124}
 --- !u!1 &953504512
 GameObject:

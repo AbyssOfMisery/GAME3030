@@ -40,7 +40,7 @@ namespace Control
             FadeInAndOut.Instance.SetScenesToBlack(); //fade out
         
             //load scenes
-            SceneManager.LoadScene("2_LogonScenes");
+            SceneManager.LoadScene("LoadingScenes");
             
 
         }
