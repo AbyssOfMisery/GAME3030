@@ -12,7 +12,7 @@
 * 2.add fade in and out in start screen 
 
 #Jan 15
-* 1.Add audio manager 
+* 1.Add audio manager `<add start scenes audio>`
 * 2.add particle effect on start screen 
 * 3.add global parameter manager `< allow scenes to load faster with out mistakes >` 
  
