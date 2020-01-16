@@ -14,5 +14,5 @@
 #Jan 15
 * 1.Add audio manager 
 * 2.add particle effect on start screen 
-* 3.add global parameter manager `< llow scenes to load faster with out mistakes >` 
+* 3.add global parameter manager `< allow scenes to load faster with out mistakes >` 
  
