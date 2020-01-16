@@ -9,3 +9,9 @@
 #Jan 11
 -optimized the second map
 -add fade in and out in start screen
+
+#Jan 15
+-Add audio manager
+-add particle effect on start screen
+-add global parameter manager
+//allow scenes to load faster with out mistakes
