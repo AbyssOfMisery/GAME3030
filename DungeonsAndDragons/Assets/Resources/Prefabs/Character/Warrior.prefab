@@ -2126,7 +2126,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5484288196614491621}
   - component: {fileID: 5484288196625582081}
-  - component: {fileID: 5484288196626818049}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Player
@@ -2187,24 +2186,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
---- !u!143 &5484288196626818049
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5484288196614590917}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.15
-  m_Radius: 0.04
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!1 &5484288196614590919
 GameObject:
   m_ObjectHideFlags: 0

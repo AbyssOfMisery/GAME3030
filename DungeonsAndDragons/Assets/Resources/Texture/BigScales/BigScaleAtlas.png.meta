@@ -1,12 +1,147 @@
 fileFormatVersion: 2
 guid: 38a820e96074ce545bd5a5613429b587
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6007108795726523566
+    second: BigScaleAtlas_0
+  - first:
+      213: 7456106520982417730
+    second: BigScaleAtlas_1
+  - first:
+      213: -1840557807702819400
+    second: BigScaleAtlas_2
+  - first:
+      213: -7720603366599734540
+    second: BigScaleAtlas_3
+  - first:
+      213: -1955931903226545574
+    second: BigScaleAtlas_4
+  - first:
+      213: 5930459464819531568
+    second: BigScaleAtlas_5
+  - first:
+      213: 6394119658010306626
+    second: BigScaleAtlas_6
+  - first:
+      213: 6919272823494366818
+    second: BigScaleAtlas_7
+  - first:
+      213: 7094201017865167307
+    second: BigScaleAtlas_8
+  - first:
+      213: -446031502486639163
+    second: BigScaleAtlas_9
+  - first:
+      213: -5568060947867981771
+    second: BigScaleAtlas_10
+  - first:
+      213: -2575892150791891325
+    second: BigScaleAtlas_11
+  - first:
+      213: 6291731931179456854
+    second: BigScaleAtlas_12
+  - first:
+      213: -3228871555288271872
+    second: BigScaleAtlas_13
+  - first:
+      213: -2887296129662952193
+    second: BigScaleAtlas_14
+  - first:
+      213: -2873413244916797162
+    second: BigScaleAtlas_15
+  - first:
+      213: 3751030642843928288
+    second: BigScaleAtlas_16
+  - first:
+      213: 8557120461182104471
+    second: BigScaleAtlas_17
+  - first:
+      213: 3480614843451753938
+    second: BigScaleAtlas_18
+  - first:
+      213: 5465797642421959381
+    second: BigScaleAtlas_19
+  - first:
+      213: -6783066623777030251
+    second: BigScaleAtlas_20
+  - first:
+      213: 3373622778317537020
+    second: BigScaleAtlas_21
+  - first:
+      213: -3415566140516916518
+    second: BigScaleAtlas_22
+  - first:
+      213: -5825335464611748995
+    second: BigScaleAtlas_23
+  - first:
+      213: 5610881867436290287
+    second: BigScaleAtlas_24
+  - first:
+      213: -5549922406992020688
+    second: BigScaleAtlas_25
+  - first:
+      213: 6785650955517475896
+    second: BigScaleAtlas_26
+  - first:
+      213: 1369881041902420201
+    second: BigScaleAtlas_27
+  - first:
+      213: -1772665246142175563
+    second: BigScaleAtlas_28
+  - first:
+      213: -3986924635153206707
+    second: BigScaleAtlas_29
+  - first:
+      213: 432153011096116108
+    second: BigScaleAtlas_30
+  - first:
+      213: -6638774628033976113
+    second: BigScaleAtlas_31
+  - first:
+      213: -7512353392069633348
+    second: BigScaleAtlas_32
+  - first:
+      213: 7363786667899430325
+    second: BigScaleAtlas_33
+  - first:
+      213: -1065865737174008946
+    second: BigScaleAtlas_34
+  - first:
+      213: 1231665892509192435
+    second: BigScaleAtlas_35
+  - first:
+      213: 2781823345777832410
+    second: BigScaleAtlas_36
+  - first:
+      213: 7573000633680335251
+    second: BigScaleAtlas_37
+  - first:
+      213: -7567591066147056243
+    second: BigScaleAtlas_38
+  - first:
+      213: 3706289986466827334
+    second: BigScaleAtlas_39
+  - first:
+      213: -1964169068111172271
+    second: BigScaleAtlas_40
+  - first:
+      213: 5784884779568646054
+    second: BigScaleAtlas_41
+  - first:
+      213: 8881783741811123761
+    second: BigScaleAtlas_42
+  - first:
+      213: 7586182485952393493
+    second: BigScaleAtlas_43
+  - first:
+      213: 1325512461962554277
+    second: BigScaleAtlas_44
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +169,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +184,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -70,13 +205,907 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BigScaleAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 966
+        width: 338
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb947b3529bb844b8ae3671fd29d35b
+      internalID: -6007108795726523566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 985
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c55ce173b72de4aaff7bed3b39074c
+      internalID: 7456106520982417730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 985
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a7e29005d22bc41be95f20a5c3b3fa
+      internalID: -1840557807702819400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 985
+        width: 50
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae8f9448a3ceb74a9c923f96811094d
+      internalID: -7720603366599734540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 985
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56081309bdd600e448692d5af678a8ab
+      internalID: -1955931903226545574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 983
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111b4932a7df5d54e9cd56c0eccfe1ae
+      internalID: 6394119658010306626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 987
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71b8a1e4ba19b648a440ab171c96200
+      internalID: 6919272823494366818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 903
+        width: 5
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d1b88acb9511142bc2b9bdf434e37a
+      internalID: 7094201017865167307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 903
+        width: 5
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62610c18a7e00a44da0352b1902ed75e
+      internalID: -446031502486639163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 947
+        width: 68
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ceeb23cd5cb15047a3a80d752ce5f0b
+      internalID: -5568060947867981771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 912
+        width: 71
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fa96151c425aa4194b89c7f706945d
+      internalID: -2575892150791891325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 945
+        width: 128
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadbfca481090f849a6abb7d53a02cc6
+      internalID: 6291731931179456854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 945
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf24bf16513789c4c82df452206f3a58
+      internalID: -3228871555288271872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 881
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872ea6195fadffa4ba8ec361c1c40c3a
+      internalID: -2887296129662952193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 912
+        width: 148
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d942caeb00f97f7468716cb696f66157
+      internalID: -2873413244916797162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 912
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833eed721d234f3409bf8155880d268a
+      internalID: 3751030642843928288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 881
+        width: 338
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92aa078f4dfe7449a7b86c790fe6142
+      internalID: 8557120461182104471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 883
+        width: 227
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67beb0984e52dae4996e82ba853859f1
+      internalID: 3480614843451753938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 670
+        width: 339
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5bf0462f6dea142895c192cca747c5
+      internalID: 5465797642421959381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 865
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a748672f6621b094ca1bd4116cef987e
+      internalID: -6783066623777030251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 865
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27bfc7a20d2f4544eb61d19c30defc5c
+      internalID: 3373622778317537020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 800
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbfdff9180a4ce4dbebc44a1b691867
+      internalID: -5825335464611748995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 787
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee58d252a0cdb04f8780f6bbf25f5c0
+      internalID: 5610881867436290287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 787
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998a303943b7b8244a8d09c7101e5c8f
+      internalID: -5549922406992020688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 688
+        width: 298
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0923cc40d4afbbd4aad9a006bed2c7a9
+      internalID: 6785650955517475896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_27
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89e5ece0ffeccd4fb2e3886d13a392d
+      internalID: 1369881041902420201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_28
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 766
+        width: 50
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffed9c2fa878bd04fb6b281a4d66eb1b
+      internalID: -1772665246142175563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_29
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 670
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a04e702e054fc94d86288332b367c7c
+      internalID: -3986924635153206707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_30
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 718
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd455e49609aa1b4293ad88518a4db86
+      internalID: 432153011096116108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_31
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 718
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3badd2f03350e4345988917c9a369d11
+      internalID: -6638774628033976113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_32
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 718
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96425c16a55369e4298bef9a06df1189
+      internalID: -7512353392069633348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_33
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 718
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08b0c9c1a6b846408b7cff4a8090b9e
+      internalID: 7363786667899430325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_34
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 685
+        width: 255
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9f9eca2ec3ec04989821ff1cd62f81
+      internalID: -1065865737174008946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_35
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 670
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eed26b77c1d1964ca68d8feb9df328b
+      internalID: 1231665892509192435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_36
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 670
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e95a03309ea6f48aeb30ed694b666b
+      internalID: 2781823345777832410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_37
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 670
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2785e57a0fe604da53afdcf4c325a1
+      internalID: 7573000633680335251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_38
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 196
+        width: 330
+        height: 491
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ea59596b6f9b14c8225eb04748ab15
+      internalID: -7567591066147056243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_39
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 636
+        width: 255
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15814c55ca52d046ba4d2ad9cecd0b6
+      internalID: 3706289986466827334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 407
+        height: 669
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aff4df12448d424aaa7668168e811f5
+      internalID: -1964169068111172271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_41
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 407
+        height: 669
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6d338b70231044e9e43b5895cd707f
+      internalID: 5784884779568646054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_42
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 268
+        width: 319
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc4e80b460dfad4aaf32cf40d69a114
+      internalID: 8881783741811123761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigScaleAtlas_44
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 191
+        width: 298
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ca29f95a3f3164f9122da60d6c402d
+      internalID: 1325512461962554277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8a8dbe402085fa14cbf962ddccfcc0e3
     internalID: 0
     vertices: []
     indices: 

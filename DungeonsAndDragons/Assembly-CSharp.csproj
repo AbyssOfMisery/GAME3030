@@ -121,6 +121,7 @@
     <Compile Include="Assets\Resources\ParticleProps\SkillThunders\thunderDestory.cs" />
     <Compile Include="Assets\Resources\ParticleProps\csPoint\csPoint.cs" />
     <Compile Include="Assets\Resources\ParticleProps\groundBrokeRed\DestroyForTime.cs" />
+    <Compile Include="Assets\Scripts\Control\Player\Ctrl_DisplayCharacter.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_StartScenes.cs" />
     <Compile Include="Assets\Scripts\Global\ConvertEnumToString.cs" />
     <Compile Include="Assets\Scripts\Global\FadeInAndOut.cs" />
