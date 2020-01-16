@@ -14,21 +14,21 @@
  */
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;                                    //泛型集合命名空间
+using System.Collections.Generic;                                   
 
 namespace Kernal
 {
     public class AudioManager : MonoBehaviour
     {
-        public AudioClip[] AudioClipArray;                               //剪辑数组
-        public static float AudioBackgroundVolumns = 1F;                 //背景音量
-        public static float AudioEffectVolumns = 1F;                     //音效音量
+        public AudioClip[] AudioClipArray;                               //audio clip array
+        public static float AudioBackgroundVolumns = 1F;                 //backgrou volumns
+        public static float AudioEffectVolumns = 1F;                     //audio effect
 
-        private static Dictionary<string, AudioClip> _DicAudioClipLib;   //音频库
-        private static AudioSource[] _AudioSourceArray;                  //音频源数组
-        private static AudioSource _AudioSource_BackgroundAudio;         //背景音乐
-        private static AudioSource _AudioSource_AudioEffectA;            //音效源A
-        private static AudioSource _AudioSource_AudioEffectB;            //音效源B
+        private static Dictionary<string, AudioClip> _DicAudioClipLib;   //audio library
+        private static AudioSource[] _AudioSourceArray;                  //audio source array
+        private static AudioSource _AudioSource_BackgroundAudio;         //backgrou volumns
+        private static AudioSource _AudioSource_AudioEffectA;            //audio source A
+        private static AudioSource _AudioSource_AudioEffectB;            //audio source B
 
         /// <summary>
         /// Sound library resource loading
