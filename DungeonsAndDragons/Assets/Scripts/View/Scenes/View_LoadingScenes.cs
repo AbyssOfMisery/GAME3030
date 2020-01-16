@@ -18,8 +18,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Global;
 
-namespace view
+namespace View
 {
     public class View_LoadingScenes : MonoBehaviour
     {
@@ -36,7 +37,8 @@ namespace view
         //Asynchronous loading
         IEnumerator LoadingScenesProgress()
         {
-            _AsyOper = SceneManager.LoadSceneAsync("2_LogonScenes");
+            //_AsyOper = SceneManager.LoadSceneAsync("2_LogonScenes");
+            _AsyOper = SceneManager.LoadSceneAsync(ConvertEnumToString.GetInstance().GetStrByEnumScenes(GlobalParaMgr.NextScenesName));
             _FloProgressNumber = _AsyOper.progress;
             yield return _AsyOper;
         }

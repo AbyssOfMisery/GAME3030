@@ -86,7 +86,11 @@
     <Compile Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\TwirlEffect.cs" />
     <Compile Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\VortexEffect.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_StartScenes.cs" />
+    <Compile Include="Assets\Scripts\Global\ConvertEnumToString.cs" />
     <Compile Include="Assets\Scripts\Global\FadeInAndOut.cs" />
+    <Compile Include="Assets\Scripts\Global\GlobalParaMgr.cs" />
+    <Compile Include="Assets\Scripts\Global\GlobalParameter.cs" />
+    <Compile Include="Assets\Scripts\Kernal\AudioManager.cs" />
     <Compile Include="Assets\Scripts\View\Scenes\View_LoadingScenes.cs" />
     <Compile Include="Assets\Scripts\View\Scenes\View_StartScenes.cs" />
     <None Include="Assets\Resources\Models\Maps\VW_ActionRPG_AssetPack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
