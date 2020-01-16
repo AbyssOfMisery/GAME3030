@@ -1,10 +1,10 @@
 # GameProduction
 
 #Jan 7
-1.add UI 1
-2.add resources 2
-3.add altas addone 3
-4.optimized the map 4
+*  1.add UI 1
+* 2.add resources 2
+* 3.add altas addone 3
+* 4.optimized the map 4
 
 
 #Jan 11
