@@ -20,3 +20,5 @@
 * 1.Import character `<2 characters witch and worrier>`
 * 2.remove particle emitter from script`<they have removed since unity 2018 3.0>`
 * 3.Backed light maps and create light map UVs
+* 4.Update character animation
+* 5.Update character UI`<Allow player to choose different character>`
