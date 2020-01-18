@@ -31,7 +31,8 @@ namespace Global
             _DicScenesEnumLib = new Dictionary<ScenesEnum, string>();
             _DicScenesEnumLib.Add(ScenesEnum.StartScenes, "1_StartScenes");
             _DicScenesEnumLib.Add(ScenesEnum.LogonScenes, "2_LogonScenes");
-            _DicScenesEnumLib.Add(ScenesEnum.LoadingScenes, "LoadingScenes");
+            _DicScenesEnumLib.Add(ScenesEnum.LoadingScenes, "LoadingScenes"); 
+                _DicScenesEnumLib.Add(ScenesEnum.LevelOne, "3_LevelOne");
         }
 
         //Get examples of instances

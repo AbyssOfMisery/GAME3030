@@ -25,6 +25,11 @@ namespace Global
         //next scenes name
         public static ScenesEnum NextScenesName = ScenesEnum.LoadingScenes;
 
+        //get user name
+        public static string PlayerName = "";
+
+        //get player type
+        public static PlayerType PlayerTypes = PlayerType.Warrior;
     }
 }
 

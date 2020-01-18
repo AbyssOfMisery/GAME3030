@@ -22,7 +22,7 @@ using Kernal;
 
 namespace Control
 {
-    public class Ctrl_StartScenes : MonoBehaviour
+    public class Ctrl_StartScenes : BaseControl
     {
         public static Ctrl_StartScenes instance; // instance
 
@@ -69,8 +69,9 @@ namespace Control
             yield return new WaitForSeconds(3.0f);
             //load scenes
             //SceneManager.LoadScene("LoadingScenes");
-            GlobalParaMgr.NextScenesName = ScenesEnum.LogonScenes;//turn to logon scenes
-            SceneManager.LoadScene(ConvertEnumToString.GetInstance().GetStrByEnumScenes(ScenesEnum.LoadingScenes));
+            //GlobalParaMgr.NextScenesName = ScenesEnum.LogonScenes;//turn to logon scenes
+            //SceneManager.LoadScene(ConvertEnumToString.GetInstance().GetStrByEnumScenes(ScenesEnum.LoadingScenes));
+            base.EnterNextScenes(ScenesEnum.LogonScenes);
         }
     }
 }

@@ -22,6 +22,7 @@ using UnityEngine;
 namespace Global{
     public class GlobalParamete {
     }
+    //scenes name enums
     public enum ScenesEnum
     {
         StartScenes,
@@ -31,5 +32,12 @@ namespace Global{
         LevelTwo,
         BaseScenes
     }
-    
+
+    //player type
+    public enum PlayerType
+    {
+        Warrior,        //warrior
+        Witch,          //Witch
+        Other
+    }
 }
