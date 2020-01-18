@@ -16,10 +16,19 @@
 * 2.add particle effect on start screen 
 * 3.add global parameter manager `< allow scenes to load faster with out mistakes >` 
  
-#Jan 16
+
+#Jan 17
+* 1.create control parent class
+* 2.fininsh character pick function
+* 3 create eume player type 
 * 1.Import character `<2 characters witch and worrier>`
 * 2.remove particle emitter from script`<they have removed since unity 2018 3.0>`
 * 3.Backed light maps and create light map UVs
 * 4.Update character animation
 * 5.Update character UI`<Allow player to choose different character>`
 * 6.Add name input field
+
+#Jan 17
+* 1.create control parent class
+* 2.fininsh character pick function
+* 3 create new scenes
