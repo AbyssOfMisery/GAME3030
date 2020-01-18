@@ -22,3 +22,4 @@
 * 3.Backed light maps and create light map UVs
 * 4.Update character animation
 * 5.Update character UI`<Allow player to choose different character>`
+* 6.Add name input field
