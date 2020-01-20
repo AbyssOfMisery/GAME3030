@@ -32,3 +32,7 @@
 * 1.create control parent class
 * 2.fininsh character pick function
 * 3 create new scenes
+
+#Jan 19
+* 1.Finish sound effect on select stage.`<It can have more sound effect will continue work on it>`
+* 2.Create sound manager prefab.
