@@ -50,6 +50,9 @@ namespace View {
             //show ui
             _UIWarriorInfo.SetActive(true);
             _UIWitchInfo.SetActive(false);
+
+            //play audio clip
+            Ctrl_LogonScenes.Instance.ClickWarriorAudio();
         }
 
         /// <summary>
@@ -65,8 +68,17 @@ namespace View {
             _UIWarriorInfo.SetActive(false);
             _UIWitchInfo.SetActive(true);
             GlobalParaMgr.PlayerTypes = PlayerType.Witch;
+
+            //play audio clip
+            Ctrl_LogonScenes.Instance.ClickWitchAudio();
         }
 
+        //when player click on question icon
+        public void OtherChampion()
+        {
+            //play audio clip
+            Ctrl_LogonScenes.Instance.ClickQuestionAudio();
+        }
         /// <summary>
         /// submit user name
         /// </summary>

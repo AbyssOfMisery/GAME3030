@@ -24,12 +24,40 @@ namespace Control{
     public class Ctrl_LogonScenes : BaseControl
     {
         public static Ctrl_LogonScenes Instance; // add instance
-                                                 // Start is called before the first frame update
+        public AudioClip aucBgMusic; //bg music
+
+        // Start is called before the first frame update
         private void Awake()
         {
             Instance = this;
         }
 
+        private void Start()
+        {
+            //to play background music
+            AudioManager.SetAudioBackgroundVolumns(0.5f);
+            AudioManager.SetAudioEffectVolumns(0.5f);
+
+            AudioManager.PlayBackground(aucBgMusic);
+        }
+
+        //When player click on warrior icon will play a sound effect
+        public void ClickWarriorAudio()
+        {
+            AudioManager.PlayAudioEffectA("1_LightRoar_SwordHero");
+        }
+
+        //When player click on witch icon will play a sound effect
+        public void ClickWitchAudio()
+        {
+            AudioManager.PlayAudioEffectB("2_FireBallEffect_MagicHero");
+        }
+
+        //When player click on question icon will play a sound effect
+        public void ClickQuestionAudio()
+        {
+            AudioManager.PlayAudioEffectB("ItemPickup");
+        }
         /// <summary>
         /// go to next scenes
         /// </summary>
