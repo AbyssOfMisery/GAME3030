@@ -36,3 +36,4 @@
 #Jan 19
 * 1.Finish sound effect on select stage.`<It can have more sound effect will continue work on it>`
 * 2.Create sound manager prefab.
+* 3.Import easy touch plugin.
