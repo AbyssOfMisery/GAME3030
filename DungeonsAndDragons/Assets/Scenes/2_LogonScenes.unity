@@ -1371,21 +1371,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6978334178257621618}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1002345331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002345330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 809532e7f5859af47bb13d356dde3c59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimIdle: {fileID: 7400000, guid: 69ef477afedfc754ea3122efbb4f3c7c, type: 2}
-  AnimRunning: {fileID: 7400000, guid: 4a2a814615f3b9f4f9a159ec4f6d69b6, type: 2}
-  AnimAttack: {fileID: 7400000, guid: 05e707b6225a3804fbd8f67f0003f192, type: 2}
 --- !u!1 &1129019048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,41 +2138,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior
       objectReference: {fileID: 0}
-    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
-        type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
-        type: 3}
-      propertyPath: m_Animations.Array.data[3]
-      value: 
-      objectReference: {fileID: 7400000, guid: fcad2351825f155458374e44b77c9224, type: 3}
-    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
-        type: 3}
-      propertyPath: m_PlayAutomatically
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
-        type: 3}
-      propertyPath: m_Animations.Array.data[4]
-      value: 
-      objectReference: {fileID: 7400000, guid: fcad2351825f155458374e44b77c9224, type: 3}
-    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
-        type: 3}
-      propertyPath: m_Animations.Array.data[2]
-      value: 
-      objectReference: {fileID: 7400000, guid: 8a1c1539bf0bcf64193967555229c0d7, type: 3}
-    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
-        type: 3}
-      propertyPath: m_Animations.Array.data[0]
-      value: 
-      objectReference: {fileID: 7400000, guid: fcad2351825f155458374e44b77c9224, type: 3}
-    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
-        type: 3}
-      propertyPath: m_Animations.Array.data[1]
-      value: 
-      objectReference: {fileID: 7400000, guid: 630ba0e812276d64c9535693f5119152, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83b707f25ee3e2949b2b1e63f587c7cf, type: 3}
 --- !u!1 &2037121919 stripped
@@ -2196,21 +2146,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2037121918}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2037121920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037121919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 809532e7f5859af47bb13d356dde3c59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimIdle: {fileID: 7400000, guid: fcad2351825f155458374e44b77c9224, type: 3}
-  AnimRunning: {fileID: 7400000, guid: 630ba0e812276d64c9535693f5119152, type: 3}
-  AnimAttack: {fileID: 7400000, guid: 8a1c1539bf0bcf64193967555229c0d7, type: 3}
 --- !u!1 &2041327122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3362,40 +3297,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3768903696764753729, guid: 77e8dbaa5643a3f4192d373204ca3f0a,
-        type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3768903696764753729, guid: 77e8dbaa5643a3f4192d373204ca3f0a,
-        type: 3}
-      propertyPath: m_Animations.Array.data[0]
-      value: 
-      objectReference: {fileID: 7400000, guid: 69ef477afedfc754ea3122efbb4f3c7c, type: 2}
-    - target: {fileID: 3768903696764753729, guid: 77e8dbaa5643a3f4192d373204ca3f0a,
-        type: 3}
-      propertyPath: m_Animations.Array.data[1]
-      value: 
-      objectReference: {fileID: 7400000, guid: 4a2a814615f3b9f4f9a159ec4f6d69b6, type: 2}
-    - target: {fileID: 3768903696764753729, guid: 77e8dbaa5643a3f4192d373204ca3f0a,
-        type: 3}
-      propertyPath: m_Animations.Array.data[2]
-      value: 
-      objectReference: {fileID: 7400000, guid: 05e707b6225a3804fbd8f67f0003f192, type: 2}
-    - target: {fileID: 3768903696764753729, guid: 77e8dbaa5643a3f4192d373204ca3f0a,
-        type: 3}
-      propertyPath: m_PlayAutomatically
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3768903696775712403, guid: 77e8dbaa5643a3f4192d373204ca3f0a,
         type: 3}
       propertyPath: m_Name
       value: Witch
-      objectReference: {fileID: 0}
-    - target: {fileID: 3768903696775712403, guid: 77e8dbaa5643a3f4192d373204ca3f0a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3768903696776073909, guid: 77e8dbaa5643a3f4192d373204ca3f0a,
         type: 3}
