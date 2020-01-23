@@ -101,7 +101,7 @@ namespace Control {
         void Start()
         {
 
-            cc = GetComponentInChildren<CharacterController>();
+            cc = GetComponent<CharacterController>();
             anim = GetComponentInChildren<Animation>();
         }
 
@@ -111,19 +111,19 @@ namespace Control {
         {
             if (cc.isGrounded && (ETCInput.GetAxis("Vertical") != 0 || ETCInput.GetAxis("Horizontal") != 0))
             {
-                anim.CrossFade("run");
+                anim.CrossFade("Run");
             }
 
             if (cc.isGrounded && ETCInput.GetAxis("Vertical") == 0 && ETCInput.GetAxis("Horizontal") == 0)
             {
-                anim.CrossFade("idle");
+                anim.CrossFade("Idle");
             }
 
-           // if (!cc.isGrounded)
-           // {
-           //     anim.CrossFade("Attack1");
-           // }
-           //
+            if (!cc.isGrounded)
+            {
+                anim.CrossFade("Attack1");
+            }
+           
         }
     }
 

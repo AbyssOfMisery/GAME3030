@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009a667eebb957649ac1d31b283849ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cc: {fileID: 0}
+  anim: {fileID: 0}
+  run: {fileID: 0}
+  idle: {fileID: 0}
 --- !u!1001 &5489593089789924164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31,7 +35,7 @@ PrefabInstance:
     - target: {fileID: 5484288196614491621, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.853015
+      value: -13.53
       objectReference: {fileID: 0}
     - target: {fileID: 5484288196614491621, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
         type: 3}
