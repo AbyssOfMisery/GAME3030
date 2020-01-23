@@ -199,7 +199,12 @@
     <Compile Include="Assets\Resources\ParticleProps\groundBrokeRed\DestroyForTime.cs" />
     <Compile Include="Assets\Scripts\Control\BaseControl.cs" />
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_DisplayCharacter.cs" />
-    <Compile Include="Assets\Scripts\Control\Player\Ctrl_WarriorMovingScript.cs" />
+    <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerAnimation.cs" />
+    <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerAttackInputByET.cs" />
+    <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerAttackInputByKey.cs" />
+    <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerMovingCtrlByKey.cs" />
+    <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerMovingScript.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_LogonScenes.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_StartScenes.cs" />
     <Compile Include="Assets\Scripts\Global\ConvertEnumToString.cs" />
