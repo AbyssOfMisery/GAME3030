@@ -91,8 +91,11 @@ namespace Control {
         //  }
         //  
 
-        private CharacterController cc;
-        private Animation anim;
+        public CharacterController cc;
+        public Animation anim;
+
+        public AnimationClip run;
+        public AnimationClip idle;
 
         // Use this for initialization
         void Start()
@@ -108,12 +111,12 @@ namespace Control {
         {
             if (cc.isGrounded && (ETCInput.GetAxis("Vertical") != 0 || ETCInput.GetAxis("Horizontal") != 0))
             {
-                anim.CrossFade("Run");
+                anim.CrossFade("run");
             }
 
             if (cc.isGrounded && ETCInput.GetAxis("Vertical") == 0 && ETCInput.GetAxis("Horizontal") == 0)
             {
-                anim.CrossFade("Idle");
+                anim.CrossFade("idle");
             }
 
            // if (!cc.isGrounded)

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 5003
+  m_Controller: {fileID: 9100000, guid: d5894c7736a7997479041a85b60503fb, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d3a56c2d2f7cd3846b847bd42db11eaf, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8a887db64dd1bd148a63940d80e10a55, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: dfba898805c8a6e489dc451fae3477c9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 35f2b40985de6e44ba6d1cbf51a474d0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d9210dc1e1f129d4690126dd0f6cc280, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c0d97cc4e200a3744bfb3cb411ebbcf7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3b3f22aff2972da4ab7b66f7c26e65e3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: db90d2a61cfe21d4897d871b391799da, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8edb52aaf63310f4785d0aed3c20a2a3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8a887db64dd1bd148a63940d80e10a55, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1f1559c2834befc4cbe91a7aaedfdc74, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8a887db64dd1bd148a63940d80e10a55, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b3a641c3d030a644ca0592e978357a8e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8a887db64dd1bd148a63940d80e10a55, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f7ff161ddb1b90e40bc90bbebf79fd2a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8a887db64dd1bd148a63940d80e10a55, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bffa87ad8d1d3724b9a7a9a8224b4170, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8a887db64dd1bd148a63940d80e10a55, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 52502799b329f304594d384066290ec7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c4eab15b440a59240a7a352e0a8738e8, type: 2}
