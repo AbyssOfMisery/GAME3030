@@ -476,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: useFixedUpdate
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: isUnregisterAtDisable
@@ -509,6 +509,18 @@ PrefabInstance:
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: joystickArea
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: showEventInspector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: showTouchEventInspector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: showPressEventInspector
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: showEventInspector
@@ -560,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22446594, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: m_SizeDelta.x
