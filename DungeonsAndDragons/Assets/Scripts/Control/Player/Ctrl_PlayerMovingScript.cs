@@ -124,7 +124,7 @@ namespace Control {
             if (!cc.isGrounded)
             {
                // anim.CrossFade("Attack1");
-                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
             }
            
         }

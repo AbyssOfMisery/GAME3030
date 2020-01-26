@@ -258,13 +258,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: JoyStick_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 119338, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 172918, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: m_Name
       value: ButtonAttack
       objectReference: {fileID: 0}
+    - target: {fileID: 172918, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 199954, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: m_Name
       value: Player_Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 11420270, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: tmSpeed
@@ -464,11 +476,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: useFixedUpdate
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: isUnregisterAtDisable
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: showPSInspector
@@ -500,7 +512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: showEventInspector
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: axis.name
@@ -520,7 +532,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: axis.autoLinkTagPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: _activated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: axis.autoTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: enableKeySimulation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: visibleOnStandalone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: showPSInspector
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: _visible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22446594, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -5531,6 +5571,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WrapMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14329774854003525, guid: 2badbbbd05b9dd54dba942f76cfd6bdc,
+        type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14329774854003525, guid: 2badbbbd05b9dd54dba942f76cfd6bdc,
+        type: 3}
+      propertyPath: m_CullingType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14329774854003525, guid: 2badbbbd05b9dd54dba942f76cfd6bdc,
+        type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2badbbbd05b9dd54dba942f76cfd6bdc, type: 3}

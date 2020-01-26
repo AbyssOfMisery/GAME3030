@@ -25,7 +25,7 @@ namespace Global{
         /// <summary>
         /// Input manager definition _Ability Name_Basic Attack
         /// </summary>
-        public const string INPUT_MGR_ATTACKNAME_NORMAL = "BasicAttack";
+        public const string INPUT_MGR_ATTACKNAME_BASIC = "BasicAttack";
 
         /// <summary>
         /// Input manager definition _Ability Name_ MagicTrickA

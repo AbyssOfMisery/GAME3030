@@ -29,7 +29,6 @@ namespace Control {
             Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickA;
             Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickB;
         }
-
         /// <summary>
         /// responding basic attack
         /// </summary>
@@ -37,7 +36,6 @@ namespace Control {
         {
             if(controlType == "BasicAttack")
             {
-                print(controlType);
                 //play basic attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
                 //Deal damage to specific enemies

@@ -30,31 +30,21 @@ namespace Control
         // Update is called once per frame
         void Update()
         {
+            //Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_NORMAL);
             //event 1
-            if(Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_NORMAL))
+            if (Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_BASIC))
             {
-                if(evePlayerControl != null)
-                {
-                    evePlayerControl(GlobalParameter.INPUT_MGR_ATTACKNAME_NORMAL);
-                }
+                evePlayerControl(GlobalParameter.INPUT_MGR_ATTACKNAME_BASIC);
             }
             //event 2
             else if(Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_A))
             {
-
-                if (evePlayerControl != null)
-                {
-                    evePlayerControl(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_A);
-                    print(evePlayerControl.ToString());
-                }
+                evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_A);
             }
             //event 3
             else if (Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B))
             {
-                if (evePlayerControl != null)
-                {
-                    evePlayerControl(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B);
-                }
+               evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B);
             }
         }//update end
     }//class end
