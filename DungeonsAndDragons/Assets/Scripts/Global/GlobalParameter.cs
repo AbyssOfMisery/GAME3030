@@ -20,8 +20,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Global{
-    public class GlobalParamete {
+    public class GlobalParameter {
+        //Define project system constants
+        /// <summary>
+        /// Input manager definition _Ability Name_Basic Attack
+        /// </summary>
+        public const string INPUT_MGR_ATTACKNAME_NORMAL = "BasicAttack";
+
+        /// <summary>
+        /// Input manager definition _Ability Name_ MagicTrickA
+        /// </summary>
+        public const string INPUT_MGR_ATTACKNAME_MAGICTRICK_A = "MagicTrickA";
+
+        /// <summary>
+        /// Input manager definition _Ability Name_ MagicTrickB
+        /// </summary>
+        public const string INPUT_MGR_ATTACKNAME_MAGICTRICK_B = "MagicTrickB";
+
     }
+
+
+    #region project's enum type
     //scenes name enums
     public enum ScenesEnum
     {
@@ -40,4 +59,26 @@ namespace Global{
         Witch,          //Witch
         Other
     }
+
+    /// <summary>
+    /// player animation state
+    /// </summary>
+    public enum PlayerActionState
+    {
+        None,
+        Idle,
+        Running,
+        BasicAttack,
+        MagicTrickA,
+        MagicTrickB,
+
+    }
+    #endregion
+    /// <summary>
+    /// Commission : player control
+    /// </summary>
+    /// <param name="controlType">control type</param>
+    #region Project Delegate Type
+    public delegate void del_PlayerControlWithStr(string controlType);
+    #endregion
 }

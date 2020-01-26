@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2121822805266649339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14329774844052097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dfe8f02c1f8b21489c256e05513d0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5672713410696705598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14329774844052097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020ed17d8e6d2204eb2aebafe5101c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ani_idle: {fileID: 7400000, guid: fcad2351825f155458374e44b77c9224, type: 3}
+  Ani_Running: {fileID: 7400000, guid: 630ba0e812276d64c9535693f5119152, type: 3}
+  Ani_BasicAttack1: {fileID: 7400000, guid: 2162b737ad9659e48bbd03d6a92e44af, type: 3}
+  Ani_BasicAttack2: {fileID: 7400000, guid: 032f02be750774145a7973c0d3444947, type: 3}
+  Ani_BasicAttack3: {fileID: 7400000, guid: 46b5b8d468b1359499aa3acfe03898b7, type: 3}
+  Ani_MagicTrickA: {fileID: 7400000, guid: 8a1c1539bf0bcf64193967555229c0d7, type: 3}
+  Ani_MagicTrickB: {fileID: 7400000, guid: 4f20f7b31cac0554a85f5066cb96ef7f, type: 3}
 --- !u!114 &8975768244528598153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +43,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009a667eebb957649ac1d31b283849ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cc: {fileID: 0}
-  anim: {fileID: 0}
-  run: {fileID: 0}
-  idle: {fileID: 0}
+--- !u!114 &5004869960483459521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14329774844052097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65287dbbe25caa841acdc886514a9f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5489593089789924164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,6 +126,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior_player Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
+        type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
+        type: 3}
+      propertyPath: m_CullingType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
+        type: 3}
+      propertyPath: m_Animations.Array.data[2]
+      value: 
+      objectReference: {fileID: 7400000, guid: 2162b737ad9659e48bbd03d6a92e44af, type: 3}
+    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
+        type: 3}
+      propertyPath: m_Animations.Array.data[3]
+      value: 
+      objectReference: {fileID: 7400000, guid: 032f02be750774145a7973c0d3444947, type: 3}
+    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
+        type: 3}
+      propertyPath: m_Animations.Array.data[4]
+      value: 
+      objectReference: {fileID: 7400000, guid: 46b5b8d468b1359499aa3acfe03898b7, type: 3}
+    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
+        type: 3}
+      propertyPath: m_Animations.Array.data[5]
+      value: 
+      objectReference: {fileID: 7400000, guid: 8a1c1539bf0bcf64193967555229c0d7, type: 3}
+    - target: {fileID: 5484288196625582081, guid: 83b707f25ee3e2949b2b1e63f587c7cf,
+        type: 3}
+      propertyPath: m_Animations.Array.data[6]
+      value: 
+      objectReference: {fileID: 7400000, guid: 4f20f7b31cac0554a85f5066cb96ef7f, type: 3}
     m_RemovedComponents:
     - {fileID: 2037121920, guid: 83b707f25ee3e2949b2b1e63f587c7cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83b707f25ee3e2949b2b1e63f587c7cf, type: 3}

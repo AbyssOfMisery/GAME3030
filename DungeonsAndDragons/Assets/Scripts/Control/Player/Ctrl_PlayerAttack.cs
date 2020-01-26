@@ -16,20 +16,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Global;
+using Kernal;
+
 namespace Control {
     public class Ctrl_PlayerAttack : BaseControl
     {
-        // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
-
+            //register event(Multicast delegation) : player attack inputs
+            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseBasicAttack;
+            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickA;
+            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickB;
         }
 
-        // Update is called once per frame
-        void Update()
+        /// <summary>
+        /// responding basic attack
+        /// </summary>
+        public void ResponseBasicAttack(string controlType)
         {
-
+            if(controlType == "BasicAttack")
+            {
+                print(controlType);
+                //play basic attack animation
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
+                //Deal damage to specific enemies
+            }
         }
+
+        /// <summary>
+        /// responding magic trick a
+        /// </summary>
+        public void ResponseMagicTrickA(string controlType)
+        {
+            if (controlType == "MagicTrickA")
+            {
+                //play MagicTrickA attack animation
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
+                //Deal damage to specific enemies
+            }
+        }
+
+
+        /// <summary>
+        /// responding magic trick b
+        /// </summary>
+        public void ResponseMagicTrickB(string controlType)
+        {
+            if (controlType == "MagicTrickB")
+            {
+                //play MagicTrickB attack animation
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
+                //Deal damage to specific enemies
+            }
+        }
+
     }
 }
 

@@ -17,6 +17,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Global;
+using Kernal;
+
 namespace Control {
     public class Ctrl_PlayerMovingScript : BaseControl
     {
@@ -108,17 +111,20 @@ namespace Control {
         {
             if (cc.isGrounded && (ETCInput.GetAxis("Vertical") != 0 || ETCInput.GetAxis("Horizontal") != 0))
             {
-                anim.CrossFade("Run");
+                //anim.CrossFade("Run");
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Running);
             }
 
             if (cc.isGrounded && ETCInput.GetAxis("Vertical") == 0 && ETCInput.GetAxis("Horizontal") == 0)
             {
-                anim.CrossFade("Idle");
+                //anim.CrossFade("Idle");
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
             }
 
             if (!cc.isGrounded)
             {
-                anim.CrossFade("Attack1");
+               // anim.CrossFade("Attack1");
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
             }
            
         }
