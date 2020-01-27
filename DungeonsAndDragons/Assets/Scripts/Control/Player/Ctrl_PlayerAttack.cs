@@ -34,7 +34,7 @@ namespace Control {
         /// </summary>
         public void ResponseBasicAttack(string controlType)
         {
-            if(controlType == "BasicAttack")
+            if(controlType == GlobalParameter.INPUT_MGR_ATTACKNAME_BASIC)
             {
                 //play basic attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
@@ -47,7 +47,7 @@ namespace Control {
         /// </summary>
         public void ResponseMagicTrickA(string controlType)
         {
-            if (controlType == "MagicTrickA")
+            if (controlType == GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_A)
             {
                 //play MagicTrickA attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
@@ -61,7 +61,7 @@ namespace Control {
         /// </summary>
         public void ResponseMagicTrickB(string controlType)
         {
-            if (controlType == "MagicTrickB")
+            if (controlType == GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B)
             {
                 //play MagicTrickB attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);

@@ -52,6 +52,7 @@ namespace Control {
             _animationHandle = this.GetComponent<Animation>();
 
         }
+
         // Update is called once per frame
         void Update()
         {

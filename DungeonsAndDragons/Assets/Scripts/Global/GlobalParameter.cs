@@ -37,6 +37,17 @@ namespace Global{
         /// </summary>
         public const string INPUT_MGR_ATTACKNAME_MAGICTRICK_B = "MagicTrickB";
 
+
+        /// <summary>
+        /// Input manager definition Vertical
+        /// </summary>
+        public const string INPUT_MGR_VERTICAL = "Vertical";
+
+        /// <summary>
+        /// Input manager definition Horizontal
+        /// </summary>
+        public const string INPUT_MGR_HORIZONTAL = "Horizontal";
+
     }
 
 

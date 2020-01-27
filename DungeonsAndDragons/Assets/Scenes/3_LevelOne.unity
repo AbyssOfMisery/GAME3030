@@ -274,7 +274,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 199954, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11420270, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425804, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -476,7 +484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: useFixedUpdate
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: isUnregisterAtDisable
@@ -521,6 +529,34 @@ PrefabInstance:
     - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: showPressEventInspector
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: allowSimulationStandalone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: enableKeySimulation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: _visible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: _activated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: axisX.enable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: axisY.enable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433156, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: visibleOnStandalone
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: showEventInspector
@@ -572,7 +608,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11482732, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492898, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22446594, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -697,6 +737,15 @@ PrefabInstance:
     - target: {fileID: 22495772, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22549932, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625196531552033055, guid: bcdee7f88e76f4949b19f8263d8f0f3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcdee7f88e76f4949b19f8263d8f0f3e, type: 3}
