@@ -48,6 +48,11 @@ namespace Global{
         /// </summary>
         public const string INPUT_MGR_HORIZONTAL = "Horizontal";
 
+        /// <summary>
+        /// basic attack button 1
+        /// </summary>
+        public const string BUTTON_ATTACK = "ButtonAttack";
+
     }
 
 

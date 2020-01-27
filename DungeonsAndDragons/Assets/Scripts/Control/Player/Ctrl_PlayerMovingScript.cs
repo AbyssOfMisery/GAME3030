@@ -120,8 +120,11 @@ namespace Control {
                 //anim.CrossFade("Idle");
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
             }
-
-            if (!cc.isGrounded)
+           // if(cc.isGrounded && ETCInput.GetButtonDown("ButtonAttack"))
+           // {
+           //     Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
+           // }
+            if (cc.isGrounded && ETCInput.GetButtonDown("ButtonAttack"))
             {     
                // anim.CrossFade("Attack1");
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
