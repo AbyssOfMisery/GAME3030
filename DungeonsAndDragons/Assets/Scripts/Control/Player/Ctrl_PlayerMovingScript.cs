@@ -124,11 +124,7 @@ namespace Control {
            // {
            //     Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
            // }
-            if (cc.isGrounded && ETCInput.GetButtonDown("ButtonAttack"))
-            {     
-               // anim.CrossFade("Attack1");
-                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
-            }
+
            
         }
     }

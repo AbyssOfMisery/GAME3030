@@ -53,6 +53,16 @@ namespace Global{
         /// </summary>
         public const string BUTTON_ATTACK = "ButtonAttack";
 
+        /// <summary>
+        /// Magic Trick button A
+        /// </summary>
+        public const string BUTTON_MAGIC_A = "MagicTrickABtn";
+
+        /// <summary>
+        /// Magic Trick button B
+        /// </summary>
+        public const string BUTTON_MAGIC_B = "MagicTrickBBtn";
+
     }
 
 

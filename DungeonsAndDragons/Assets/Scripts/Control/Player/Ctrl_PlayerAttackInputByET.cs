@@ -17,19 +17,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Global;
+
 namespace Control {
     public class Ctrl_PlayerAttackInputByET : BaseControl
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
 
         // Update is called once per frame
-        void Update()
+        void LateUpdate()
         {
+            if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_ATTACK))
+            {
+                // anim.CrossFade("Attack1");
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
+            }
 
+            if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_MAGIC_A))
+            {
+                // anim.CrossFade("Attack1");
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
+            }
+
+            if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_MAGIC_B))
+            {
+                // anim.CrossFade("Attack1");
+                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
+            }
         }
     }
 }
