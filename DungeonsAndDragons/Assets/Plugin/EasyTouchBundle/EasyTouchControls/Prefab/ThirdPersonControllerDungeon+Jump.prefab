@@ -562,7 +562,7 @@ MonoBehaviour:
     currentGravity: 0
     isJump: 0
     unityAxis: Horizontal
-    showGeneralInspector: 0
+    showGeneralInspector: 1
     showDirectInspector: 1
     showInertiaInspector: 0
     showSimulatinInspector: 0
@@ -627,10 +627,10 @@ MonoBehaviour:
     currentGravity: 0
     isJump: 0
     unityAxis: Vertical
-    showGeneralInspector: 0
+    showGeneralInspector: 1
     showDirectInspector: 1
     showInertiaInspector: 0
-    showSimulatinInspector: 0
+    showSimulatinInspector: 1
   thumb: {fileID: 22446594}
   joystickArea: 1
   userArea: {fileID: 0}

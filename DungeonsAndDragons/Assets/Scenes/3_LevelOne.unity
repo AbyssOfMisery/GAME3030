@@ -253,6 +253,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3483459456708767871}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &548357041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 876022945854583863, guid: 261ac97614b6c15409d744a14b2fce97,
+    type: 3}
+  m_PrefabInstance: {fileID: 3483459456708767871}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548357040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854f80b1b89826046882aeb19d2c3b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &548357043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3483459456165393356, guid: 261ac97614b6c15409d744a14b2fce97,
@@ -5168,8 +5180,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
+      propertyPath: onDown.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
       propertyPath: axis.gravity
-      value: 9.8
+      value: 9.81
       objectReference: {fileID: 0}
     - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
@@ -5180,6 +5197,71 @@ PrefabInstance:
         type: 3}
       propertyPath: axis.directAction
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: enableKeySimulation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axis.autoLinkTagPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: onDown.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: onDown.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: onDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 548357041}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: onDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BasicAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: onDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: allowSimulationStandalone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: useFixedUpdate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: isUnregisterAtDisable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axis._directTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axis.directCharacterController
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: showPSInspector
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
@@ -5221,20 +5303,105 @@ PrefabInstance:
       propertyPath: axisY.directCharacterController
       value: 
       objectReference: {fileID: 548357044}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axisX.valueMethod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axisX.deadValue
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axisY.valueMethod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axisY.deadValue
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axisX.gravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: showAxesInspector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
       propertyPath: axis.gravity
-      value: 9.8
+      value: 9.81
       objectReference: {fileID: 0}
     - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
       propertyPath: axis.autoTag
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: useFixedUpdate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: allowSimulationStandalone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: isUnregisterAtDisable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axis.directAction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: isSwipeIn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axis.isValueOverTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axis.autoLinkTagPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6624851566183859236, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
       propertyPath: axis.gravity
-      value: 9.8
+      value: 9.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624851566183859236, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: useFixedUpdate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624851566183859236, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: allowSimulationStandalone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624851566183859236, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: isUnregisterAtDisable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624851566183859236, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axis.autoLinkTagPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6865dc86f1c5a564bad91d4547980698, type: 3}
