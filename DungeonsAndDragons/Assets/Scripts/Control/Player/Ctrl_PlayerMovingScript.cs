@@ -109,22 +109,17 @@ namespace Control {
         // Wait end of frame to manage charactercontroller, because gravity is managed by virtual controller
         void LateUpdate()
         {
-            if (cc.isGrounded && (ETCInput.GetAxis(GlobalParameter.INPUT_MGR_VERTICAL) != 0 || ETCInput.GetAxis(GlobalParameter.INPUT_MGR_HORIZONTAL) != 0))
+            if ((ETCInput.GetAxis("Vertical") != 0 || ETCInput.GetAxis("Horizontal") != 0))
             {
                 //anim.CrossFade("Run");
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Running);
             }
 
-            if (cc.isGrounded && ETCInput.GetAxis(GlobalParameter.INPUT_MGR_VERTICAL) == 0 && ETCInput.GetAxis(GlobalParameter.INPUT_MGR_HORIZONTAL) == 0)
+            if ((ETCInput.GetAxis("Vertical") == 0 && ETCInput.GetAxis("Horizontal") == 0))
             {
                 //anim.CrossFade("Idle");
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
             }
-           // if(cc.isGrounded && ETCInput.GetButtonDown("ButtonAttack"))
-           // {
-           //     Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
-           // }
-
            
         }
     }

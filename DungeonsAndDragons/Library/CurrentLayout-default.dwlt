@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 530
     height: 573
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -71,10 +71,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 881, y: 342}
-  m_MaxSize: {x: 16006, y: 8042}
+  m_MinSize: {x: 880, y: 342}
+  m_MaxSize: {x: 16005, y: 8042}
   vertical: 0
-  controlID: 22
+  controlID: 121
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 492
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 0
     width: 359
     height: 573
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 342}
   m_MaxSize: {x: 12005, y: 8042}
   vertical: 1
-  controlID: 23
+  controlID: 122
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 24
+  controlID: 123
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -352,7 +352,7 @@ MonoBehaviour:
     height: 353
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: thir
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -363,20 +363,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts/Control/Player
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
   - Assets/Scripts/Control/Player
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\LucianZ\Documents\GitHub\GameProduction6\DungeonsAndDragons
+  m_LastProjectPath: C:\Users\Family\Documents\GameProduction\DungeonsAndDragons
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ca560000cc560000ce560000d0560000d2560000d4560000d6560000d8560000da560000dc560000de560000e0560000e2560000e4560000e6560000e8560000ea560000ec560000ee560000f0560000f2560000f4560000f6560000f8560000fa560000fc560000fe56000000570000025700000457000006570000085700000a5700000c5700000e57000010570000125700001457000016570000185700001a5700001c5700001e57000020570000225700002457000026570000285700002a5700002c5700002e57000030570000b47a010000ca9a3b
+    m_SelectedIDs: 1ad10200
+    m_LastClickedID: 184602
+    m_ExpandedIDs: 00000000b6d00200b8d00200bad00200bcd00200bed00200c0d00200c2d00200c4d00200c6d00200c8d00200cad00200ccd00200ced00200d0d00200d2d00200d4d00200d6d00200d8d00200dad00200dcd00200ded00200e0d00200e2d00200e4d00200e6d00200e8d00200ead00200ecd00200eed00200f0d00200f2d00200f4d00200f6d00200f8d00200fad00200fcd00200fed0020000d1020002d1020004d1020006d1020008d102000ad102000cd102000ed1020010d1020012d1020014d1020016d1020018d102001ad102001cd102001cd30200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -404,7 +405,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 120}
     m_SelectedIDs: 12070700
     m_LastClickedID: 460562
-    m_ExpandedIDs: 00000000ca560000cc560000ce560000d0560000d2560000d4560000d6560000d8560000da560000dc560000de560000e0560000e2560000e4560000e6560000e8560000ea560000ec560000ee560000f0560000f2560000f4560000f6560000f8560000fa560000fc560000fe56000000570000025700000457000006570000085700000a5700000c5700000e57000010570000125700001457000016570000185700001a5700001c5700001e57000020570000225700002457000026570000285700002a5700002c5700002e57000030570000
+    m_ExpandedIDs: 00000000b6d00200b8d00200bad00200bcd00200bed00200c0d00200c2d00200c4d00200c6d00200c8d00200cad00200ccd00200ced00200d0d00200d2d00200d4d00200d6d00200d8d00200dad00200dcd00200ded00200e0d00200e2d00200e4d00200e6d00200e8d00200ead00200ecd00200eed00200f0d00200f2d00200f4d00200f6d00200f8d00200fad00200fcd00200fed0020000d1020002d1020004d1020006d1020008d102000ad102000cd102000ed1020010d1020012d1020014d1020016d1020018d102001ad102001cd10200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -429,24 +430,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 1ae0ffff
-    m_LastClickedInstanceID: -8166
+    m_SelectedInstanceIDs: 00c6fbff
+    m_LastClickedInstanceID: -276992
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000000000008445000062510000ac4d0000245f0000665d0000c85d00008a5d00008e5d0000925d0000965d00009a5d00009e5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Ctrl_PlayerMovingCtrlByKey
+      m_OriginalName: Ctrl_PlayerMovingCtrlByKey
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 14036
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 6}
     m_CreateAssetUtility:
@@ -497,7 +498,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 354
+  m_LastVerticalScrollValue: 720
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -527,23 +528,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 20e0ffff
-      m_LastClickedID: -8160
-      m_ExpandedIDs: 3ee0ffff70fbffff1839000022390000
+      m_SelectedIDs: 00c6fbff
+      m_LastClickedID: -276992
+      m_ExpandedIDs: 20c6fbff52e1fbff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Enviroments
+        m_OriginalName: Enviroments
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 184042
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -589,9 +590,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 91.676056, y: -12.726527, z: -43.557056}
+    m_Target: {x: 475.19998, y: 49.500008, z: 0}
     speed: 2
-    m_Value: {x: 91.676056, y: -12.726527, z: -43.557056}
+    m_Value: {x: 475.19998, y: 49.500008, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -641,9 +642,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 12.994502
+    m_Target: 107.80551
     speed: 2
-    m_Value: 12.994502
+    m_Value: 107.80551
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -37,8 +37,10 @@ namespace Control {
         public AnimationClip Ani_MagicTrickB;  //ultimate b
 
         //Animation handle
-        private Animation _animationHandle; 
+        private Animation _animationHandle;
 
+        //play animation once
+        private bool _isSinglePlay = true;
         private void Awake()
         {
             Instance = this;
@@ -51,14 +53,17 @@ namespace Control {
             //get animation handle example
             _animationHandle = this.GetComponent<Animation>();
 
+            //Start coroutine, control player animation state
+            StartCoroutine("ControlPlayerAnimation");
+
         }
 
         // Update is called once per frame
-        void Update()
-        {
-            //main character animation control
-            ControlPlayerAnimation(_currentActionState);
-        }
+        //void Update()
+        //{
+        //    //main character animation control
+        //    ControlPlayerAnimation(_currentActionState);
+        //}
 
         public void SetCurrentAtionState(PlayerActionState currenActionState)
         {
@@ -69,35 +74,79 @@ namespace Control {
         /// <summary>
         /// main character animation control
         /// </summary>
-        private void ControlPlayerAnimation(PlayerActionState currentActionState)
+        IEnumerator ControlPlayerAnimation()
         {
-            switch (currentActionState)
+            while (true)
             {
-                case PlayerActionState.None:
+                yield return new WaitForSeconds(0.1f);
+                switch (_currentActionState)
+                {
+                    case PlayerActionState.None:
 
-                    break;
-                case PlayerActionState.Idle:
-                    _animationHandle.CrossFade(Ani_idle.name);
-                    break;
-                case PlayerActionState.Running:
-                    _animationHandle.CrossFade(Ani_Running.name);
-                    break;
-                case PlayerActionState.BasicAttack:
-                   //print(GetType() + "/play animation, basic attack");
-                    _animationHandle.CrossFade(Ani_BasicAttack1.name);
-                    break;
-                case PlayerActionState.MagicTrickA:
-                   // print(GetType() + "/play animation, MagicTrickA");
-                    _animationHandle.CrossFade(Ani_MagicTrickA.name);
-                    break;
-                case PlayerActionState.MagicTrickB:
-                    //print(GetType() + "/play animation, MagicTrickB");
-                    _animationHandle.CrossFade(Ani_MagicTrickB.name);
-                    break;
-                default:
-                    break;
+                        break;
+                    case PlayerActionState.Idle:
+                        _animationHandle.CrossFade(Ani_idle.name);
+                        break;
+                    case PlayerActionState.Running:
+                        _animationHandle.CrossFade(Ani_Running.name);
+                        break;
+                    case PlayerActionState.BasicAttack:
+                        //print(GetType() + "/play animation, basic attack");
+                        if (_isSinglePlay)
+                        {
+                            _isSinglePlay = false;
+                            _animationHandle.CrossFade(Ani_BasicAttack1.name);
+                            yield return new WaitForSeconds(Ani_BasicAttack1.length);
+                        }
+                        else
+                        {
+                            StartCoroutine("ReturnOriginalAction");
+                        }
+                        break;
+                    case PlayerActionState.MagicTrickA:
+                        // print(GetType() + "/play animation, MagicTrickA");
+                        if (_isSinglePlay)
+                        {
+                            _isSinglePlay = false;
+                            _animationHandle.CrossFade(Ani_MagicTrickA.name);
+                            yield return new WaitForSeconds(Ani_MagicTrickA.length);
+                        }
+                        else
+                        {
+                            StartCoroutine("ReturnOriginalAction");
+                        }
+                        break;
+                    case PlayerActionState.MagicTrickB:
+                        //print(GetType() + "/play animation, MagicTrickB");
+                        if (_isSinglePlay)
+                        {
+                            _isSinglePlay = false;
+                            _animationHandle.CrossFade(Ani_MagicTrickB.name);
+                            yield return new WaitForSeconds(Ani_MagicTrickB.length);
+                        }
+                        else
+                        {
+                            StartCoroutine("ReturnOriginalAction");
+                        }
+                        break;
+                    default:
+                        break;
+                }//Switch end
             }
+            
         }
+
+        /// <summary>
+        /// make animation playable
+        /// </summary>
+        IEnumerator ReturnOriginalAction()
+        {
+            _currentActionState = PlayerActionState.Idle;
+            yield return new WaitForSeconds(0.05f);
+            _isSinglePlay = true;
+        }
+
+        
     }
 }
 

@@ -5246,7 +5246,7 @@ PrefabInstance:
     - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
       propertyPath: isUnregisterAtDisable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2681321811510848294, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
@@ -5326,11 +5326,56 @@ PrefabInstance:
     - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
       propertyPath: axisX.gravity
-      value: 0
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
       propertyPath: showAxesInspector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: joystickType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: _anchor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: useFixedUpdate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: allowSimulationStandalone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: isUnregisterAtDisable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axisX.actionOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axisY.actionOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axisY.showSimulatinInspector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681321811510897038, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axisX.showSimulatinInspector
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
@@ -5351,17 +5396,17 @@ PrefabInstance:
     - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
       propertyPath: allowSimulationStandalone
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
-        type: 3}
-      propertyPath: isUnregisterAtDisable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
-      propertyPath: axis.directAction
+      propertyPath: isUnregisterAtDisable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
+        type: 3}
+      propertyPath: axis.directAction
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3531665336733770089, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
@@ -5396,7 +5441,7 @@ PrefabInstance:
     - target: {fileID: 6624851566183859236, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
       propertyPath: isUnregisterAtDisable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624851566183859236, guid: 6865dc86f1c5a564bad91d4547980698,
         type: 3}
@@ -5412,6 +5457,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 876022945854583863, guid: 261ac97614b6c15409d744a14b2fce97,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3483459456165393356, guid: 261ac97614b6c15409d744a14b2fce97,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5471,6 +5521,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Warrior_player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6992808903932512865, guid: 261ac97614b6c15409d744a14b2fce97,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 261ac97614b6c15409d744a14b2fce97, type: 3}
