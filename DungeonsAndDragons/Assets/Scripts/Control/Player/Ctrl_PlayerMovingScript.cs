@@ -94,15 +94,13 @@ namespace Control {
         //  }
         //  
 
-        private CharacterController cc; //character controller
-        private Animation anim; //animation 
+        private CharacterController cc; //character controller 
 
         // Use this for initialization
         void Start()
         {
 
             cc = GetComponent<CharacterController>();
-            anim = GetComponentInChildren<Animation>();
         }
 
 

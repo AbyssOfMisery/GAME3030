@@ -32,7 +32,7 @@ namespace Control
         {
             //Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_NORMAL);
             //event 1
-            if (Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_BASIC))
+            if (Input.GetButton(GlobalParameter.INPUT_MGR_ATTACKNAME_BASIC))
             {
                 evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_BASIC);
             }

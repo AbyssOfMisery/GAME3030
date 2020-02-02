@@ -41,6 +41,9 @@ namespace Control {
 
         //play animation once
         private bool _isSinglePlay = true;
+
+        //animation combo
+        private BasicATKCombo _CurATKCombo = BasicATKCombo.BasicATK1;
         private void Awake()
         {
             Instance = this;
@@ -56,14 +59,12 @@ namespace Control {
             //Start coroutine, control player animation state
             StartCoroutine("ControlPlayerAnimation");
 
-        }
+            //speed up basic attack animation 
+            _animationHandle[Ani_BasicAttack1.name].speed = 2.5f;
+            _animationHandle[Ani_BasicAttack2.name].speed = 2.5f;
+            _animationHandle[Ani_BasicAttack3.name].speed = 2f;
 
-        // Update is called once per frame
-        //void Update()
-        //{
-        //    //main character animation control
-        //    ControlPlayerAnimation(_currentActionState);
-        //}
+        }
 
         public void SetCurrentAtionState(PlayerActionState currenActionState)
         {
@@ -91,20 +92,56 @@ namespace Control {
                         _animationHandle.CrossFade(Ani_Running.name);
                         break;
                     case PlayerActionState.BasicAttack:
-                        //print(GetType() + "/play animation, basic attack");
-                        if (_isSinglePlay)
+
+                        /*attack combo*/
+                        switch (_CurATKCombo)
                         {
-                            _isSinglePlay = false;
-                            _animationHandle.CrossFade(Ani_BasicAttack1.name);
-                            yield return new WaitForSeconds(Ani_BasicAttack1.length);
+                            case BasicATKCombo.BasicATK1:
+                                if (_isSinglePlay)
+                                {
+                                    _isSinglePlay = false;
+                                    _animationHandle.CrossFade(Ani_BasicAttack1.name);
+                                    yield return new WaitForSeconds(Ani_BasicAttack1.length/2.5f);
+                                }
+                                else
+                                {
+                                    StartCoroutine("ReturnOriginalAction");
+                                }
+                                _CurATKCombo = BasicATKCombo.BasicATK2;
+                                break;
+                            case BasicATKCombo.BasicATK2:
+                                if (_isSinglePlay)
+                                {
+                                    _isSinglePlay = false;
+                                    _animationHandle.CrossFade(Ani_BasicAttack2.name);
+                                    yield return new WaitForSeconds(Ani_BasicAttack2.length/2.5f);
+                                }
+                                else
+                                {
+                                    StartCoroutine("ReturnOriginalAction");
+                                }
+                                _CurATKCombo = BasicATKCombo.BasicATK3;
+                                break;
+                            case BasicATKCombo.BasicATK3:
+                                if (_isSinglePlay)
+                                {
+                                    _isSinglePlay = false;
+                                    _animationHandle.CrossFade(Ani_BasicAttack3.name);
+                                    yield return new WaitForSeconds(Ani_BasicAttack3.length/2f);
+                                }
+                                else
+                                {
+                                    StartCoroutine("ReturnOriginalAction");
+                                }
+                                _CurATKCombo = BasicATKCombo.BasicATK1;
+                                break;
+                            default:
+                                break;
                         }
-                        else
-                        {
-                            StartCoroutine("ReturnOriginalAction");
-                        }
+                       
                         break;
                     case PlayerActionState.MagicTrickA:
-                        // print(GetType() + "/play animation, MagicTrickA");
+                        
                         if (_isSinglePlay)
                         {
                             _isSinglePlay = false;
@@ -117,7 +154,7 @@ namespace Control {
                         }
                         break;
                     case PlayerActionState.MagicTrickB:
-                        //print(GetType() + "/play animation, MagicTrickB");
+                      
                         if (_isSinglePlay)
                         {
                             _isSinglePlay = false;
@@ -142,7 +179,7 @@ namespace Control {
         IEnumerator ReturnOriginalAction()
         {
             _currentActionState = PlayerActionState.Idle;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.001f);
             _isSinglePlay = true;
         }
 

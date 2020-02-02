@@ -25,7 +25,7 @@ namespace Control {
 
         void Update()
         {
-            if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_ATTACK))
+            if (ETCInput.GetButton(GlobalParameter.BUTTON_ATTACK))
             {
                 // anim.CrossFade("Attack1");
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);

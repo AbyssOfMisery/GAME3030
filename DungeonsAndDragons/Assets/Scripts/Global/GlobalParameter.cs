@@ -7,6 +7,7 @@
  *         1: Define the enumeration type for the entire project
  *         2: Define the delegation perspective for the entire project
  *         3: Define system constants for the entire project
+ *         4: Define system's all tags
  *         
  * Date:2020
  * 
@@ -20,8 +21,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Global{
+    //Define project system constants
     public class GlobalParameter {
-        //Define project system constants
         /// <summary>
         /// Input manager definition _Ability Name_Basic Attack
         /// </summary>
@@ -63,8 +64,24 @@ namespace Global{
         /// </summary>
         public const string BUTTON_MAGIC_B = "MagicTrickBBtn";
 
+        //Const wait time
+        public const float INTERVAL_TIME_0DOT1 = 0.1f;
+        public const float INTERVAL_TIME_0DOT2 = 0.2f;
+        public const float INTERVAL_TIME_0DOT3 = 0.3f;
+        public const float INTERVAL_TIME_0DOT5 = 0.5f;
+        public const float INTERVAL_TIME_1 = 1.0f;
+        public const float INTERVAL_TIME_1DOT5 = 1.5f;
+        public const float INTERVAL_TIME_2 = 2.0f;
+        public const float INTERVAL_TIME_2DOT = 2.5f;
+        public const float INTERVAL_TIME_3 = 3.0f;
     }
 
+    /*all projects tag defind*/
+    public class Tag
+    {
+        public static string Tag_Enemy = "TagEnemy";
+        public static string Player = "Player";
+    }
 
     #region project's enum type
     //scenes name enums
@@ -99,6 +116,17 @@ namespace Global{
         MagicTrickB,
 
     }
+
+    /// <summary>
+    /// basic attack combo
+    /// </summary>
+    public enum BasicATKCombo
+    {
+        BasicATK1,
+        BasicATK2,
+        BasicATK3,
+    }
+     
     #endregion
     /// <summary>
     /// Commission : player control
