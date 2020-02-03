@@ -38,3 +38,9 @@
 * 2.Create sound manager prefab.
 * 3.Import easy touch plugin.
 * 4.Import new map in the scenes.
+
+#Feb 1
+* 1.Add basic attack combo animation
+* 2.Add keyboard control script
+* 3.Add enemy list `<Player will check near by enemy in to array>`
+* 4.Add a demo enemy`<Allow player to targer closest enemy>`
