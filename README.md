@@ -44,3 +44,9 @@
 * 2.Add keyboard control script
 * 3.Add enemy list `<Player will check near by enemy in to array>`
 * 4.Add a demo enemy`<Allow player to targer closest enemy>`
+
+#Feb 2
+* 1. And enemy script
+* 2. and function to check is player facing enemy or enemy is facing player
+* 3. check is enemy in attack range
+
