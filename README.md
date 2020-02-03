@@ -49,4 +49,5 @@
 * 1. And enemy script
 * 2. and function to check is player facing enemy or enemy is facing player
 * 3. check is enemy in attack range
+* 4. add a time delay function
 
