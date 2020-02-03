@@ -28,8 +28,9 @@ using Kernal;
 namespace Control {
     public class Ctrl_PlayerAttack : BaseControl
     {
-        public float _FloMinAttackDistance = 4.0f; //minimum attack range
-        public float _FloPlayerRoataionSpeed = 1.0f;
+        public float _FloMinAttackDistance = 5.0f; //minimum attack range (player target enemy range)
+        public float _FloPlayerRoataionSpeed = 1.0f; //rotation speed
+        public float _FloAttackRange = 2.0f; //attack range
 
         private List<GameObject> _LisEnemies; //list of enemies
         private Transform _TraNearestEnemy;//get closest enemy postion
@@ -68,6 +69,7 @@ namespace Control {
                 //play basic attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
                 //Deal damage to specific enemies
+                AttackEnemyByBasic();
             }
         }
 
@@ -115,6 +117,7 @@ namespace Control {
         }
         /// <summary>
         ///  get all enemy and put them in an array
+        ///  and check is enemy is alive
         /// </summary>
         public void GetEnemiesToArray()
         {
@@ -122,10 +125,14 @@ namespace Control {
             foreach(GameObject goItem in GoEnemies)
             {
                 //check the enemy is alive
-
-                _LisEnemies.Add(goItem);
+                Ctrl_Enemy enemy = goItem.GetComponent<Ctrl_Enemy>();
+                if (enemy && enemy.IsAlive)
+                {
+                    _LisEnemies.Add(goItem);
+                }
+          
             }
-        }
+        }//function end
         /// <summary>
         /// check enemy array and find out the closest enemy
         /// </summary>
@@ -151,7 +158,9 @@ namespace Control {
             while(true)
             {
                 yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT5);
-               if(_TraNearestEnemy != null)
+               if(_TraNearestEnemy != null 
+                    && Ctrl_PlayerAnimation.Instance.CurrentActionState
+                    == PlayerActionState.Idle)
                 {
                     float floDistance = Vector3.Distance(this.gameObject.transform.position, _TraNearestEnemy.position);
 
@@ -168,7 +177,38 @@ namespace Control {
                 }
             }
         }
-    }
+
+        /// <summary>
+        /// use basic attack to damage enemy
+        /// </summary>
+        private void AttackEnemyByBasic()
+        {
+            //Parameter check
+            if(_LisEnemies == null || _LisEnemies.Count<=0)
+            {
+                _TraNearestEnemy = null;
+                return;
+            }
+
+            foreach (GameObject enemyItem in _LisEnemies)
+            {
+                //check enemy and player distance 
+                float floDistance = Vector3.Distance(this.gameObject.transform.position, enemyItem.transform.position);
+                //check player rotation(is player facing enemy or is enemy facing player)
+                //Vector subtraction
+                Vector3 dir = (enemyItem.transform.position - this.gameObject.transform.position).normalized;
+                //check player and enemy angle(use vertor point multiplication)
+                float floAngleDirection = Vector3.Dot(dir,this.gameObject.transform.forward);
+                //if palyer and enemy has same dirction and within attack range. so player can damage enemy
+                if(floDistance>0 && floDistance <= _FloAttackRange)
+                {
+                    print("within range");
+                    enemyItem.SendMessage("OnDamage", 10, SendMessageOptions.DontRequireReceiver);
+                }
+            }
+        }
+
+    }//class end
 }
 
 

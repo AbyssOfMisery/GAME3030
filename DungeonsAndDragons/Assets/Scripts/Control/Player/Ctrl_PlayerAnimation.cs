@@ -44,6 +44,11 @@ namespace Control {
 
         //animation combo
         private BasicATKCombo _CurATKCombo = BasicATKCombo.BasicATK1;
+
+        public PlayerActionState CurrentActionState {
+            get => _currentActionState;
+          }
+
         private void Awake()
         {
             Instance = this;
@@ -69,7 +74,7 @@ namespace Control {
         public void SetCurrentAtionState(PlayerActionState currenActionState)
         {
             //set up current player animation
-            _currentActionState = currenActionState;
+           _currentActionState = currenActionState;
         }
 
         /// <summary>
@@ -80,7 +85,7 @@ namespace Control {
             while (true)
             {
                 yield return new WaitForSeconds(0.1f);
-                switch (_currentActionState)
+                switch (CurrentActionState)
                 {
                     case PlayerActionState.None:
 
