@@ -60,10 +60,13 @@ namespace Control
              }//if end
             else
             {
-                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
+                if(UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT2))
+                {
+                    Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
+                }             
 
             }
-        }//function end         
+        }//ControlMoving end         
     }//class end
 }
 

@@ -121,6 +121,8 @@ namespace Control {
         /// </summary>
         public void GetEnemiesToArray()
         {
+            //empty enemy list
+            _LisEnemies.Clear();
             GameObject[] GoEnemies = GameObject.FindGameObjectsWithTag(Tag.Tag_Enemy);
             foreach(GameObject goItem in GoEnemies)
             {
@@ -202,7 +204,7 @@ namespace Control {
                 //if palyer and enemy has same dirction and within attack range. so player can damage enemy
                 if(floDistance>0 && floDistance <= _FloAttackRange)
                 {
-                    print("within range");
+
                     enemyItem.SendMessage("OnDamage", 10, SendMessageOptions.DontRequireReceiver);
                 }
             }
