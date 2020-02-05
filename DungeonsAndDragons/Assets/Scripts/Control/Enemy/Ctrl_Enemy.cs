@@ -41,11 +41,18 @@ namespace Control
 
         IEnumerator CheckLifeContinue()
         {
-            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_2);
-            if(_CurrentHealth <= _MaxHealth * 0.01)
+           
+            while(true)
             {
-                IsAlive = false;
+                yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
+                if (_CurrentHealth <= _MaxHealth * 0.01)
+                {
+                    IsAlive = false;
+                    //destroy this enemy
+                    Destroy(this.gameObject);
+                }
             }
+
         }
 
         /// <summary>
@@ -62,11 +69,6 @@ namespace Control
             {
                 _CurrentHealth -= damageValue;
             }
-        }
-
-        private void Update()
-        {
-           // print(_CurrentHealth);
         }
     }
 }

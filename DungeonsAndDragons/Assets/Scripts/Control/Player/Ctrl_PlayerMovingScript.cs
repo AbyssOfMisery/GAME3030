@@ -110,12 +110,16 @@ namespace Control {
             if ((ETCInput.GetAxis("Vertical") != 0 || ETCInput.GetAxis("Horizontal") != 0))
             {
                 //anim.CrossFade("Run");
-                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Running);
+                if (UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT1))
+                {
+                    Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Running);
+                }
             }
 
             if ((ETCInput.GetAxis("Vertical") == 0 && ETCInput.GetAxis("Horizontal") == 0))
             {
                 //anim.CrossFade("Idle");
+
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
             }
            

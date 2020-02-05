@@ -69,7 +69,11 @@ namespace Control {
                 //play basic attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
                 //Deal damage to specific enemies
-                AttackEnemyByBasic();
+                if(UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT1))
+                {
+                    AttackEnemyByBasic();
+                }
+
             }
         }
 
@@ -194,19 +198,24 @@ namespace Control {
 
             foreach (GameObject enemyItem in _LisEnemies)
             {
-                //check enemy and player distance 
-                float floDistance = Vector3.Distance(this.gameObject.transform.position, enemyItem.transform.position);
-                //check player rotation(is player facing enemy or is enemy facing player)
-                //Vector subtraction
-                Vector3 dir = (enemyItem.transform.position - this.gameObject.transform.position).normalized;
-                //check player and enemy angle(use vertor point multiplication)
-                float floAngleDirection = Vector3.Dot(dir,this.gameObject.transform.forward);
-                //if palyer and enemy has same dirction and within attack range. so player can damage enemy
-                if(floDistance>0 && floDistance <= _FloAttackRange)
+                //check if enemy is alive
+                if(enemyItem.GetComponent<Ctrl_Enemy>().IsAlive)
                 {
-
-                    enemyItem.SendMessage("OnDamage", 10, SendMessageOptions.DontRequireReceiver);
+                    //check enemy and player distance 
+                    float floDistance = Vector3.Distance(this.gameObject.transform.position, enemyItem.transform.position);
+                    //check player rotation(is player facing enemy or is enemy facing player)
+                    //Vector subtraction
+                    Vector3 dir = (enemyItem.transform.position - this.gameObject.transform.position).normalized;
+                    //check player and enemy angle(use vertor point multiplication)
+                    float floAngleDirection = Vector3.Dot(dir, this.gameObject.transform.forward);
+                    //if palyer and enemy has same dirction and within attack range. so player can damage enemy
+                    if (floDistance > 0 && floDistance <= _FloAttackRange)
+                    {
+                        print("close to enemy");
+                        enemyItem.SendMessage("OnDamage", 10, SendMessageOptions.DontRequireReceiver);
+                    }
                 }
+               
             }
         }
 

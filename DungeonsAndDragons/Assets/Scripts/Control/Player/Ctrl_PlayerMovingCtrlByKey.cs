@@ -56,7 +56,12 @@ namespace Control
                 //play run animation
                 movement.y -= gravity;
                 cc.Move(movement);
-                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Running);
+
+                if (UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT1))
+                {
+                    Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Running);
+                }
+
              }//if end
             else
             {
