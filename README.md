@@ -1,4 +1,4 @@
-# GameProduction `<this project is made with unity 2019.3.0f3>`
+# GameProduction `<this project is made with unity 2019.3.0f6>`
 
 #Jan 7
 * 1. add UI 
@@ -51,3 +51,5 @@
 * 3. check is enemy in attack range
 * 4. add a time delay function
 
+#Feb 4
+* 1. Fix player attack script
