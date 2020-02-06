@@ -53,3 +53,6 @@
 
 #Feb 4
 * 1. Fix player attack script
+
+#Feb 5
+* 1. Add player save data script
