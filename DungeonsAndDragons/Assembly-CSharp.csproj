@@ -214,6 +214,10 @@
     <Compile Include="Assets\Scripts\Global\GlobalParameter.cs" />
     <Compile Include="Assets\Scripts\Kernal\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Kernal\UnityHelper.cs" />
+    <Compile Include="Assets\Scripts\Model\Player\PlayerExtenalData.cs" />
+    <Compile Include="Assets\Scripts\Model\Player\PlayerExtenalDataProxy.cs" />
+    <Compile Include="Assets\Scripts\Model\Player\PlayerSaveData.cs" />
+    <Compile Include="Assets\Scripts\Model\Player\PlayerSaveDataProxy.cs" />
     <Compile Include="Assets\Scripts\View\Scenes\View_LoadingScenes.cs" />
     <Compile Include="Assets\Scripts\View\Scenes\View_LogonScenes.cs" />
     <Compile Include="Assets\Scripts\View\Scenes\View_StartScenes.cs" />
