@@ -65,10 +65,10 @@ namespace Control
              }//if end
             else
             {
-                if(UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT2))
-                {
-                    Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
-                }             
+               // if(UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT2))
+               // {
+               //     Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
+               // }             
 
             }
         }//ControlMoving end         

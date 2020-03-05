@@ -126,13 +126,52 @@ namespace Global{
         BasicATK2,
         BasicATK3,
     }
-     
+
+    public enum LevelName
+    {
+        Level_0 = 0,
+        Level_1 = 1,
+        Level_2 = 2,
+        Level_3 = 3,
+        Level_4 = 4,
+        Level_5 = 5,
+        Level_6 = 6,
+        Level_7 = 7,
+        Level_8 = 8,
+        Level_9 = 9,
+        Level_10 = 10
+    }
+
     #endregion
+
+    #region Project Delegate Type
     /// <summary>
     /// Commission : player control
     /// </summary>
     /// <param name="controlType">control type</param>
-    #region Project Delegate Type
+    /// 
     public delegate void del_PlayerControlWithStr(string controlType);
+
+    public delegate void del_PlayerSaveModel(KeyValueUpdate kv);
+
+    /// <summary>
+    /// key value update
+    /// </summary>
+    public class KeyValueUpdate
+    {
+        private string _Key;    
+        private object _Values;
+
+        //Attributes
+        public string Key { get => _Key;}
+        public object Values { get => _Values;}
+
+        public KeyValueUpdate(string key, object values)
+        {
+            _Key = key;
+            _Values = values;
+        }
+    }
+
     #endregion
 }
