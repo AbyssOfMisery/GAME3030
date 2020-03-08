@@ -27,8 +27,8 @@ namespace Model
     public class PlayerExtenalDataProxy:PlayerExtenalData
     {
         public static PlayerExtenalDataProxy _Instance = null; //get instance
-        
-        
+
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -62,9 +62,9 @@ namespace Model
         /// get this instance
         /// </summary>
         /// <returns></returns>
-        public PlayerExtenalDataProxy GetInstance()
+        public static PlayerExtenalDataProxy GetInstance()
         {
-            if (_Instance == null)
+            if (_Instance != null)
             {
                 return _Instance;
             }

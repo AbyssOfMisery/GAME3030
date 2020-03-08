@@ -25,24 +25,24 @@ namespace Control {
 
         void Update()
         {
-            if (ETCInput.GetButton(GlobalParameter.BUTTON_ATTACK))
-            {
-                // anim.CrossFade("Attack1");
-                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
-            }
-
-            if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_MAGIC_A))
-            {
-                // anim.CrossFade("Attack1");
-                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
-            }
-
-            if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_MAGIC_B))
-            {
-                // anim.CrossFade("Attack1");
-                
-                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
-            }
+          //  if (ETCInput.GetButton(GlobalParameter.BUTTON_ATTACK))
+          //  {
+          //      // anim.CrossFade("Attack1");
+          //      Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
+          //  }
+          //
+          //  if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_MAGIC_A))
+          //  {
+          //      // anim.CrossFade("Attack1");
+          //      Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
+          //  }
+          //
+          //  if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_MAGIC_B))
+          //  {
+          //      // anim.CrossFade("Attack1");
+          //      
+          //      Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
+          //  }
         }
 
     }

@@ -1619,6 +1619,7 @@ GameObject:
   - component: {fileID: 65616203354215955}
   - component: {fileID: 6992808903932512865}
   - component: {fileID: 876022945854583863}
+  - component: {fileID: 5150829618559482575}
   m_Layer: 0
   m_Name: Warrior_player
   m_TagString: Player
@@ -1714,6 +1715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65287dbbe25caa841acdc886514a9f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _FloMinAttackDistance: 5
+  _FloPlayerRoataionSpeed: 1
+  _FloAttackRange: 2
 --- !u!114 &65616203354215955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1750,6 +1754,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854f80b1b89826046882aeb19d2c3b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5150829618559482575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3483459456165393359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d308c709bd11ce14cacda4893da1f28e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCurrentHp: 100
+  playerMaxHp: 100
+  playerCurrentMp: 100
+  playerMaxMp: 100
+  playerCurrentATK: 10
+  playerMaxATK: 10
+  playerCurrentDEF: 5
+  playerMaxDEF: 5
+  playerCurrentDEX: 45
+  playerMaxDEX: 50
+  FloATKByProp: 0
+  FloDEFByProp: 0
+  FloDEXByProp: 0
+  IntEXP: 0
+  IntLevel: 0
+  IntKillNum: 0
+  IntGold: 0
+  IntDiamond: 0
 --- !u!1 &3483459456254357353
 GameObject:
   m_ObjectHideFlags: 0

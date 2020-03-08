@@ -64,13 +64,13 @@ public class TestModelLayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerSaveDataProxy playerSaveDataProxy = new PlayerSaveDataProxy(100,100,10,
-            5,45,100,100,10,5,50,0,0,0) ;
-
-        PlayerExtenalDataProxy playerExtenalDataProxy = new PlayerExtenalDataProxy(0,0,0,0,0);
-        //Show initial value
-        PlayerSaveDataProxy._Instance.DisplayAllOriginalValues();
-        PlayerExtenalDataProxy._Instance.DisplayerAllOriginalValue();
+       // PlayerSaveDataProxy playerSaveDataProxy = new PlayerSaveDataProxy(100,100,10,
+       //     5,45,100,100,10,5,50,0,0,0) ;
+       //
+       // PlayerExtenalDataProxy playerExtenalDataProxy = new PlayerExtenalDataProxy(0,0,0,0,0);
+       // //Show initial value
+       // PlayerSaveDataProxy._Instance.DisplayAllOriginalValues();
+       // PlayerExtenalDataProxy._Instance.DisplayerAllOriginalValue();
 
     }
 
@@ -78,37 +78,37 @@ public class TestModelLayer : MonoBehaviour
     public void IncreaseHP()
     {
         //use modle layer functions
-        PlayerSaveDataProxy._Instance.IncreaseHealthValues(30);
+        PlayerSaveDataProxy.GetInstance().IncreaseHealthValues(30);
     }
     public void DecreaseHP()
     {
-        PlayerSaveDataProxy._Instance.DecreaseHealthValues(10);
+        PlayerSaveDataProxy.GetInstance().DecreaseHealthValues(10);
     }
     public void IncreaseMagic()
     {
-        PlayerSaveDataProxy._Instance.IncreaseMagicValues(40);
+        PlayerSaveDataProxy.GetInstance().IncreaseMagicValues(40);
     }
     public void DecreaseMagic()
     {
-        PlayerSaveDataProxy._Instance.DecreaseMagicValues(15);
+        PlayerSaveDataProxy.GetInstance().DecreaseMagicValues(15);
     }
 
     public void IncreaseEXP()
     {
         //use modle layer functions
-        PlayerExtenalDataProxy._Instance.AddEXP(100);
+        PlayerExtenalDataProxy.GetInstance().AddEXP(100);
     }
     public void Killnumbers()
     {
-        PlayerExtenalDataProxy._Instance.AddKillNumber(100);
+        PlayerExtenalDataProxy.GetInstance().AddKillNumber(100);
     }
     public void Gold()
     {
-        PlayerExtenalDataProxy._Instance.AddGold(100);
+        PlayerExtenalDataProxy.GetInstance().AddGold(100);
     }
     public void Diamond()
     {
-        PlayerExtenalDataProxy._Instance.AddDiamond(100);
+        PlayerExtenalDataProxy.GetInstance().AddDiamond(100);
     }
 
     public void Level()

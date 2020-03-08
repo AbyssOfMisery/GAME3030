@@ -48,6 +48,10 @@ namespace Control
                 if (_CurrentHealth <= _MaxHealth * 0.01)
                 {
                     IsAlive = false;
+                    //add exp to player
+                    //add number of kills
+
+
                     //destroy this enemy
                     Destroy(this.gameObject);
                 }

@@ -128,14 +128,14 @@ namespace Model
         /// <param name="DEX"></param>
         private void UpgradeRuleOperation(float maxhp, float maxmp, float maxATK, float maxDEF,float maxDEX)
         {
-            PlayerSaveDataProxy._Instance.IncreaseMaxHealth(maxhp);
-            PlayerSaveDataProxy._Instance.IncreaseMaxMagic(maxmp);
-            PlayerSaveDataProxy._Instance.IncreaseMaxATK(maxATK);
-            PlayerSaveDataProxy._Instance.IncreaseMaxDEF(maxDEF);
-            PlayerSaveDataProxy._Instance.IncreaseMaxDEX(maxDEX);
+            PlayerSaveDataProxy.GetInstance().IncreaseMaxHealth(maxhp);
+            PlayerSaveDataProxy.GetInstance().IncreaseMaxMagic(maxmp);
+            PlayerSaveDataProxy.GetInstance().IncreaseMaxATK(maxATK);
+            PlayerSaveDataProxy.GetInstance().IncreaseMaxDEF(maxDEF);
+            PlayerSaveDataProxy.GetInstance().IncreaseMaxDEX(maxDEX);
                            
-            PlayerSaveDataProxy._Instance.IncreaseHealthValues(PlayerSaveDataProxy._Instance.GetMaxHealth());
-            PlayerSaveDataProxy._Instance.IncreaseMagicValues(PlayerSaveDataProxy._Instance.GetMaxMagic());
+            PlayerSaveDataProxy.GetInstance().IncreaseHealthValues(PlayerSaveDataProxy.GetInstance().GetMaxHealth());
+            PlayerSaveDataProxy.GetInstance().IncreaseMagicValues(PlayerSaveDataProxy.GetInstance().GetMaxMagic());
         }
     }//class end
 

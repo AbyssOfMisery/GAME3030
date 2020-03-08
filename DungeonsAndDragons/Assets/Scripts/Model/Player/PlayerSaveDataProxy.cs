@@ -65,7 +65,7 @@ namespace Model
         /// <returns></returns>
         public static PlayerSaveDataProxy GetInstance()
         {
-            if(_Instance == null)
+            if(_Instance != null)
             {
                 return _Instance;
             }
