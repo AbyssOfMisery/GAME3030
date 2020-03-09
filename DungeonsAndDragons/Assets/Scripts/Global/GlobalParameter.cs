@@ -38,6 +38,15 @@ namespace Global{
         /// </summary>
         public const string INPUT_MGR_ATTACKNAME_MAGICTRICK_B = "MagicTrickB";
 
+        /// <summary>
+        /// Input manager definition _Ability Name_ MagicTrickC
+        /// </summary>
+        public const string INPUT_MGR_ATTACKNAME_MAGICTRICK_C = "MagicTrickC";
+
+        /// <summary>
+        /// Input manager definition _Ability Name_ MagicTrickD
+        /// </summary>
+        public const string INPUT_MGR_ATTACKNAME_MAGICTRICK_D = "MagicTrickD";
 
         /// <summary>
         /// Input manager definition Vertical

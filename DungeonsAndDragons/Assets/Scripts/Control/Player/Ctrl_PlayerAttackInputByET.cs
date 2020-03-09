@@ -17,34 +17,60 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Kernal;
 using Global;
+using Model;
 
 namespace Control {
     public class Ctrl_PlayerAttackInputByET : BaseControl
     {
+        public static Ctrl_PlayerAttackInputByET Instance; // instance
+        //event player control animation
+        public static event del_PlayerControlWithStr evePlayerControl;
 
-        void Update()
+        private void Awake()
         {
-          //  if (ETCInput.GetButton(GlobalParameter.BUTTON_ATTACK))
-          //  {
-          //      // anim.CrossFade("Attack1");
-          //      Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
-          //  }
-          //
-          //  if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_MAGIC_A))
-          //  {
-          //      // anim.CrossFade("Attack1");
-          //      Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
-          //  }
-          //
-          //  if (ETCInput.GetButtonDown(GlobalParameter.BUTTON_MAGIC_B))
-          //  {
-          //      // anim.CrossFade("Attack1");
-          //      
-          //      Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
-          //  }
+            Instance = this;
         }
 
-    }
+        /// <summary>
+        /// response to basic attack
+        /// </summary>
+        public void ResponseATKByBasic()
+        {
+           evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_BASIC);
+        }
+        /// <summary>
+        /// response to magic a
+        /// </summary>
+        public void ResponseATKByMagicA()
+        {
+           evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_A);
+        }
+        /// <summary>
+        /// response to magic b
+        /// </summary>
+        public void ResponseATKByMagicB()
+        {
+           evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B);
+        }
+
+        /// <summary>
+        /// response to magic c
+        /// </summary>
+        public void ResponseATKByMagicC()
+        {
+            evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_C);
+        }
+
+        /// <summary>
+        /// response to magic D
+        /// </summary>
+        public void ResponseATKByMagicD()
+        {
+            evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_D);
+        }
+
+    }//class end
 }
 

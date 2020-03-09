@@ -17,6 +17,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Control;
+
+
 namespace View
 {
     public class View_PlayerInfoResponse : MonoBehaviour
@@ -30,6 +33,34 @@ namespace View
         {
             goPlayerDetailInfoPanel.SetActive(!goPlayerDetailInfoPanel.activeSelf); 
         }
+
+        #region response to player attack
+        public void ResponseBASICATK()
+        {
+            Ctrl_PlayerAttackInputByET.Instance.ResponseATKByBasic();
+        }
+
+        public void ResponseATKByMagicA()
+        {
+            Ctrl_PlayerAttackInputByET.Instance.ResponseATKByMagicA();
+        }
+
+        public void ResponseATKByMagicB()
+        {
+            Ctrl_PlayerAttackInputByET.Instance.ResponseATKByMagicB();
+        }
+
+        public void ResponseATKByMagicC()
+        {
+            Ctrl_PlayerAttackInputByET.Instance.ResponseATKByMagicC();
+        }
+
+        public void ResponseATKByMagicD ()
+        {
+            Ctrl_PlayerAttackInputByET.Instance.ResponseATKByMagicC();
+        }
+
+        #endregion
     }
 
 }

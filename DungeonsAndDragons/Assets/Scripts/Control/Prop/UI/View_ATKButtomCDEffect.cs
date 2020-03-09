@@ -1,0 +1,101 @@
+﻿/*
+ * Title:"Dungoen and dragons"
+ *      
+ *      View layer: UI buttom attack CD effect
+ *      
+ * Description:
+ *      UI buttom CD effect
+ *         
+ * Date:2020
+ * 
+ * Verstion: 0.1
+ * 
+ * Modify Recoder;
+ *  
+ */
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace View
+{
+    public class View_ATKButtomCDEffect : MonoBehaviour
+    {
+        public float FloCDTime = 5f;        //cool down time
+
+        public Image ImgCircle;   //that cool down effect
+        public GameObject goWhiteAndBlack; //cool down picture
+
+        private float FloTimerDelta = 0f;       //a timer
+        private bool IsStartTimer = false;      //to active cool down script
+        private Button BtnSelf;                 //get it's buttom
+        private bool _Enable = false;      //to active cool down script
+
+        private void Start()
+        {
+            //get it's buttom
+            BtnSelf = this.gameObject.GetComponent<Button>();
+
+            DisableSelf();
+            //BtnSelf.interactable = true;
+            ////hide white and black icon 
+            //goWhiteAndBlack.SetActive(false);
+        }
+
+        private void Update()
+        {
+            //check if player to use this component
+            if(_Enable)
+            {
+                if (IsStartTimer)
+                {
+                    goWhiteAndBlack.SetActive(true);            //active white and black icon
+                    FloTimerDelta += Time.deltaTime; // stack up time
+                    ImgCircle.fillAmount = FloTimerDelta / FloCDTime; //give value to image circle
+                    BtnSelf.interactable = false;
+
+                    //while FloTimerDelta is greater than flocetime, reset everything
+                    if (FloTimerDelta > FloCDTime)
+                    {
+                        IsStartTimer = false;
+                        ImgCircle.fillAmount = 1;
+                        FloTimerDelta = 0;
+                        goWhiteAndBlack.SetActive(false);          //hide white and black icon 
+                        BtnSelf.interactable = true;
+                    }
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// response to player click events
+        /// </summary>
+        public void ResponseBtnClick()
+        {
+            IsStartTimer = true;
+            BtnSelf.interactable = true;
+        }
+
+        /// <summary>
+        /// active this component
+        /// </summary>
+        public void EnableSelf()
+        {
+            _Enable = true;
+            goWhiteAndBlack.SetActive(false);
+            BtnSelf.interactable = false;
+        }
+
+        /// <summary>
+        /// disable this component
+        /// </summary>
+        public void DisableSelf()
+        {
+            _Enable = false;
+            goWhiteAndBlack.SetActive(true);
+        }
+    }
+
+}

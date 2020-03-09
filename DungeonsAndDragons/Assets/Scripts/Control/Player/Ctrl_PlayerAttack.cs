@@ -44,6 +44,11 @@ namespace Control {
             Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseBasicAttack;
             Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickA;
             Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickB;
+
+            //register event(Multicast delegation) : player attack inputs by screen buttom
+            Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseBasicAttack;
+            Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseMagicTrickA;
+            Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseMagicTrickB;
         }
 
         private void Start()
@@ -69,10 +74,10 @@ namespace Control {
                 //play basic attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.BasicAttack);
                 //Deal damage to specific enemies
-                if(UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT1))
-                {
+               // if(UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT1))
+               // {
                     AttackEnemyByBasic();
-                }
+               // }
 
             }
         }
@@ -198,22 +203,27 @@ namespace Control {
 
             foreach (GameObject enemyItem in _LisEnemies)
             {
-                //check if enemy is alive
-                if(enemyItem.GetComponent<Ctrl_Enemy>().IsAlive)
+                //make sure this gameobject is still exist
+                if(enemyItem && enemyItem.GetComponent<Ctrl_Enemy>())
                 {
-                    //check enemy and player distance 
-                    float floDistance = Vector3.Distance(this.gameObject.transform.position, enemyItem.transform.position);
-                    //check player rotation(is player facing enemy or is enemy facing player)
-                    //Vector subtraction
-                    Vector3 dir = (enemyItem.transform.position - this.gameObject.transform.position).normalized;
-                    //check player and enemy angle(use vertor point multiplication)
-                    float floAngleDirection = Vector3.Dot(dir, this.gameObject.transform.forward);
-                    //if palyer and enemy has same dirction and within attack range. so player can damage enemy
-                    if (floDistance > 0 && floDistance <= _FloAttackRange)
+                    //check if enemy is alive
+                    if (enemyItem.GetComponent<Ctrl_Enemy>().IsAlive)
                     {
-                        print("close to enemy");
-                        enemyItem.SendMessage("OnDamage", 10, SendMessageOptions.DontRequireReceiver);
+                        //check enemy and player distance 
+                        float floDistance = Vector3.Distance(this.gameObject.transform.position, enemyItem.transform.position);
+                        //check player rotation(is player facing enemy or is enemy facing player)
+                        //Vector subtraction
+                        Vector3 dir = (enemyItem.transform.position - this.gameObject.transform.position).normalized;
+                        //check player and enemy angle(use vertor point multiplication)
+                        float floAngleDirection = Vector3.Dot(dir, this.gameObject.transform.forward);
+                        //if palyer and enemy has same dirction and within attack range. so player can damage enemy
+                        if (floDistance > 0 && floDistance <= _FloAttackRange)
+                        {
+                            print("close to enemy");
+                            enemyItem.SendMessage("OnDamage", Ctrl_PlayerProperty.Instance.GetCurrentATK(), SendMessageOptions.DontRequireReceiver);
+                        }
                     }
+                   
                 }
                
             }

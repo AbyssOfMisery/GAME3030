@@ -29,7 +29,7 @@ namespace Control
         void Start()
         {
 
-            cc = this.GetComponent<CharacterController>();
+            cc = this.gameObject.GetComponent<CharacterController>();
         }
 
         // Update is called once per frame
@@ -62,15 +62,8 @@ namespace Control
                     Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Running);
                 }
 
-             }//if end
-            else
-            {
-               // if(UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT2))
-               // {
-               //     Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
-               // }             
+             }
 
-            }
         }//ControlMoving end         
     }//class end
 }

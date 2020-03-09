@@ -100,17 +100,17 @@ namespace Control {
         void Start()
         {
 
-            cc = GetComponent<CharacterController>();
+            cc = this.gameObject.GetComponent<CharacterController>();
         }
 
 
         // Wait end of frame to manage charactercontroller, because gravity is managed by virtual controller
-        void LateUpdate()
+        void Update()
         {
             if ((ETCInput.GetAxis("Vertical") != 0 || ETCInput.GetAxis("Horizontal") != 0))
             {
                 //anim.CrossFade("Run");
-                if (UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT1))
+                if (UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT3))
                 {
                     Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Running);
                 }
@@ -119,8 +119,10 @@ namespace Control {
             if ((ETCInput.GetAxis("Vertical") == 0 && ETCInput.GetAxis("Horizontal") == 0))
             {
                 //anim.CrossFade("Idle");
-
-                Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
+                if (UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT3))
+                {
+                    Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
+                }
             }
            
         }

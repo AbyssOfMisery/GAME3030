@@ -21,6 +21,7 @@ namespace Control
 {
     public class Ctrl_Enemy : BaseControl
     {
+        public int IntPlayerExp = 5;   //add exp per one enemy killed
         private bool _isAlive = true; //check enemy is alive
         public int _MaxHealth = 20;   //Enemy max health
         private float _CurrentHealth = 0;  //current health
@@ -49,8 +50,9 @@ namespace Control
                 {
                     IsAlive = false;
                     //add exp to player
+                    Ctrl_PlayerProperty.Instance.AddEXP(IntPlayerExp);
                     //add number of kills
-
+                    Ctrl_PlayerProperty.Instance.AddKillNumber(1);
 
                     //destroy this enemy
                     Destroy(this.gameObject);
@@ -65,7 +67,7 @@ namespace Control
         /// <param name="damageValue"></param>
         public void OnDamage(int damageValue)
         {
-            Debug.Log("damaged");
+           // Debug.Log("damaged");
             int damageValues = 0;
 
             damageValues = Mathf.Abs(damageValue);

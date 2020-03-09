@@ -26,7 +26,7 @@ namespace Control
     {
         public static event del_PlayerControlWithStr evePlayerControl;
 
-
+   
         // Update is called once per frame
         void Update()
         {
