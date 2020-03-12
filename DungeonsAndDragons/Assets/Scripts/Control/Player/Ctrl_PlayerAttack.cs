@@ -136,8 +136,9 @@ namespace Control {
             foreach(GameObject goItem in GoEnemies)
             {
                 //check the enemy is alive
-                Ctrl_Enemy enemy = goItem.GetComponent<Ctrl_Enemy>();
-                if (enemy && enemy.IsAlive)
+                Ctrl_Warrior_Property enemy = goItem.GetComponent<Ctrl_Warrior_Property>();
+                //if (enemy && enemy.IsAlive)
+                if (enemy && enemy.CurrentState != EnemyState.Dead)
                 {
                     _LisEnemies.Add(goItem);
                 }
@@ -179,10 +180,7 @@ namespace Control {
                     {
                         //minimum attack range
                         //this.transform.LookAt(_TraNearestEnemy);
-                        this.transform.rotation = 
-                            Quaternion.Slerp(this.transform.rotation,
-                            Quaternion.LookRotation(new Vector3(_TraNearestEnemy.position.x,0,_TraNearestEnemy.position.z)-new Vector3(this.gameObject.transform.position.x,0,this.gameObject.transform.position.z)),
-                            _FloPlayerRoataionSpeed);
+                        UnityHelper.GetInstance().FaceToGoal(this.gameObject.transform,_TraNearestEnemy,_FloPlayerRoataionSpeed);
                     }
          
                 }
@@ -204,10 +202,13 @@ namespace Control {
             foreach (GameObject enemyItem in _LisEnemies)
             {
                 //make sure this gameobject is still exist
-                if(enemyItem && enemyItem.GetComponent<Ctrl_Enemy>())
+       
+               // if (enemyItem && enemyItem.GetComponent<Ctrl_Enemy>())
+                   if (enemyItem && enemyItem.GetComponent<Ctrl_Warrior_Property>())
                 {
                     //check if enemy is alive
-                    if (enemyItem.GetComponent<Ctrl_Enemy>().IsAlive)
+                    //if (enemyItem.GetComponent<Ctrl_Enemy>().IsAlive)
+                    if (enemyItem.GetComponent<Ctrl_Warrior_Property>().CurrentState != EnemyState.Dead)
                     {
                         //check enemy and player distance 
                         float floDistance = Vector3.Distance(this.gameObject.transform.position, enemyItem.transform.position);

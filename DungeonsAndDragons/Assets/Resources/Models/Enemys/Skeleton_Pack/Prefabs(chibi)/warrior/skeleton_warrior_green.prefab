@@ -1061,8 +1061,10 @@ GameObject:
   m_Component:
   - component: {fileID: 400052}
   - component: {fileID: 9500000}
-  - component: {fileID: 3340155716477561168}
   - component: {fileID: 1758299216694371876}
+  - component: {fileID: 1358317382220302417}
+  - component: {fileID: 5126372452783132842}
+  - component: {fileID: 3020053474812124090}
   m_Layer: 0
   m_Name: skeleton_warrior_green
   m_TagString: Untagged
@@ -1108,20 +1110,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3340155716477561168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e0482cd9081b3540adda4b21671840d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IntPlayerExp: 5
-  _MaxHealth: 20
 --- !u!143 &1758299216694371876
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1140,6 +1128,48 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1358317382220302417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94db9f28fbec7cf48b84e04277e279c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IntPlayerExp: 5
+  IntATK: 2
+  IntDEF: 2
+  _MaxHealth: 20
+--- !u!114 &5126372452783132842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9d4ca060c35684b8a2493c79dcb2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FloMoveSpeed: 1
+  floRoataionSpeed: 1
+--- !u!114 &3020053474812124090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053223a8326e2af4181419a278a14627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &100054
 GameObject:
   m_ObjectHideFlags: 0

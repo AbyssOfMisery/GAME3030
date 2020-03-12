@@ -151,6 +151,15 @@ namespace Global{
         Level_10 = 10
     }
 
+    public enum EnemyState
+    {
+        Idle,           //idel
+        Walking,        //walking   
+        Attack,         //attack
+        Hurt,           //hurt
+        Dead            //dead
+    }
+
     #endregion
 
     #region Project Delegate Type

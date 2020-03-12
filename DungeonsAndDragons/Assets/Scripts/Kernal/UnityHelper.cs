@@ -52,6 +52,19 @@ namespace Kernal
             }
         }
 
+        /// <summary>
+        /// rotate to target gameobject
+        /// </summary>
+        /// <param name="self">this gameobject</param>
+        /// <param name="goal">target gameobject</param>
+        /// <param name="floRoataionSpeed">rotation speed</param>
+        public void FaceToGoal(Transform self,Transform goal, float floRoataionSpeed)
+        {
+            self.rotation =
+                  Quaternion.Slerp(self.rotation,
+                  Quaternion.LookRotation(new Vector3(goal.position.x, 0, goal.position.z) - new Vector3(self.position.x, 0, self.position.z)),
+                  floRoataionSpeed);
+        }
     }
 
 }
