@@ -72,8 +72,10 @@ namespace Control
                     //add number of kills
                     Ctrl_PlayerProperty.Instance.AddKillNumber(1);
 
+                    //dead animation
+                    _CurrentState = EnemyState.Dead;
                     //destroy this enemy
-                    Destroy(this.gameObject);
+                    Destroy(this.gameObject,5f);
                 }
             }
 
@@ -87,6 +89,9 @@ namespace Control
         {
             // Debug.Log("damaged");
             int damageValues = 0;
+
+            //hurt animation
+            _CurrentState = EnemyState.Hurt;
 
             damageValues = Mathf.Abs(damageValue);
             if (damageValues > 0)

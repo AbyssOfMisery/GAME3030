@@ -26,6 +26,8 @@ namespace Control
         private Ctrl_Warrior_Property _MyProperty;          //self
         private Ctrl_PlayerProperty _PlayerProperty;        //player
         private Animator _Animator;                         //animator
+        private bool _IsSingleTimes = true;                 //check if dead animation is played
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -38,14 +40,16 @@ namespace Control
                 _PlayerProperty = goPlayer.GetComponent<Ctrl_PlayerProperty>();
             }
 
-            StartCoroutine("PlayWarriorAnimation");
+            StartCoroutine("PlayWarriorAnimation_A");
+
+            StartCoroutine("PlayWarriorAnimation_B");
         }
 
         /// <summary>
-        /// Player enemy warrior animation
+        /// Player enemy warrior animation a
         /// </summary>
         /// <returns></returns>
-        IEnumerator PlayWarriorAnimation()
+        IEnumerator PlayWarriorAnimation_A()
         {
             yield return new WaitForEndOfFrame();
             while(true)
@@ -65,18 +69,42 @@ namespace Control
                         _Animator.SetFloat("MoveSpeed", 0);
                         _Animator.SetBool("Attack",true);
                         break;
+                    default:
+                        break;
+                }
+            }//while end
+        }
+
+
+        /// <summary>
+        /// Player enemy warrior animation b
+        /// </summary>
+        /// <returns></returns>
+        IEnumerator PlayWarriorAnimation_B()
+        {
+            yield return new WaitForEndOfFrame();
+            while (true)
+            {
+                yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT5);
+                switch (_MyProperty.CurrentState)
+                {
                     case EnemyState.Hurt:
                         _Animator.SetTrigger("Hurt");
                         break;
                     case EnemyState.Dead:
-                        _Animator.SetTrigger("Dead");
+                        if(_IsSingleTimes)
+                        {
+                            _IsSingleTimes = false;
+                            _Animator.SetTrigger("Dead");
+                        }
+
                         break;
                     default:
                         break;
                 }
             }//while end
         }
-        
+
 
         /// <summary>
         /// do damage to player(animation event)

@@ -33,12 +33,13 @@ namespace View
         {
             goPlayerDetailInfoPanel.SetActive(!goPlayerDetailInfoPanel.activeSelf); 
         }
-
+//#if UNITY_ANDROID || UNITY_IPHONE
         #region response to player attack
-        public void ResponseBASICATK()
-        {
-            Ctrl_PlayerAttackInputByET.Instance.ResponseATKByBasic();
-        }
+//public void ResponseBASICATK()
+//{
+//    Ctrl_PlayerAttackInputByET.Instance.ResponseATKByBasic();
+//}
+
 
         public void ResponseATKByMagicA()
         {
@@ -60,7 +61,8 @@ namespace View
             Ctrl_PlayerAttackInputByET.Instance.ResponseATKByMagicC();
         }
 
-        #endregion
+ #endregion
+//#endif
     }
 
 }

@@ -24,6 +24,7 @@ using Model;
 namespace Control {
     public class Ctrl_PlayerAttackInputByET : BaseControl
     {
+//#if UNITY_ANDROID || UNITY_IPHONE
         public static Ctrl_PlayerAttackInputByET Instance; // instance
         //event player control animation
         public static event del_PlayerControlWithStr evePlayerControl;
@@ -70,7 +71,7 @@ namespace Control {
         {
             evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_D);
         }
-
+//#endif
     }//class end
 }
 

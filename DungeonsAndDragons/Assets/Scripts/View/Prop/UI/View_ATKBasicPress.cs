@@ -26,6 +26,7 @@ namespace View
 {
     public class View_ATKBasicPress : StateMachineBehaviour
     {
+//#if UNITY_ANDROID || UNITY_IPHONE
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         //{
@@ -60,6 +61,7 @@ namespace View
         //{
         //    // Implement code that sets up animation IK (inverse kinematics)
         //}
+//#endif
     }
 }
 

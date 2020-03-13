@@ -45,10 +45,12 @@ namespace Control {
             Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickA;
             Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickB;
 
+//#if UNITY_ANDROID || UNITY_IPHONE
             //register event(Multicast delegation) : player attack inputs by screen buttom
             Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseBasicAttack;
             Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseMagicTrickA;
             Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseMagicTrickB;
+//#endif
         }
 
         private void Start()
@@ -63,7 +65,7 @@ namespace Control {
             StartCoroutine("PlayerRotationEnemy");
         }
 
-        #region response to attacks signal
+#region response to attacks signal
         /// <summary>
         /// responding basic attack
         /// </summary>
@@ -108,7 +110,7 @@ namespace Control {
                 //Deal damage to specific enemies
             }
         }
-        #endregion
+#endregion
 
         //1. put nearby enemies in a enemy array
         IEnumerator PutNearByEnemyToArray()

@@ -24,6 +24,7 @@ namespace Control
 {
     public class Ctrl_PlayerAttackInputByKey : BaseControl
     {
+//#if UNITY_STANDALONE_WIN ||UNITY_EDITOR
         public static event del_PlayerControlWithStr evePlayerControl;
 
    
@@ -47,6 +48,7 @@ namespace Control
                 evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B);
             }
         }//update end
+//#endif
     }//class end
 }
 

@@ -87,6 +87,49 @@ namespace Control {
                 yield return new WaitForSeconds(0.1f);
                 switch (CurrentActionState)
                 {
+
+                    case PlayerActionState.BasicAttack:
+
+                        /*attack combo*/
+                        switch (_CurATKCombo)
+                        {
+                            case BasicATKCombo.BasicATK1:
+                                _CurATKCombo = BasicATKCombo.BasicATK2;
+                                _animationHandle.CrossFade(Ani_BasicAttack1.name);
+                                yield return new WaitForSeconds(Ani_BasicAttack1.length / 2.5f);
+                                _currentActionState = PlayerActionState.Idle;
+                          
+
+                                break;
+                            case BasicATKCombo.BasicATK2:
+                                _CurATKCombo = BasicATKCombo.BasicATK3;
+                                _animationHandle.CrossFade(Ani_BasicAttack2.name);
+                                yield return new WaitForSeconds(Ani_BasicAttack2.length / 2.5f);
+                                _currentActionState = PlayerActionState.Idle;
+              
+                                break;
+                            case BasicATKCombo.BasicATK3:
+                                _CurATKCombo = BasicATKCombo.BasicATK1;
+                                _animationHandle.CrossFade(Ani_BasicAttack3.name);
+                                yield return new WaitForSeconds(Ani_BasicAttack3.length / 2f);
+                                _currentActionState = PlayerActionState.Idle;
+
+                                break;
+                            default:
+                                break;
+                        }
+                       
+                        break;
+                    case PlayerActionState.MagicTrickA:
+                        _animationHandle.CrossFade(Ani_MagicTrickA.name);
+                        yield return new WaitForSeconds(Ani_MagicTrickA.length);
+                        _currentActionState = PlayerActionState.Idle;
+                        break;
+                    case PlayerActionState.MagicTrickB:
+                        _animationHandle.CrossFade(Ani_MagicTrickB.name);
+                        yield return new WaitForSeconds(Ani_MagicTrickB.length);
+                        _currentActionState = PlayerActionState.Idle;
+                        break;
                     case PlayerActionState.None:
 
                         break;
@@ -96,81 +139,6 @@ namespace Control {
                     case PlayerActionState.Running:
                         _animationHandle.CrossFade(Ani_Running.name);
                         break;
-                    case PlayerActionState.BasicAttack:
-
-                        /*attack combo*/
-                        switch (_CurATKCombo)
-                        {
-                            case BasicATKCombo.BasicATK1:
-                                if (_isSinglePlay)
-                                {
-                                    _isSinglePlay = false;
-                                    _animationHandle.CrossFade(Ani_BasicAttack1.name);
-                                    yield return new WaitForSeconds(Ani_BasicAttack1.length/2.5f);
-                                }
-                                else
-                                {
-                                    StartCoroutine("ReturnOriginalAction");
-                                }
-                                _CurATKCombo = BasicATKCombo.BasicATK2;
-                                break;
-                            case BasicATKCombo.BasicATK2:
-                                if (_isSinglePlay)
-                                {
-                                    _isSinglePlay = false;
-                                    _animationHandle.CrossFade(Ani_BasicAttack2.name);
-                                    yield return new WaitForSeconds(Ani_BasicAttack2.length/2.5f);
-                                }
-                                else
-                                {
-                                    StartCoroutine("ReturnOriginalAction");
-                                }
-                                _CurATKCombo = BasicATKCombo.BasicATK3;
-                                break;
-                            case BasicATKCombo.BasicATK3:
-                                if (_isSinglePlay)
-                                {
-                                    _isSinglePlay = false;
-                                    _animationHandle.CrossFade(Ani_BasicAttack3.name);
-                                    yield return new WaitForSeconds(Ani_BasicAttack3.length/2f);
-                                }
-                                else
-                                {
-                                    StartCoroutine("ReturnOriginalAction");
-                                }
-                                _CurATKCombo = BasicATKCombo.BasicATK1;
-                                break;
-                            default:
-                                break;
-                        }
-                       
-                        break;
-                    case PlayerActionState.MagicTrickA:
-                        
-                        if (_isSinglePlay)
-                        {
-                            _isSinglePlay = false;
-                            _animationHandle.CrossFade(Ani_MagicTrickA.name);
-                            yield return new WaitForSeconds(Ani_MagicTrickA.length);
-                        }
-                        else
-                        {
-                            StartCoroutine("ReturnOriginalAction");
-                        }
-                        break;
-                    case PlayerActionState.MagicTrickB:
-                      
-                        if (_isSinglePlay)
-                        {
-                            _isSinglePlay = false;
-                            _animationHandle.CrossFade(Ani_MagicTrickB.name);
-                            yield return new WaitForSeconds(Ani_MagicTrickB.length);
-                        }
-                        else
-                        {
-                            StartCoroutine("ReturnOriginalAction");
-                        }
-                        break;
                     default:
                         break;
                 }//Switch end
@@ -178,17 +146,6 @@ namespace Control {
             
         }
 
-        /// <summary>
-        /// make animation playable
-        /// </summary>
-        IEnumerator ReturnOriginalAction()
-        {
-            _currentActionState = PlayerActionState.Idle;
-            yield return new WaitForSeconds(0.001f);
-            _isSinglePlay = true;
-        }
-
-        
     }
 }
 

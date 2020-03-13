@@ -1620,6 +1620,7 @@ GameObject:
   - component: {fileID: 6992808903932512865}
   - component: {fileID: 876022945854583863}
   - component: {fileID: 5150829618559482575}
+  - component: {fileID: 1124265054761886449}
   m_Layer: 0
   m_Name: Warrior_player
   m_TagString: Player
@@ -1784,6 +1785,19 @@ MonoBehaviour:
   IntKillNum: 0
   IntGold: 0
   IntDiamond: 0
+--- !u!114 &1124265054761886449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3483459456165393359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e5113c736671d4d9ff5f50b1d91063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
 --- !u!1 &3483459456254357353
 GameObject:
   m_ObjectHideFlags: 0
