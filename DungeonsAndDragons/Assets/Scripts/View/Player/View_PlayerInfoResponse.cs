@@ -19,7 +19,6 @@ using UnityEngine;
 
 using Control;
 
-
 namespace View
 {
     public class View_PlayerInfoResponse : MonoBehaviour
@@ -33,6 +32,11 @@ namespace View
         {
             goPlayerDetailInfoPanel.SetActive(!goPlayerDetailInfoPanel.activeSelf); 
         }
+
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
 //#if UNITY_ANDROID || UNITY_IPHONE
         #region response to player attack
 //public void ResponseBASICATK()
@@ -44,6 +48,7 @@ namespace View
         public void ResponseATKByMagicA()
         {
             Ctrl_PlayerAttackInputByET.Instance.ResponseATKByMagicA();
+            
         }
 
         public void ResponseATKByMagicB()

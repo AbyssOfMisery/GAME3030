@@ -1700,8 +1700,8 @@ MonoBehaviour:
   Ani_idle: {fileID: 7400000, guid: fcad2351825f155458374e44b77c9224, type: 3}
   Ani_Running: {fileID: 7400000, guid: 630ba0e812276d64c9535693f5119152, type: 3}
   Ani_BasicAttack1: {fileID: 7400000, guid: 2162b737ad9659e48bbd03d6a92e44af, type: 3}
-  Ani_BasicAttack2: {fileID: 7400000, guid: 032f02be750774145a7973c0d3444947, type: 3}
-  Ani_BasicAttack3: {fileID: 7400000, guid: 46b5b8d468b1359499aa3acfe03898b7, type: 3}
+  Ani_BasicAttack2: {fileID: 7400000, guid: 46b5b8d468b1359499aa3acfe03898b7, type: 3}
+  Ani_BasicAttack3: {fileID: 7400000, guid: 032f02be750774145a7973c0d3444947, type: 3}
   Ani_MagicTrickA: {fileID: 7400000, guid: 8a1c1539bf0bcf64193967555229c0d7, type: 3}
   Ani_MagicTrickB: {fileID: 7400000, guid: 4f20f7b31cac0554a85f5066cb96ef7f, type: 3}
 --- !u!114 &4111107550962256731

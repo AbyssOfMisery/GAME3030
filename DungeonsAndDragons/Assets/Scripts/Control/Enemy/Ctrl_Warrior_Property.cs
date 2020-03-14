@@ -20,7 +20,7 @@ using Kernal;
 
 namespace Control
 {
-    public class Ctrl_Warrior_Property : MonoBehaviour
+    public class Ctrl_Warrior_Property : BaseControl
     {
         public int IntPlayerExp = 5;   //add exp per one enemy killed
 

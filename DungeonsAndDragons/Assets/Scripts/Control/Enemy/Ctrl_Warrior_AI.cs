@@ -20,10 +20,15 @@ using Global;
 using Kernal;
 
 namespace Control {
-    public class Ctrl_Warrior_AI : MonoBehaviour
+    public class Ctrl_Warrior_AI : BaseControl
     {
         public float FloMoveSpeed = 1.0f;  //moving speed
         public float floRoataionSpeed = 1.0f; //rotaion speed
+        public float FloAttackDistance = 2f;    //attack range
+        public float FloatCordonDistance = 5f;     //alert range
+
+        public float FloThinkInterval = 1f;         //run program 1f per once
+
         private GameObject goPlayer;        //player
 
         private Transform _MyTransform;     //enemy position
@@ -43,7 +48,13 @@ namespace Control {
             _MyProperty = this.gameObject.GetComponent<Ctrl_Warrior_Property>();
 
             //get character contronller
-            _cc = this.gameObject.GetComponent<CharacterController>(); 
+            _cc = this.gameObject.GetComponent<CharacterController>();
+
+            /* get random property number for each enemy*/
+            FloMoveSpeed = UnityHelper.GetInstance().GetRandomNum(1,2);
+            FloAttackDistance = UnityHelper.GetInstance().GetRandomNum(1, 3);
+            FloatCordonDistance = UnityHelper.GetInstance().GetRandomNum(4, 15);
+            FloThinkInterval = UnityHelper.GetInstance().GetRandomNum(1, 3);
 
             //use ThinkProcess
             StartCoroutine("ThinkProcess");
@@ -60,7 +71,7 @@ namespace Control {
             yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
             while (true)
             {
-                yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
+                yield return new WaitForSeconds(FloThinkInterval);
                 if(_MyProperty && _MyProperty.CurrentState != EnemyState.Dead)
                 {
                     //get player position
@@ -70,13 +81,13 @@ namespace Control {
                     float floDistance = Vector3.Distance(VecPlayer, _MyTransform.position);
 
                     //check distence
-                    if (floDistance < 2)
+                    if (floDistance < FloAttackDistance)
                     {
                         //attack state
                         _MyProperty.CurrentState = EnemyState.Attack;
 
                     }
-                    else if (floDistance < 5)
+                    else if (floDistance < FloatCordonDistance)
                     {
                         //alert (Chase)
                         _MyProperty.CurrentState = EnemyState.Walking;
@@ -100,7 +111,7 @@ namespace Control {
             yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
             while (true)
             {
-                yield return new WaitForSeconds(0.02f);
+                yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT02);
                 if (_MyProperty && _MyProperty.CurrentState != EnemyState.Dead)
                 {
                     //face to player

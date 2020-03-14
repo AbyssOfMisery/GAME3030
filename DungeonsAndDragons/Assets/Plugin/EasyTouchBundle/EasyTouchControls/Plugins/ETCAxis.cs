@@ -229,8 +229,8 @@ public class ETCAxis {
 	}
 	
 	public void DoDirectAction(){
-	
-		if (directTransform){
+
+        if (directTransform){
 			Vector3 localAxis = GetInfluencedAxis();
 
 			switch (  directAction){

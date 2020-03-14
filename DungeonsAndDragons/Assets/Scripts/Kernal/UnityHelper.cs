@@ -65,6 +65,24 @@ namespace Kernal
                   Quaternion.LookRotation(new Vector3(goal.position.x, 0, goal.position.z) - new Vector3(self.position.x, 0, self.position.z)),
                   floRoataionSpeed);
         }
+
+        /// <summary>
+        /// get randon number in range
+        /// </summary>
+        /// <param name="minNum"></param>
+        /// <param name="maxNum"></param>
+        /// <returns></returns>
+        public int GetRandomNum(int minNum, int maxNum)
+        {
+            int randomNumResult = 0;
+            if(minNum == maxNum)
+            {
+                randomNumResult = minNum;
+            }
+            randomNumResult = Random.Range(minNum, maxNum+1);
+
+            return randomNumResult;
+        }
     }
 
 }

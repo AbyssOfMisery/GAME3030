@@ -40,6 +40,7 @@ namespace Control {
         public void ResponseATKByBasic()
         {
            evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_BASIC);
+
         }
         /// <summary>
         /// response to magic a

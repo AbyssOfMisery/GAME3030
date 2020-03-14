@@ -37,10 +37,9 @@ namespace Control {
         // Wait end of frame to manage charactercontroller, because gravity is managed by virtual controller
         void Update()
         {
-            if (Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Idle ||
-                Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Running)
-            {
-                if ((ETCInput.GetAxis("Vertical") != 0 || ETCInput.GetAxis("Horizontal") != 0))
+
+                if ((ETCInput.GetAxis("Vertical") != 0 || ETCInput.GetAxis("Horizontal") != 0) && (Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Idle ||
+                Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Running))
                 {
                     //anim.CrossFade("Run");
                     if (UnityHelper.GetInstance().GetSmallTime(GlobalParameter.INTERVAL_TIME_0DOT3))
@@ -57,12 +56,7 @@ namespace Control {
                         Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.Idle);
                     }
                 }
-            }
-            else
-            {
-                return;
-            }
-               
+
            
         }
 //#endif

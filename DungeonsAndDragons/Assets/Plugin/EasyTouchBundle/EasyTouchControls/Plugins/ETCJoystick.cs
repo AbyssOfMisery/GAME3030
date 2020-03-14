@@ -11,6 +11,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using Global;
+using Control;
+
 
 [System.Serializable]
 public class ETCJoystick : ETCBase,IPointerEnterHandler,IDragHandler, IBeginDragHandler, IPointerDownHandler, IPointerUpHandler {
@@ -416,164 +419,211 @@ public class ETCJoystick : ETCBase,IPointerEnterHandler,IDragHandler, IBeginDrag
 
 	#region Joystick Update
 	protected override void DoActionBeforeEndOfFrame (){
-		axisX.DoGravity();
-		axisY.DoGravity();
+        if ((Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Idle ||
+        Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Running))
+        {
+            axisX.DoGravity();
+            axisY.DoGravity();
+        }
 	}
 
-	private void UpdateJoystick(){
+    private void UpdateJoystick()
+    {
 
-		#region Unity axes
-		if (enableKeySimulation && !isOnTouch && _activated && _visible ){
+        #region Unity axes
+        if (enableKeySimulation && !isOnTouch && _activated && _visible)
+        {
 
-			float x = Input.GetAxis(axisX.unityAxis);
-			float y= Input.GetAxis(axisY.unityAxis);
+            float x = Input.GetAxis(axisX.unityAxis);
+            float y = Input.GetAxis(axisY.unityAxis);
 
-			if (!isNoReturnThumb){
-				thumb.localPosition = Vector2.zero;
-			}
+            if (!isNoReturnThumb)
+            {
+                thumb.localPosition = Vector2.zero;
+            }
 
-			isOnDrag = false;
+            isOnDrag = false;
 
-			if (x!=0){
-				isOnDrag = true;
-				thumb.localPosition = new Vector2(GetRadius()*x, thumb.localPosition.y);
-			}
+            if (x != 0)
+            {
+                isOnDrag = true;
+                thumb.localPosition = new Vector2(GetRadius() * x, thumb.localPosition.y);
+            }
 
-			if (y!=0){
-				isOnDrag = true;
-				thumb.localPosition = new Vector2(thumb.localPosition.x,GetRadius()*y );
-			}
+            if (y != 0)
+            {
+                isOnDrag = true;
+                thumb.localPosition = new Vector2(thumb.localPosition.x, GetRadius() * y);
+            }
 
-			thumbPosition = thumb.localPosition;
-		}
-		#endregion
+            thumbPosition = thumb.localPosition;
+        }
+        #endregion
 
-		// Computejoystick value
-		OldTmpAxis.x = axisX.axisValue;
-		OldTmpAxis.y = axisY.axisValue;
+        // Computejoystick value
+        OldTmpAxis.x = axisX.axisValue;
+        OldTmpAxis.y = axisY.axisValue;
 
-		tmpAxis = thumbPosition / GetRadius();
+        tmpAxis = thumbPosition / GetRadius();
 
-		axisX.UpdateAxis( tmpAxis.x,isOnDrag, ETCBase.ControlType.Joystick,true);
-		axisY.UpdateAxis( tmpAxis.y,isOnDrag, ETCBase.ControlType.Joystick,true);
+        axisX.UpdateAxis(tmpAxis.x, isOnDrag, ETCBase.ControlType.Joystick, true);
+        axisY.UpdateAxis(tmpAxis.y, isOnDrag, ETCBase.ControlType.Joystick, true);
+        if ((Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Idle ||
+           Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Running))
+        {
+            #region Move event
 
-		#region Move event
-		if ((axisX.axisValue!=0 ||  axisY.axisValue!=0 ) && OldTmpAxis == Vector2.zero){
-			onMoveStart.Invoke();
-		}
-		if (axisX.axisValue!=0 ||  axisY.axisValue!=0 ){
+            if ((axisX.axisValue != 0 || axisY.axisValue != 0) && OldTmpAxis == Vector2.zero)
+            {
+                onMoveStart.Invoke();
+            }
 
-			if (!isTurnAndMove){
-				// X axis
-				if( axisX.actionOn == ETCAxis.ActionOn.Down && (axisX.axisState == ETCAxis.AxisState.DownLeft || axisX.axisState == ETCAxis.AxisState.DownRight)){
-					axisX.DoDirectAction();
-				}
-				else if (axisX.actionOn == ETCAxis.ActionOn.Press){
-					axisX.DoDirectAction();
-				}
+            if (axisX.axisValue != 0 || axisY.axisValue != 0)
+            {
 
-				// Y axis
-				if( axisY.actionOn == ETCAxis.ActionOn.Down && (axisY.axisState == ETCAxis.AxisState.DownUp || axisY.axisState == ETCAxis.AxisState.DownDown)){
-					axisY.DoDirectAction();
-				}
-				else if (axisY.actionOn == ETCAxis.ActionOn.Press){
-					axisY.DoDirectAction();
-				}
-			}
-			else{
-				DoTurnAndMove();
-			}
-			onMove.Invoke( new Vector2(axisX.axisValue,axisY.axisValue));
-			onMoveSpeed.Invoke( new Vector2(axisX.axisSpeedValue,axisY.axisSpeedValue));
-		}
-		else if (axisX.axisValue==0 &&  axisY.axisValue==0  && OldTmpAxis!=Vector2.zero) {
-			onMoveEnd.Invoke();
-		}		
+                if (!isTurnAndMove)
+                {
+                    // X axis
+                    if (axisX.actionOn == ETCAxis.ActionOn.Down && (axisX.axisState == ETCAxis.AxisState.DownLeft || axisX.axisState == ETCAxis.AxisState.DownRight))
+                    {
+                        axisX.DoDirectAction();
+                    }
+                    else if (axisX.actionOn == ETCAxis.ActionOn.Press)
+                    {
+                        axisX.DoDirectAction();
+                    }
 
-		if (!isTurnAndMove){
-			if (axisX.axisValue==0 &&  axisX.directCharacterController ){
-				if (!axisX.directCharacterController.isGrounded && axisX.isLockinJump)
-					axisX.DoDirectAction();
-			} 
+                    // Y axis
+                    if (axisY.actionOn == ETCAxis.ActionOn.Down && (axisY.axisState == ETCAxis.AxisState.DownUp || axisY.axisState == ETCAxis.AxisState.DownDown))
+                    {
+                        axisY.DoDirectAction();
+                    }
+                    else if (axisY.actionOn == ETCAxis.ActionOn.Press)
+                    {
+                        axisY.DoDirectAction();
+                    }
+                }
+                else
+                {
+                    DoTurnAndMove();
+                }
+                onMove.Invoke(new Vector2(axisX.axisValue, axisY.axisValue));
+                onMoveSpeed.Invoke(new Vector2(axisX.axisSpeedValue, axisY.axisSpeedValue));
+            }
+            else if (axisX.axisValue == 0 && axisY.axisValue == 0 && OldTmpAxis != Vector2.zero)
+            {
+                onMoveEnd.Invoke();
+            }
 
-			if (axisY.axisValue==0 &&  axisY.directCharacterController ){
-				if (!axisY.directCharacterController.isGrounded && axisY.isLockinJump)
-					axisY.DoDirectAction();
-			}
-		}
-		else{
-			if ((axisX.axisValue==0 && axisY.axisValue==0) &&  axisX.directCharacterController ){
-				if (!axisX.directCharacterController.isGrounded && tmLockInJump)
-					DoTurnAndMove();
-			}
-		}
+            if (!isTurnAndMove)
+            {
+                if (axisX.axisValue == 0 && axisX.directCharacterController)
+                {
+                    if (!axisX.directCharacterController.isGrounded && axisX.isLockinJump)
+                        axisX.DoDirectAction();
+                }
 
-		#endregion
+                if (axisY.axisValue == 0 && axisY.directCharacterController)
+                {
+                    if (!axisY.directCharacterController.isGrounded && axisY.isLockinJump)
+                        axisY.DoDirectAction();
+                }
+            }
+            else
+            {
+                if ((axisX.axisValue == 0 && axisY.axisValue == 0) && axisX.directCharacterController)
+                {
+                    if (!axisX.directCharacterController.isGrounded && tmLockInJump)
+                        DoTurnAndMove();
+                }
+            }
 
 
-		#region Down & press event
-		float coef =1;
-		if (axisX.invertedAxis) coef = -1;
-		if (Mathf.Abs(OldTmpAxis.x)< axisX.axisThreshold && Mathf.Abs(axisX.axisValue)>=axisX.axisThreshold){
 
-			if (axisX.axisValue*coef >0){
-				axisX.axisState = ETCAxis.AxisState.DownRight;
-				OnDownRight.Invoke();
-			}
-			else if (axisX.axisValue*coef<0){
-				axisX.axisState = ETCAxis.AxisState.DownLeft;
-				OnDownLeft.Invoke();
-			}
-			else{
-				axisX.axisState = ETCAxis.AxisState.None;
-			}
-		}
-		else if (axisX.axisState!= ETCAxis.AxisState.None) {
-			if (axisX.axisValue*coef>0){
-				axisX.axisState = ETCAxis.AxisState.PressRight;
-				OnPressRight.Invoke();
-			}
-			else if (axisX.axisValue*coef<0){
-				axisX.axisState = ETCAxis.AxisState.PressLeft;
-				OnPressLeft.Invoke();
-			}
-			else{
-				axisX.axisState = ETCAxis.AxisState.None;
-			}
-		}
 
-		coef =1;
-		if (axisY.invertedAxis) coef = -1;
-		if (Mathf.Abs(OldTmpAxis.y)< axisY.axisThreshold && Mathf.Abs(axisY.axisValue)>=axisY.axisThreshold  ){
-			
-			if (axisY.axisValue*coef>0){
-				axisY.axisState = ETCAxis.AxisState.DownUp;
-				OnDownUp.Invoke();
-			}
-			else if (axisY.axisValue*coef<0){
-				axisY.axisState = ETCAxis.AxisState.DownDown;
-				OnDownDown.Invoke();
-			}
-			else{
-				axisY.axisState = ETCAxis.AxisState.None;
-			}
-		}
-		else if (axisY.axisState!= ETCAxis.AxisState.None) {
-			if (axisY.axisValue*coef>0){
-				axisY.axisState = ETCAxis.AxisState.PressUp;
-				OnPressUp.Invoke();
-			}
-			else if (axisY.axisValue*coef<0){
-				axisY.axisState = ETCAxis.AxisState.PressDown;
-				OnPressDown.Invoke();
-			}
-			else{
-				axisY.axisState = ETCAxis.AxisState.None;
-			}
-		}
-		#endregion
+            #endregion
 
-	}		
+
+            #region Down & press event
+            float coef = 1;
+            if (axisX.invertedAxis) coef = -1;
+            if (Mathf.Abs(OldTmpAxis.x) < axisX.axisThreshold && Mathf.Abs(axisX.axisValue) >= axisX.axisThreshold)
+            {
+
+                if (axisX.axisValue * coef > 0)
+                {
+                    axisX.axisState = ETCAxis.AxisState.DownRight;
+                    OnDownRight.Invoke();
+                }
+                else if (axisX.axisValue * coef < 0)
+                {
+                    axisX.axisState = ETCAxis.AxisState.DownLeft;
+                    OnDownLeft.Invoke();
+                }
+                else
+                {
+                    axisX.axisState = ETCAxis.AxisState.None;
+                }
+            }
+            else if (axisX.axisState != ETCAxis.AxisState.None)
+            {
+                if (axisX.axisValue * coef > 0)
+                {
+                    axisX.axisState = ETCAxis.AxisState.PressRight;
+                    OnPressRight.Invoke();
+                }
+                else if (axisX.axisValue * coef < 0)
+                {
+                    axisX.axisState = ETCAxis.AxisState.PressLeft;
+                    OnPressLeft.Invoke();
+                }
+                else
+                {
+                    axisX.axisState = ETCAxis.AxisState.None;
+                }
+            }
+
+            coef = 1;
+            if (axisY.invertedAxis) coef = -1;
+            if (Mathf.Abs(OldTmpAxis.y) < axisY.axisThreshold && Mathf.Abs(axisY.axisValue) >= axisY.axisThreshold)
+            {
+
+                if (axisY.axisValue * coef > 0)
+                {
+                    axisY.axisState = ETCAxis.AxisState.DownUp;
+                    OnDownUp.Invoke();
+                }
+                else if (axisY.axisValue * coef < 0)
+                {
+                    axisY.axisState = ETCAxis.AxisState.DownDown;
+                    OnDownDown.Invoke();
+                }
+                else
+                {
+                    axisY.axisState = ETCAxis.AxisState.None;
+                }
+            }
+            else if (axisY.axisState != ETCAxis.AxisState.None)
+            {
+                if (axisY.axisValue * coef > 0)
+                {
+                    axisY.axisState = ETCAxis.AxisState.PressUp;
+                    OnPressUp.Invoke();
+                }
+                else if (axisY.axisValue * coef < 0)
+                {
+                    axisY.axisState = ETCAxis.AxisState.PressDown;
+                    OnPressDown.Invoke();
+                }
+                else
+                {
+                    axisY.axisState = ETCAxis.AxisState.None;
+                }
+            }
+            #endregion
+
+        }
+    }
 	#endregion
 
 	#region Touch manager
@@ -740,6 +790,7 @@ public class ETCJoystick : ETCBase,IPointerEnterHandler,IDragHandler, IBeginDrag
 
 
 	private void DoTurnAndMove(){
+
 
 		float angle =Mathf.Atan2( axisX.axisValue,axisY.axisValue ) * Mathf.Rad2Deg;
 		float speed = tmMoveCurve.Evaluate( new Vector2(axisX.axisValue,axisY.axisValue).magnitude) * tmSpeed;

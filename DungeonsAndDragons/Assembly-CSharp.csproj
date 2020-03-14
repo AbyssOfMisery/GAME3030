@@ -210,6 +210,7 @@
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerMovingCtrlByKey.cs" />
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerMovingScript.cs" />
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerProperty.cs" />
+    <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_LevelOneScenes.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_LogonScenes.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_StartScenes.cs" />
     <Compile Include="Assets\Scripts\Global\ConvertEnumToString.cs" />
@@ -228,6 +229,7 @@
     <Compile Include="Assets\Scripts\View\Player\View_PlayerInfoResponse.cs" />
     <Compile Include="Assets\Scripts\View\Prop\UI\View_ATKBasicPress.cs" />
     <Compile Include="Assets\Scripts\View\Prop\UI\View_ATKButtomCDEffect.cs" />
+    <Compile Include="Assets\Scripts\View\Scenes\View_LevelOneScenes.cs" />
     <Compile Include="Assets\Scripts\View\Scenes\View_LoadingScenes.cs" />
     <Compile Include="Assets\Scripts\View\Scenes\View_LogonScenes.cs" />
     <Compile Include="Assets\Scripts\View\Scenes\View_StartScenes.cs" />

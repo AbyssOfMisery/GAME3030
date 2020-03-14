@@ -74,6 +74,7 @@ namespace Global{
         public const string BUTTON_MAGIC_B = "MagicTrickBBtn";
 
         //Const wait time
+        public const float INTERVAL_TIME_0DOT02 = 0.02f;
         public const float INTERVAL_TIME_0DOT1 = 0.1f;
         public const float INTERVAL_TIME_0DOT2 = 0.2f;
         public const float INTERVAL_TIME_0DOT3 = 0.3f;
