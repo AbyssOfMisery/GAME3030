@@ -44,15 +44,20 @@ namespace Control
             yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT5);
             for (int i = 1; i <= createEnemies; ++i)
             {
+                int randomNumber = UnityHelper.GetInstance().GetRandomNum(0, 7);
                 yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
-                int randomNumber = UnityHelper.GetInstance().GetRandomNum(1,8);
+                
                 //TraSpawnEnemyPosition_1 = new Transform[randomNumber];
-                GameObject goEnemy = Resources.Load("Prefabs/Enemy/skeleton_warrior_green",typeof(GameObject)) as GameObject;
-                goEnemy.transform.position = new Vector3(TraSpawnEnemyPosition_1[randomNumber].position.x, TraSpawnEnemyPosition_1[randomNumber].position.y, TraSpawnEnemyPosition_1[randomNumber].position.z);
-                GameObject goEnemyClone = GameObject.Instantiate(goEnemy);
-                //enemy position
- 
-                goEnemyClone.transform.parent = TraSpawnEnemyPosition_1[randomNumber].parent;
+                //GameObject goEnemy = Resources.Load("Prefabs/Enemy/skeleton_warrior_green",typeof(GameObject)) as GameObject;
+                //goEnemy.transform.position = new Vector3(TraSpawnEnemyPosition_1[randomNumber].position.x, TraSpawnEnemyPosition_1[randomNumber].position.y, TraSpawnEnemyPosition_1[randomNumber].position.z);
+                //GameObject goEnemyClone = GameObject.Instantiate(goEnemy);
+
+                //load enemy
+                GameObject goEnemyClone = ResourceMgr.GetInstance().LoadAsset("Prefabs/Enemy/skeleton_warrior_green",true, TraSpawnEnemyPosition_1[randomNumber]);
+               
+
+                //Debug.Log(goEnemyClone.transform.position);
+               
                 
           
             }

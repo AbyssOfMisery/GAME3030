@@ -124,7 +124,11 @@ namespace Control {
                             Vector3 v = Vector3.ClampMagnitude((goPlayer.transform.position-_MyTransform.position), FloMoveSpeed * Time.deltaTime);
                             _cc.Move(v);
                             break;
-
+                        //when enemy is hurted they will move one step backward
+                        case EnemyState.Hurt:
+                            Vector3 vec = transform.forward * FloMoveSpeed * Time.deltaTime; ;
+                            _cc.Move(-vec);
+                            break;
                         default:
 
                             break;

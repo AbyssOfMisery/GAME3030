@@ -218,6 +218,7 @@
     <Compile Include="Assets\Scripts\Global\GlobalParaMgr.cs" />
     <Compile Include="Assets\Scripts\Global\GlobalParameter.cs" />
     <Compile Include="Assets\Scripts\Kernal\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Kernal\ResourceMgr.cs" />
     <Compile Include="Assets\Scripts\Kernal\UnityHelper.cs" />
     <Compile Include="Assets\Scripts\Model\Player\PlayerExtenalData.cs" />
     <Compile Include="Assets\Scripts\Model\Player\PlayerExtenalDataProxy.cs" />
