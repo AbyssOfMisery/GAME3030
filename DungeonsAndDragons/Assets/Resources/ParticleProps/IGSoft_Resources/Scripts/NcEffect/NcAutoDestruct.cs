@@ -171,6 +171,7 @@ public class NcAutoDestruct : NcEffectBehaviour
 
 	void AutoDestruct()
 	{
-		DestroyObject(gameObject);
+        //DestroyObject(gameObject);
+        Object.Destroy(gameObject);
 	}
 }

@@ -32,25 +32,31 @@ namespace Control {
         public float _FloPlayerRoataionSpeed = 1.0f; //rotation speed
         public float _FloAttackRange = 2.0f; //attack range
 
+        //about magic values
+        public float FloAttackAreaByMagicA = 4f; //magic a attack distance
+        public float FloAttackAreaByMagicB = 8f; //magic b attack distance
+        public int IntAttackPowerMultipleByMagicA = 5;  //increase attack damage 
+        public int IntAttackPowerMultipleByMagicB = 20;  //increase attack damage 
+
         private List<GameObject> _LisEnemies; //list of enemies
         private Transform _TraNearestEnemy;//get closest enemy postion
         private float _FloMaxDistance = 10.0f;      //enemy and player the maximum distance
       
 
 
+
         private void Awake()
         {
-            //register event(Multicast delegation) : player attack inputs
-            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseBasicAttack;
-            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickA;
-            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickB;
-
 //#if UNITY_ANDROID || UNITY_IPHONE
             //register event(Multicast delegation) : player attack inputs by screen buttom
             Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseBasicAttack;
             Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseMagicTrickA;
             Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseMagicTrickB;
 //#endif
+            //register event(Multicast delegation) : player attack inputs
+            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseBasicAttack;
+            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickA;
+            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickB;
         }
 
         private void Start()
@@ -94,6 +100,9 @@ namespace Control {
                 //play MagicTrickA attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
                 //Deal damage to specific enemies
+                AttackEnemyByMagicA();
+             
+
             }
         }
 
@@ -108,6 +117,8 @@ namespace Control {
                 //play MagicTrickB attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
                 //Deal damage to specific enemies
+                AttackEnemyByMagicB();
+                
             }
         }
 #endregion
@@ -138,7 +149,7 @@ namespace Control {
             foreach(GameObject goItem in GoEnemies)
             {
                 //check the enemy is alive
-                Ctrl_Warrior_Property enemy = goItem.GetComponent<Ctrl_Warrior_Property>();
+                Ctrl_BaseEnemyProperty enemy = goItem.GetComponent<Ctrl_BaseEnemyProperty>();
                 //if (enemy && enemy.IsAlive)
                 if (enemy && enemy.CurrentState != EnemyState.Dead)
                 {
@@ -194,44 +205,24 @@ namespace Control {
         /// </summary>
         private void AttackEnemyByBasic()
         {
-            //Parameter check
-            if(_LisEnemies == null || _LisEnemies.Count<=0)
-            {
-                _TraNearestEnemy = null;
-                return;
-            }
-
-            foreach (GameObject enemyItem in _LisEnemies)
-            {
-                //make sure this gameobject is still exist
-       
-               // if (enemyItem && enemyItem.GetComponent<Ctrl_Enemy>())
-                   if (enemyItem && enemyItem.GetComponent<Ctrl_Warrior_Property>())
-                {
-                    //check if enemy is alive
-                    //if (enemyItem.GetComponent<Ctrl_Enemy>().IsAlive)
-                    if (enemyItem.GetComponent<Ctrl_Warrior_Property>().CurrentState != EnemyState.Dead)
-                    {
-                        //check enemy and player distance 
-                        float floDistance = Vector3.Distance(this.gameObject.transform.position, enemyItem.transform.position);
-                        //check player rotation(is player facing enemy or is enemy facing player)
-                        //Vector subtraction
-                        Vector3 dir = (enemyItem.transform.position - this.gameObject.transform.position).normalized;
-                        //check player and enemy angle(use vertor point multiplication)
-                        float floAngleDirection = Vector3.Dot(dir, this.gameObject.transform.forward);
-                        //if palyer and enemy has same dirction and within attack range. so player can damage enemy
-                        if (floDistance > 0 && floDistance <= _FloAttackRange)
-                        {
-                            print("close to enemy");
-                            enemyItem.SendMessage("OnDamage", Ctrl_PlayerProperty.Instance.GetCurrentATK(), SendMessageOptions.DontRequireReceiver);
-                        }
-                    }
-                   
-                }
-               
-            }
+            base.AttackEnemy(_LisEnemies, _TraNearestEnemy, _FloAttackRange, 1);
         }
 
+        /// <summary>
+        /// magic a
+        /// </summary>
+        private void AttackEnemyByMagicA()
+        {
+            base.AttackEnemy(_LisEnemies, _TraNearestEnemy, FloAttackAreaByMagicA, IntAttackPowerMultipleByMagicA,false);
+        }
+
+        /// <summary>
+        /// magic b
+        /// </summary>
+        private void AttackEnemyByMagicB()
+        {
+            base.AttackEnemy(_LisEnemies, _TraNearestEnemy, FloAttackAreaByMagicB, IntAttackPowerMultipleByMagicB);
+        }
     }//class end
 }
 

@@ -51,8 +51,10 @@ public class SSAOEffect : MonoBehaviour
 	
 	void Start()
 	{
-		if (!SystemInfo.supportsImageEffects || !SystemInfo.SupportsRenderTextureFormat (RenderTextureFormat.Depth))
-		{
+#pragma warning disable CS0618 // Type or member is obsolete
+        if (!SystemInfo.supportsImageEffects || !SystemInfo.SupportsRenderTextureFormat (RenderTextureFormat.Depth))
+#pragma warning restore CS0618 // Type or member is obsolete
+        {
 			m_Supported = false;
 			enabled = false;
 			return;

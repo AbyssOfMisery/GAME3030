@@ -36,11 +36,11 @@ namespace Control {
         public AnimationClip Ani_MagicTrickA;  //ultimate a
         public AnimationClip Ani_MagicTrickB;  //ultimate b
 
+        //running audio clip
+        public AudioClip AcPlayerRunning;
+
         //Animation handle
         private Animation _animationHandle;
-
-        //play animation once
-        private bool _isSinglePlay = true;
 
         //animation combo
         private BasicATKCombo _CurATKCombo = BasicATKCombo.BasicATK1;
@@ -96,7 +96,8 @@ namespace Control {
                             case BasicATKCombo.BasicATK1:
                                 _CurATKCombo = BasicATKCombo.BasicATK2;
                                 _animationHandle.CrossFade(Ani_BasicAttack1.name);
-                                yield return new WaitForSeconds(Ani_BasicAttack1.length / 2.5f);
+                                AudioManager.PlayAudioEffectA("BeiJi_DaoJian_3");
+                                yield return new WaitForSecondsRealtime(Ani_BasicAttack1.length / 2.5f);
                                 _currentActionState = PlayerActionState.Idle;
                           
 
@@ -104,14 +105,16 @@ namespace Control {
                             case BasicATKCombo.BasicATK2:
                                 _CurATKCombo = BasicATKCombo.BasicATK3;
                                 _animationHandle.CrossFade(Ani_BasicAttack2.name);
-                                yield return new WaitForSeconds(Ani_BasicAttack2.length / 2.5f);
+                                AudioManager.PlayAudioEffectA("BeiJi_DaoJian_2");
+                                yield return new WaitForSecondsRealtime(Ani_BasicAttack2.length / 2.5f);
                                 _currentActionState = PlayerActionState.Idle;
               
                                 break;
                             case BasicATKCombo.BasicATK3:
                                 _CurATKCombo = BasicATKCombo.BasicATK1;
                                 _animationHandle.CrossFade(Ani_BasicAttack3.name);
-                                yield return new WaitForSeconds(Ani_BasicAttack3.length / 2f);
+                                AudioManager.PlayAudioEffectA("BeiJi_DaoJian_1");
+                                yield return new WaitForSecondsRealtime(Ani_BasicAttack3.length / 2f);
                                 _currentActionState = PlayerActionState.Idle;
 
                                 break;
@@ -122,12 +125,14 @@ namespace Control {
                         break;
                     case PlayerActionState.MagicTrickA:
                         _animationHandle.CrossFade(Ani_MagicTrickA.name);
-                        yield return new WaitForSeconds(Ani_MagicTrickA.length);
+                        AudioManager.PlayAudioEffectA("Player_MagicA");
+                        yield return new WaitForSecondsRealtime(Ani_MagicTrickA.length);
                         _currentActionState = PlayerActionState.Idle;
                         break;
                     case PlayerActionState.MagicTrickB:
                         _animationHandle.CrossFade(Ani_MagicTrickB.name);
-                        yield return new WaitForSeconds(Ani_MagicTrickB.length);
+                        AudioManager.PlayAudioEffectA("Player_MagicB");
+                        yield return new WaitForSecondsRealtime(Ani_MagicTrickB.length);
                         _currentActionState = PlayerActionState.Idle;
                         break;
                     case PlayerActionState.None:
@@ -138,12 +143,43 @@ namespace Control {
                         break;
                     case PlayerActionState.Running:
                         _animationHandle.CrossFade(Ani_Running.name);
+
+                        //running audio effect
+                        AudioManager.PlayAudioEffectB(AcPlayerRunning);
+                        yield return new WaitForSeconds(AcPlayerRunning.length);
                         break;
                     default:
                         break;
                 }//Switch end
             }
             
+        }
+
+
+        /// <summary>
+        /// partical effect magic A
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerator AnimationEvent_PlayerMagicA()
+        {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
+            GameObject goMagicA = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_MagicA(bruceSkill)", true,this.transform);
+
+            //play audio clip
+
+        }
+
+        /// <summary>
+        /// partical effect magic B
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerator AnimationEvent_PlayerMagicB()
+        {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
+            GameObject goMagicA = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_MagicB(groundBrokeRed)", true, this.transform);
+            goMagicA.transform.position = transform.position + transform.TransformDirection(new Vector3(0f, 0f, 5f));
+            //play audio clip
+
         }
 
     }

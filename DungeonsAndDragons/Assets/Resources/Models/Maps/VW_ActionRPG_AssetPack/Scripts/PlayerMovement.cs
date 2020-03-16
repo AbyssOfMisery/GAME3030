@@ -68,16 +68,20 @@ public class PlayerMovement : MonoBehaviour
 	
 	void AudioManagement ()
 	{
-		// If the player is currently in the run state...
-		if(anim.GetCurrentAnimatorStateInfo(0).nameHash == hash.locomotionState)
-		{
-			// ... and if the footsteps are not playing...
-			if(!GetComponent<AudioSource>().isPlaying)
-				// ... play them.
-				GetComponent<AudioSource>().Play();
-		}
-		else
-			// Otherwise stop the footsteps.
-			GetComponent<AudioSource>().Stop();
-	}
+        // If the player is currently in the run state...
+#pragma warning disable CS0618 // Type or member is obsolete
+        if (anim.GetCurrentAnimatorStateInfo(0).nameHash != hash.locomotionState)
+#pragma warning restore CS0618 // Type or member is obsolete
+        {
+            // Otherwise stop the footsteps.
+            GetComponent<AudioSource>().Stop();
+        }
+        else
+        {
+            // ... and if the footsteps are not playing...
+            if (!GetComponent<AudioSource>().isPlaying)
+                // ... play them.
+                GetComponent<AudioSource>().Play();
+        }
+    }
 }

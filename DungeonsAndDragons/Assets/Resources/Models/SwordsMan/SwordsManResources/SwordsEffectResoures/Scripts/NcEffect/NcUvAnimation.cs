@@ -137,8 +137,9 @@ public class NcUvAnimation : NcEffectAniBehaviour
 		if (bCallEndAni)
 		{
 			OnEndAnimation();
-			if (m_bAutoDestruct)
-				DestroyObject(gameObject);
+            if (m_bAutoDestruct)
+                //DestroyObject(gameObject);
+                Object.Destroy(gameObject);
 		}
 	}
 

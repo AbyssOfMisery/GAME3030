@@ -73,10 +73,14 @@ public class EasyTouchWelcomeScreen : EditorWindow {
 	}
 
 	static EasyTouchWelcomeScreen(){
-		EditorApplication.playmodeStateChanged -= OnPlayModeChanged;
-		EditorApplication.playmodeStateChanged += OnPlayModeChanged;
-		
-		showAtStartup = EditorPrefs.GetBool(PREFSHOWATSTARTUP, true);
+#pragma warning disable CS0618 // Type or member is obsolete
+        EditorApplication.playmodeStateChanged -= OnPlayModeChanged;
+#pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning disable CS0618 // Type or member is obsolete
+        EditorApplication.playmodeStateChanged += OnPlayModeChanged;
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        showAtStartup = EditorPrefs.GetBool(PREFSHOWATSTARTUP, true);
 		
 		if (showAtStartup){
 			EditorApplication.update -= OpenAtStartup;
@@ -91,8 +95,10 @@ public class EasyTouchWelcomeScreen : EditorWindow {
 
 	static void OnPlayModeChanged(){
 		EditorApplication.update -= OpenAtStartup;
-		EditorApplication.playmodeStateChanged -= OnPlayModeChanged;
-	}
+#pragma warning disable CS0618 // Type or member is obsolete
+        EditorApplication.playmodeStateChanged -= OnPlayModeChanged;
+#pragma warning restore CS0618 // Type or member is obsolete
+    }
 	
 	void OnEnable(){
 		titleContent = new GUIContent("Welcome To Easy Touch"); 

@@ -509,8 +509,10 @@ public class NcCurveAnimation : NcEffectAniBehaviour
 					OnEndAnimation();
 				// AutoDestruct
 				if (m_bAutoDestruct)
-					DestroyObject(gameObject);
-			}
+#pragma warning disable CS0618 // Type or member is obsolete
+                    DestroyObject(gameObject);
+#pragma warning restore CS0618 // Type or member is obsolete
+            }
 		}
 	}
 

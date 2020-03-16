@@ -23,7 +23,7 @@ namespace Control
 {
     public class Ctrl_Warrior_Animation : BaseControl
     {
-        private Ctrl_Warrior_Property _MyProperty;          //self
+        private Ctrl_BaseEnemyProperty _MyProperty;          //self
         private Ctrl_PlayerProperty _PlayerProperty;        //player
         private Animator _Animator;                         //animator
         private bool _IsSingleTimes = true;                 //check if dead animation is played
@@ -31,7 +31,7 @@ namespace Control
         // Start is called before the first frame update
         void Start()
         {
-            _MyProperty = this.gameObject.GetComponent<Ctrl_Warrior_Property>();
+            _MyProperty = this.gameObject.GetComponent<Ctrl_BaseEnemyProperty>();
             _Animator = this.gameObject.GetComponent<Animator>();
             GameObject goPlayer = GameObject.FindGameObjectWithTag(Tag.Player);
 
@@ -111,7 +111,7 @@ namespace Control
         /// </summary>
         public void AttackPlayerByAnimationEvent()
         {
-            _PlayerProperty.DecreaseHealthValues(_MyProperty.IntATK);
+            _PlayerProperty.DecreaseHealthValues(_MyProperty.ATK);
         }
     }
 }

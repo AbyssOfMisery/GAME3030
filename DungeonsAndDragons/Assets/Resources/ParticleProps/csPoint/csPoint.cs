@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 
@@ -104,8 +105,8 @@ public class csPoint : MonoBehaviour {
         {
             case CSPointType.MainTown:
 
-                Application.LoadLevel("MainTown");
-
+                //Application.LoadLevel("MainTown");
+                SceneManager.LoadScene("MainTown");
 
 
                 break;

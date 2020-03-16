@@ -4,11 +4,11 @@ using System.Collections;
 public class elite : MonoBehaviour {
 
 
-    private float speed;
+    //private float speed;
 
 	// Use this for initialization
 	void Start () {
-        speed = 10.0f;
+       // speed = 10.0f;
 	}
 	
 	// Update is called once per frame

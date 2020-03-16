@@ -22,6 +22,7 @@ namespace View
 {
     public class View_ATKButtomCDEffect : MonoBehaviour
     {
+        public Text TxtCountDownNumber;     //count down number
         public float FloCDTime = 5f;        //cool down time
 
         public Image ImgCircle;   //that cool down effect
@@ -37,6 +38,8 @@ namespace View
         {
             //get it's buttom
             BtnSelf = this.gameObject.GetComponent<Button>();
+            //show counting down timer
+            TxtCountDownNumber.enabled = true;
             EnableSelf();
         }
 
@@ -48,18 +51,24 @@ namespace View
                 if(Input.GetKeyDown(keyCode))
                 {
                     IsStartTimer = true;
+                    
                 }
 
                 if (IsStartTimer)
                 {
+                    TxtCountDownNumber.enabled = true;
                     goWhiteAndBlack.SetActive(true);            //active white and black icon
-                    FloTimerDelta += Time.deltaTime; // stack up time
+                    FloTimerDelta += Time.deltaTime;            // stack up time
+
+                    //Showing time count down
+                    TxtCountDownNumber.text = Mathf.RoundToInt(FloCDTime - FloTimerDelta).ToString();
                     ImgCircle.fillAmount = FloTimerDelta / FloCDTime; //give value to image circle
                     BtnSelf.interactable = false;
 
                     //while FloTimerDelta is greater than flocetime, reset everything
                     if (FloTimerDelta > FloCDTime)
                     {
+                        TxtCountDownNumber.enabled = false;
                         IsStartTimer = false;
                         ImgCircle.fillAmount = 1;
                         FloTimerDelta = 0;

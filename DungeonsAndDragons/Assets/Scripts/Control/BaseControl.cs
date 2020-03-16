@@ -37,6 +37,66 @@ namespace Control
             GlobalParaMgr.NextScenesName = scenesEnumName;
             SceneManager.LoadScene(ConvertEnumToString.GetInstance().GetStrByEnumScenes(ScenesEnum.LoadingScenes));
         }
-    }
+        /// <summary>
+        /// common function: attack to enemy
+        /// </summary>
+        /// <param name="attackArea">attack range</param>
+        /// <param name="AttackPowerMultiple">multiple damage</param>
+        /// <param name="isDirection">does it have diretion</param>
+        protected void AttackEnemy(List<GameObject> ListEnemies, Transform traNearestEnemy, float attackArea, int AttackPowerMultiple, bool isDirection = true)
+        {
+            //Parameter check
+            if (ListEnemies == null || ListEnemies.Count <= 0)
+            {
+                traNearestEnemy = null;
+                return;
+            }
+
+            foreach (GameObject enemyItem in ListEnemies)
+            {
+                //make sure this gameobject is still exist
+
+                // if (enemyItem && enemyItem.GetComponent<Ctrl_Enemy>())
+                if (enemyItem && enemyItem.GetComponent<Ctrl_BaseEnemyProperty>())
+                {
+                    //check if enemy is alive
+                    //if (enemyItem.GetComponent<Ctrl_Enemy>().IsAlive)
+                    if (enemyItem.GetComponent<Ctrl_BaseEnemyProperty>().CurrentState != EnemyState.Dead)
+                    {
+
+                        //check enemy and player distance 
+                        float floDistance = Vector3.Distance(this.gameObject.transform.position, enemyItem.transform.position);
+                        //check player rotation(is player facing enemy or is enemy facing player)
+                        if (isDirection)
+                        {
+                            //Vector subtraction
+                            Vector3 dir = (enemyItem.transform.position - this.gameObject.transform.position).normalized;
+                            //check player and enemy angle(use vertor point multiplication)
+                            float floAngleDirection = Vector3.Dot(dir, this.gameObject.transform.forward);
+                            //if palyer and enemy has same dirction and within attack range. so player can damage enemy
+                            if (floAngleDirection > 0 && floDistance <= attackArea)
+                            {
+
+                                enemyItem.SendMessage("OnDamage", Ctrl_PlayerProperty.Instance.GetCurrentATK() * AttackPowerMultiple, SendMessageOptions.DontRequireReceiver);
+                            }
+                        }
+                        else
+                        {
+                            //if palyer and enemy has same dirction and within attack range. so player can damage enemy
+                            if (floDistance <= attackArea)
+                            {
+
+                                enemyItem.SendMessage("OnDamage", Ctrl_PlayerProperty.Instance.GetCurrentATK() * AttackPowerMultiple, SendMessageOptions.DontRequireReceiver);
+                            }
+                        }
+
+
+                    }
+
+                }
+
+            }
+        }
+        }
 
 }

@@ -103,7 +103,7 @@ namespace Kernal
         /// Play sound effects_Audio source A
         /// </summary>
         /// <param name="audioClip">Audio clip</param>
-        private static void PlayAudioEffectA(AudioClip audioClip)
+        public static void PlayAudioEffectA(AudioClip audioClip)
         {
             //Handling Global Sound Volume
             _AudioSource_AudioEffectA.volume = AudioEffectVolumns;
@@ -123,7 +123,7 @@ namespace Kernal
         /// Play sound effects_Audio source B
         /// </summary>
         /// <param name="audioClip">Audio clip</param>
-        private static void PlayAudioEffectB(AudioClip audioClip)
+        public static void PlayAudioEffectB(AudioClip audioClip)
         {
             //Handling Global Sound Volume
             _AudioSource_AudioEffectB.volume = AudioEffectVolumns;

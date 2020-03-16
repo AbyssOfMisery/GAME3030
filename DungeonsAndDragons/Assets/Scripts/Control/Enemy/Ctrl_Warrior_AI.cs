@@ -33,7 +33,7 @@ namespace Control {
 
         private Transform _MyTransform;     //enemy position
 
-        private Ctrl_Warrior_Property _MyProperty;      //Attributes
+        private Ctrl_BaseEnemyProperty _MyProperty;      //Attributes
 
         private CharacterController _cc;                //charactercontroller component
         // Start is called before the first frame update
@@ -45,7 +45,7 @@ namespace Control {
             goPlayer = GameObject.FindGameObjectWithTag(Tag.Player);
 
             //get Attributes instance
-            _MyProperty = this.gameObject.GetComponent<Ctrl_Warrior_Property>();
+            _MyProperty = this.gameObject.GetComponent<Ctrl_BaseEnemyProperty>();
 
             //get character contronller
             _cc = this.gameObject.GetComponent<CharacterController>();

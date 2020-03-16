@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LoadScene : MonoBehaviour {
@@ -8,6 +9,6 @@ public class LoadScene : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		Debug.Log ("Loading Level");
-		Application.LoadLevel(level);
+		SceneManager.LoadScene(level);
 	}
 }

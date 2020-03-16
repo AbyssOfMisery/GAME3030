@@ -44,21 +44,27 @@ public class BlurEffect : MonoBehaviour
 	// --------------------------------------------------------
 	
 	protected void Start()
-	{
-		// Disable if we don't support image effects
-		if (!SystemInfo.supportsImageEffects) {
-			enabled = false;
-			return;
-		}
-		// Disable if the shader can't run on the users graphics card
-		if (!blurShader || !material.shader.isSupported) {
-			enabled = false;
-			return;
-		}
-	}
-	
-	// Performs one blur iteration.
-	public void FourTapCone (RenderTexture source, RenderTexture dest, int iteration)
+    {
+        // Disable if we don't support image effects
+        if (!GetSupportsImageEffects())
+        {
+            enabled = false;
+            return;
+        }
+        // Disable if the shader can't run on the users graphics card
+        if (!blurShader || !material.shader.isSupported)
+        {
+            enabled = false;
+            return;
+        }
+    }
+
+#pragma warning disable CS0618 // Type or member is obsolete
+    private static bool GetSupportsImageEffects() => SystemInfo.supportsImageEffects;
+#pragma warning restore CS0618 // Type or member is obsolete
+
+    // Performs one blur iteration.
+    public void FourTapCone (RenderTexture source, RenderTexture dest, int iteration)
 	{
 		float off = 0.5f + iteration*blurSpread;
 		Graphics.BlitMultiTap (source, dest, material,

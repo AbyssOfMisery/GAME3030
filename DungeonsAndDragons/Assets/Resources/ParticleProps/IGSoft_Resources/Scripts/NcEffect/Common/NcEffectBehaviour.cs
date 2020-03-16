@@ -118,9 +118,11 @@ public class NcEffectBehaviour : MonoBehaviour
 #if (UNITY_4_0 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_4 || UNITY_4_5 || UNITY_4_6 || UNITY_4_7 || UNITY_4_8 || UNITY_4_9)
 		target.SetActive(bActive);
 #else
-		target.active = bActive;
+#pragma warning disable CS0618 // Type or member is obsolete
+        target.active = bActive;
+#pragma warning restore CS0618 // Type or member is obsolete
 #endif
-	}
+    }
 
 	protected static void SetActiveRecursively(GameObject target, bool bActive)
 	{
@@ -130,18 +132,22 @@ public class NcEffectBehaviour : MonoBehaviour
 				SetActiveRecursively(target.transform.GetChild(n).gameObject, bActive);
 		target.SetActive(bActive);
 #else
-		target.SetActiveRecursively(bActive);
+#pragma warning disable CS0618 // Type or member is obsolete
+        target.SetActiveRecursively(bActive);
+#pragma warning restore CS0618 // Type or member is obsolete
 #endif
-	}
+    }
 
 	protected static bool IsActive(GameObject target)
 	{
 #if (UNITY_4_0 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_4 || UNITY_4_5 || UNITY_4_6 || UNITY_4_7 || UNITY_4_8 || UNITY_4_9)
 		return (target.activeInHierarchy && target.activeSelf);
 #else
-		return target.active;
+#pragma warning disable CS0618 // Type or member is obsolete
+        return target.active;
+#pragma warning restore CS0618 // Type or member is obsolete
 #endif
-	}
+    }
 
 	protected static void RemoveAllChildObject(GameObject parent, bool bImmediate)
 	{
@@ -305,12 +311,14 @@ public class NcEffectBehaviour : MonoBehaviour
 		ParticleSystem[] pss = gameObject.GetComponentsInChildren<ParticleSystem>(true);
 		foreach (ParticleSystem em in pss)
 			if (em != null)
-				em.enableEmission = false;
-		//ParticleEmitter[] pes = gameObject.GetComponentsInChildren<ParticleEmitter>(true);
-		//foreach (ParticleEmitter em in pes)
-		//	if (em != null)
-		//		em.emit = false;
-	}
+#pragma warning disable CS0618 // Type or member is obsolete
+                em.enableEmission = false;
+#pragma warning restore CS0618 // Type or member is obsolete
+                              //ParticleEmitter[] pes = gameObject.GetComponentsInChildren<ParticleEmitter>(true);
+                              //foreach (ParticleEmitter em in pes)
+                              //	if (em != null)
+                              //		em.emit = false;
+    }
 
 	// SafeCreate -----------------------------------------------------------------------------------
 	public static bool IsSafe()

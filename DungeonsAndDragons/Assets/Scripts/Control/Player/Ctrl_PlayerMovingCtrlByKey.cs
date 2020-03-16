@@ -48,8 +48,11 @@ namespace Control
 
             if (floMovingXPos != 0 || floMovingYPos != 0)
              {
-                //set up character rotation
-                transform.LookAt(new Vector3(transform.position.x - floMovingXPos, transform.position.y, transform.position.z - floMovingYPos));
+                if (Ctrl_PlayerAnimation.Instance.CurrentActionState != PlayerActionState.MagicTrickB)
+                {
+                    //set up character rotation
+                    transform.LookAt(new Vector3(transform.position.x - floMovingXPos, transform.position.y, transform.position.z - floMovingYPos));
+                }
 
                 //move character
                 //transform.Translate(Vector3.forward * Time.deltaTime * 5);

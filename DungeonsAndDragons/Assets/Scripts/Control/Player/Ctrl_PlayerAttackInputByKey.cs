@@ -38,15 +38,15 @@ namespace Control
                 evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_BASIC);
             }
             //event 2
-            else if(Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_A))
-            {
-                evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_A);
-            }
-            //event 3
-            else if (Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B))
-            {
-                evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B);
-            }
+          // else if(Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_A))
+          // {
+          //     evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_A);
+          // }
+          // //event 3
+          // else if (Input.GetButtonDown(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B))
+          // {
+          //     evePlayerControl?.Invoke(GlobalParameter.INPUT_MGR_ATTACKNAME_MAGICTRICK_B);
+          // }
         }//update end
 //#endif
     }//class end

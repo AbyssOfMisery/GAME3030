@@ -426,10 +426,12 @@ public class NcParticleSystem : NcEffectBehaviour
 	{
 // 		Debug.Log("SetEnableParticle");
 		if (m_ps != null)
-			m_ps.enableEmission = bEnable;
-		//if (m_pe != null)
-		//	m_pe.emit = bEnable;
-	}
+#pragma warning disable CS0618 // Type or member is obsolete
+            m_ps.enableEmission = bEnable;
+#pragma warning restore CS0618 // Type or member is obsolete
+                              //if (m_pe != null)
+                              //	m_pe.emit = bEnable;
+    }
 
 	// Legacy ----------------------------------------------------------
 	public float GetScaleMinMeshNormalVelocity()
@@ -602,13 +604,21 @@ public class NcParticleSystem : NcEffectBehaviour
 	{
 		if (m_ps != null)
 		{
-// 			m_ps.startDelay		+= m_fStartDelayTime;
-			m_ps.startSize		*= m_fStartSizeRate;
-			m_ps.startLifetime	*= m_fStartLifeTimeRate;
-			m_ps.emissionRate	*= m_fStartEmissionRate;
-			m_ps.startSpeed		*= m_fStartSpeedRate;
+            // 			m_ps.startDelay		+= m_fStartDelayTime;
+#pragma warning disable CS0618 // Type or member is obsolete
+            m_ps.startSize		*= m_fStartSizeRate;
+#pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning disable CS0618 // Type or member is obsolete
+            m_ps.startLifetime	*= m_fStartLifeTimeRate;
+#pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning disable CS0618 // Type or member is obsolete
+            m_ps.emissionRate	*= m_fStartEmissionRate;
+#pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning disable CS0618 // Type or member is obsolete
+            m_ps.startSpeed		*= m_fStartSpeedRate;
+#pragma warning restore CS0618 // Type or member is obsolete
 
-			ParticleSystemRenderer	ren = GetComponent<ParticleSystemRenderer>();
+            ParticleSystemRenderer	ren = GetComponent<ParticleSystemRenderer>();
 			if (ren != null)
 			{
 				float fRenderLength	= (float)Ng_GetProperty(ren, "lengthScale");
@@ -659,10 +669,12 @@ public class NcParticleSystem : NcEffectBehaviour
 				parts[n].position += transform.position;
 
 			} else parts[n].position *= fScale;
-// 			parts[n].angularVelocity *= fScale;
-			parts[n].size *= fScale;
-// 			parts[n].velocity *= fScale;
-		}
+            // 			parts[n].angularVelocity *= fScale;
+#pragma warning disable CS0618 // Type or member is obsolete
+            parts[n].size *= fScale;
+#pragma warning restore CS0618 // Type or member is obsolete
+                              // 			parts[n].velocity *= fScale;
+        }
 		return parts;
 	}
 

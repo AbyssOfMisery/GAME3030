@@ -750,7 +750,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3483459455622616229}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.00000006090384, y: 0.006716714, z: 0.009680412}
   m_LocalScale: {x: 1, y: 1, z: 1.0275973}
   m_Children: []
@@ -1661,8 +1661,8 @@ Animation:
   - {fileID: 7400000, guid: 2162b737ad9659e48bbd03d6a92e44af, type: 3}
   - {fileID: 7400000, guid: 032f02be750774145a7973c0d3444947, type: 3}
   - {fileID: 7400000, guid: 46b5b8d468b1359499aa3acfe03898b7, type: 3}
-  - {fileID: 7400000, guid: 8a1c1539bf0bcf64193967555229c0d7, type: 3}
-  - {fileID: 7400000, guid: 4f20f7b31cac0554a85f5066cb96ef7f, type: 3}
+  - {fileID: 7400000, guid: 3fc2d715486c54f4ca2e2473d0e5d65d, type: 2}
+  - {fileID: 7400000, guid: e418fa65731f892449293238430dba1d, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -1702,8 +1702,9 @@ MonoBehaviour:
   Ani_BasicAttack1: {fileID: 7400000, guid: 2162b737ad9659e48bbd03d6a92e44af, type: 3}
   Ani_BasicAttack2: {fileID: 7400000, guid: 46b5b8d468b1359499aa3acfe03898b7, type: 3}
   Ani_BasicAttack3: {fileID: 7400000, guid: 032f02be750774145a7973c0d3444947, type: 3}
-  Ani_MagicTrickA: {fileID: 7400000, guid: 8a1c1539bf0bcf64193967555229c0d7, type: 3}
-  Ani_MagicTrickB: {fileID: 7400000, guid: 4f20f7b31cac0554a85f5066cb96ef7f, type: 3}
+  Ani_MagicTrickA: {fileID: 7400000, guid: 3fc2d715486c54f4ca2e2473d0e5d65d, type: 2}
+  Ani_MagicTrickB: {fileID: 7400000, guid: e418fa65731f892449293238430dba1d, type: 2}
+  AcPlayerRunning: {fileID: 8300000, guid: d6ef96f3eb55ec444ab45901a18c1470, type: 3}
 --- !u!114 &4111107550962256731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1719,6 +1720,10 @@ MonoBehaviour:
   _FloMinAttackDistance: 5
   _FloPlayerRoataionSpeed: 1
   _FloAttackRange: 2
+  FloAttackAreaByMagicA: 4
+  FloAttackAreaByMagicB: 8
+  IntAttackPowerMultipleByMagicA: 10
+  IntAttackPowerMultipleByMagicB: 40
 --- !u!114 &65616203354215955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,6 +1736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009a667eebb957649ac1d31b283849ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloPlayerAttackMovingSpeed: 10
 --- !u!114 &6992808903932512865
 MonoBehaviour:
   m_ObjectHideFlags: 0
