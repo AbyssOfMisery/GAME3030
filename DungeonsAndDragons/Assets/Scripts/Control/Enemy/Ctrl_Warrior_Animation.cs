@@ -113,6 +113,20 @@ namespace Control
         {
             _PlayerProperty.DecreaseHealthValues(_MyProperty.ATK);
         }
+
+        /// <summary>
+        /// when enemy gets hurt particle effect
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerator AnimationEvent_WarriorHurt()
+        {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
+            GameObject WarriorHurt = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Enemy_HurtEffect", true, this.transform);
+
+            //destroy this particle object
+            Destroy(WarriorHurt, 1);
+        }
+
     }
 }
 

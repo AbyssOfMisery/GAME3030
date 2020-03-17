@@ -239,6 +239,8 @@
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerMovingCtrlByKey.cs" />
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerMovingScript.cs" />
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerProperty.cs" />
+    <Compile Include="Assets\Scripts\Control\Prop\DestoryObject.cs" />
+    <Compile Include="Assets\Scripts\Control\Prop\MakeObjectRotate.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_LevelOneScenes.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_LogonScenes.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_StartScenes.cs" />

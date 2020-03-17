@@ -69,6 +69,10 @@ namespace Control {
             _animationHandle[Ani_BasicAttack2.name].speed = 2.5f;
             _animationHandle[Ani_BasicAttack3.name].speed = 2f;
 
+            //player spawn particle effect
+            PlayerDisplayParticleEffect();
+
+
         }
 
         public void SetCurrentAtionState(PlayerActionState currenActionState)
@@ -180,6 +184,43 @@ namespace Control {
             goMagicA.transform.position = transform.position + transform.TransformDirection(new Vector3(0f, 0f, 5f));
             //play audio clip
 
+        }
+
+        /// <summary>
+        /// defind basic attack particle effect
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerator AnimationEvent_PlayerBasicATK_A()
+        {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
+            GameObject PlayerBasicATKParticleEffect = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_BasicATK1", true, this.transform);
+            PlayerBasicATKParticleEffect.transform.position = this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 1f));
+
+            //destroy this particle object
+            Destroy(PlayerBasicATKParticleEffect, 1);
+        }
+
+        /// <summary>
+        /// defind basic attack particle effect
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerator AnimationEvent_PlayerBasicATK_B()
+        {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
+            GameObject PlayerBasicATKParticleEffect = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_BasicATK2", true, this.transform);
+            PlayerBasicATKParticleEffect.transform.position = transform.position + transform.TransformDirection(new Vector3(0f, 0f, 1f));
+
+            //destroy this particle object
+            Destroy(PlayerBasicATKParticleEffect, 1);
+        }
+
+        /// <summary>
+        /// player spawn particle effect
+        /// </summary>
+        public void PlayerDisplayParticleEffect()
+        {
+            GameObject SpawnEffect = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_Display", true, this.transform);
+            SpawnEffect.transform.parent = transform;
         }
 
     }

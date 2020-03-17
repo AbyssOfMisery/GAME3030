@@ -97,6 +97,18 @@ namespace Control
 
             }
         }
+
+
+        //common function for loading particle effect
+        IEnumerator LoadParticleEffectMethod()
+        {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
+            GameObject PlayerBasicATKParticleEffect = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_BasicATK1", true, this.transform);
+            PlayerBasicATKParticleEffect.transform.position = this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 1f));
+
+            //destroy this particle object
+            Destroy(PlayerBasicATKParticleEffect, 1);
         }
+    }
 
 }

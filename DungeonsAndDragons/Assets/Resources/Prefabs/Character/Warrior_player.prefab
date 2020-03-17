@@ -1658,9 +1658,9 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: fcad2351825f155458374e44b77c9224, type: 3}
   - {fileID: 7400000, guid: 630ba0e812276d64c9535693f5119152, type: 3}
-  - {fileID: 7400000, guid: 2162b737ad9659e48bbd03d6a92e44af, type: 3}
-  - {fileID: 7400000, guid: 032f02be750774145a7973c0d3444947, type: 3}
-  - {fileID: 7400000, guid: 46b5b8d468b1359499aa3acfe03898b7, type: 3}
+  - {fileID: 7400000, guid: af70a77ccf270f84dbcb048e4011f4c4, type: 2}
+  - {fileID: 7400000, guid: b2f12c504f68f2f4792cfa206714777e, type: 2}
+  - {fileID: 7400000, guid: 994238e09192ad94c943f375cc8cf6fa, type: 2}
   - {fileID: 7400000, guid: 3fc2d715486c54f4ca2e2473d0e5d65d, type: 2}
   - {fileID: 7400000, guid: e418fa65731f892449293238430dba1d, type: 2}
   m_WrapMode: 0
@@ -1699,9 +1699,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ani_idle: {fileID: 7400000, guid: fcad2351825f155458374e44b77c9224, type: 3}
   Ani_Running: {fileID: 7400000, guid: 630ba0e812276d64c9535693f5119152, type: 3}
-  Ani_BasicAttack1: {fileID: 7400000, guid: 2162b737ad9659e48bbd03d6a92e44af, type: 3}
-  Ani_BasicAttack2: {fileID: 7400000, guid: 46b5b8d468b1359499aa3acfe03898b7, type: 3}
-  Ani_BasicAttack3: {fileID: 7400000, guid: 032f02be750774145a7973c0d3444947, type: 3}
+  Ani_BasicAttack1: {fileID: 7400000, guid: af70a77ccf270f84dbcb048e4011f4c4, type: 2}
+  Ani_BasicAttack2: {fileID: 7400000, guid: 994238e09192ad94c943f375cc8cf6fa, type: 2}
+  Ani_BasicAttack3: {fileID: 7400000, guid: b2f12c504f68f2f4792cfa206714777e, type: 2}
   Ani_MagicTrickA: {fileID: 7400000, guid: 3fc2d715486c54f4ca2e2473d0e5d65d, type: 2}
   Ani_MagicTrickB: {fileID: 7400000, guid: e418fa65731f892449293238430dba1d, type: 2}
   AcPlayerRunning: {fileID: 8300000, guid: d6ef96f3eb55ec444ab45901a18c1470, type: 3}
@@ -1719,7 +1719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _FloMinAttackDistance: 5
   _FloPlayerRoataionSpeed: 1
-  _FloAttackRange: 2
+  _FloAttackRange: 3
   FloAttackAreaByMagicA: 4
   FloAttackAreaByMagicB: 8
   IntAttackPowerMultipleByMagicA: 10

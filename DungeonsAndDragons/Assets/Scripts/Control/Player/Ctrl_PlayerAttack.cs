@@ -54,9 +54,9 @@ namespace Control {
             Ctrl_PlayerAttackInputByET.evePlayerControl += ResponseMagicTrickB;
 //#endif
             //register event(Multicast delegation) : player attack inputs
-            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseBasicAttack;
-            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickA;
-            Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickB;
+           //Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseBasicAttack;
+           //Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickA;
+           //Ctrl_PlayerAttackInputByKey.evePlayerControl += ResponseMagicTrickB;
         }
 
         private void Start()
@@ -100,8 +100,8 @@ namespace Control {
                 //play MagicTrickA attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickA);
                 //Deal damage to specific enemies
-                AttackEnemyByMagicA();
-             
+       
+                StartCoroutine("AttackEnemyByMagicA");
 
             }
         }
@@ -117,8 +117,7 @@ namespace Control {
                 //play MagicTrickB attack animation
                 Ctrl_PlayerAnimation.Instance.SetCurrentAtionState(PlayerActionState.MagicTrickB);
                 //Deal damage to specific enemies
-                AttackEnemyByMagicB();
-                
+                StartCoroutine("AttackEnemyByMagicB");
             }
         }
 #endregion
@@ -211,16 +210,18 @@ namespace Control {
         /// <summary>
         /// magic a
         /// </summary>
-        private void AttackEnemyByMagicA()
+        IEnumerator AttackEnemyByMagicA()
         {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
             base.AttackEnemy(_LisEnemies, _TraNearestEnemy, FloAttackAreaByMagicA, IntAttackPowerMultipleByMagicA,false);
         }
 
         /// <summary>
         /// magic b
         /// </summary>
-        private void AttackEnemyByMagicB()
+        IEnumerator AttackEnemyByMagicB()
         {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
             base.AttackEnemy(_LisEnemies, _TraNearestEnemy, FloAttackAreaByMagicB, IntAttackPowerMultipleByMagicB);
         }
     }//class end

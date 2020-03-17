@@ -484,7 +484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4620162842904752661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.94056, y: -12.81, z: -48.359116}
+  m_LocalPosition: {x: 78.27736, y: -12.81, z: -50.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4620162842904784453}
@@ -551,7 +551,7 @@ MonoBehaviour:
   IntPlayerExp: 5
   IntATK: 2
   IntDEF: 2
-  IntMaxHealth: 20
+  IntMaxHealth: 50
 --- !u!114 &520892764829181035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FloMoveSpeed: 1
   floRoataionSpeed: 1
-  FloAttackDistance: 2
+  FloAttackDistance: 1
   FloatCordonDistance: 5
   FloThinkInterval: 1
 --- !u!114 &7635711340183957371

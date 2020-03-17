@@ -24,7 +24,7 @@ namespace Control {
     {
         public float FloMoveSpeed = 1.0f;  //moving speed
         public float floRoataionSpeed = 1.0f; //rotaion speed
-        public float FloAttackDistance = 2f;    //attack range
+        public float FloAttackDistance = 1f;    //attack range
         public float FloatCordonDistance = 5f;     //alert range
 
         public float FloThinkInterval = 1f;         //run program 1f per once
@@ -52,7 +52,7 @@ namespace Control {
 
             /* get random property number for each enemy*/
             FloMoveSpeed = UnityHelper.GetInstance().GetRandomNum(1,2);
-            FloAttackDistance = UnityHelper.GetInstance().GetRandomNum(1, 3);
+            //FloAttackDistance = UnityHelper.GetInstance().GetRandomNum(1, 3);
             FloatCordonDistance = UnityHelper.GetInstance().GetRandomNum(4, 15);
             FloThinkInterval = UnityHelper.GetInstance().GetRandomNum(1, 3);
 
