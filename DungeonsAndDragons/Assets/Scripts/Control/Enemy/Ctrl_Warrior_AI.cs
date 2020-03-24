@@ -36,8 +36,7 @@ namespace Control {
         private Ctrl_BaseEnemyProperty _MyProperty;      //Attributes
 
         private CharacterController _cc;                //charactercontroller component
-        // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             //get this enemy position
             _MyTransform = this.gameObject.transform;
@@ -51,15 +50,27 @@ namespace Control {
             _cc = this.gameObject.GetComponent<CharacterController>();
 
             /* get random property number for each enemy*/
-            FloMoveSpeed = UnityHelper.GetInstance().GetRandomNum(1,2);
+            FloMoveSpeed = UnityHelper.GetInstance().GetRandomNum(1, 2);
             //FloAttackDistance = UnityHelper.GetInstance().GetRandomNum(1, 3);
             FloatCordonDistance = UnityHelper.GetInstance().GetRandomNum(4, 15);
             FloThinkInterval = UnityHelper.GetInstance().GetRandomNum(1, 3);
+        }
+        private void OnEnable()
+        {
+         
 
             //use ThinkProcess
             StartCoroutine("ThinkProcess");
             //use MovingProcess
             StartCoroutine("MovingProcess");
+        }
+
+        private void OnDisable()
+        {
+            //use ThinkProcess
+            StopCoroutine("ThinkProcess");
+            //use MovingProcess
+            StopCoroutine("MovingProcess");
         }
 
         /// <summary>

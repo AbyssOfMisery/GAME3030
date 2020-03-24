@@ -58,7 +58,9 @@ namespace Control {
         // Wait end of frame to manage charactercontroller, because gravity is managed by virtual controller
         void Update()
         {
-
+            if ((Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Idle ||
+       Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Running) && Ctrl_PlayerAnimation.Instance.CurrentActionState != PlayerActionState.MagicTrickB)
+            {
                 if ((ETCInput.GetAxis("Vertical") != 0 || ETCInput.GetAxis("Horizontal") != 0) && (Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Idle ||
                 Ctrl_PlayerAnimation.Instance.CurrentActionState == PlayerActionState.Running))
                 {
@@ -78,7 +80,7 @@ namespace Control {
                     }
                 }
 
-           
+            }
         }
 //#endif
     }

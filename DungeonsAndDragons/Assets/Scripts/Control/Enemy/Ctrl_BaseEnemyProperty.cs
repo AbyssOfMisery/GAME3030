@@ -38,13 +38,22 @@ namespace Control {
             set => _CurrentState = value;
         }
 
+        private void OnEnable()
+        {
+            //check is this enemy still has health
+            StartCoroutine("CheckLifeContinue");
+        }
+
+        private void OnDisable()
+        {
+            //check is this enemy still has health
+            StopCoroutine("CheckLifeContinue");
+        }
 
         public void RunMethodInChildren()
         {
             _CurrentHealth = MaxHealth;
 
-            //check is this enemy still has health
-            StartCoroutine("CheckLifeContinue");
         }
 
         IEnumerator CheckLifeContinue()
@@ -66,7 +75,8 @@ namespace Control {
                     //dead animation
                     _CurrentState = EnemyState.Dead;
                     //destroy this enemy
-                    Destroy(this.gameObject, 5f);
+                    //Destroy(this.gameObject, 5f);
+                    StartCoroutine("RecoverEnemy");
                 }
             }
 
@@ -89,6 +99,20 @@ namespace Control {
             {
                 _CurrentHealth -= damageValue;
             }
+        }
+
+        /// <summary>
+        /// recover enemy object to pool
+        /// </summary>
+        /// <returns></returns>
+        IEnumerator RecoverEnemy()
+        {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_3);
+            //reset enemy state and health
+            _CurrentHealth = MaxHealth;
+            CurrentState = EnemyState.Idle;
+            //recover object
+            PoolManager.PoolsArray["_Enemies"].RecoverGameObjectToPools(this.gameObject);
         }
     }
 }

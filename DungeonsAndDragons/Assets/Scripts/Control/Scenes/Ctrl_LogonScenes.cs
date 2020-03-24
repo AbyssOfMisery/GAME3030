@@ -44,7 +44,7 @@ namespace Control{
         //When player click on warrior icon will play a sound effect
         public void ClickWarriorAudio()
         {
-            AudioManager.PlayAudioEffectA("1_LightRoar_SwordHero");
+            AudioManager.PlayAudioEffectA("Player_MagicA");
         }
 
         //When player click on witch icon will play a sound effect

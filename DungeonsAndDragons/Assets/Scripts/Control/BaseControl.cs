@@ -99,15 +99,42 @@ namespace Control
         }
 
 
+
+        /// <summary>
+        /// Load ParticleEffect Method
+        /// </summary>
+        /// <param name="internalTime">wait timer</param>
+        /// <param name="strPath">path </param>
+        /// <param name="isUseCatch"></param>
+        /// <param name="particleEffectPosition"></param>
+        /// <param name="tranParent"></param>
+        /// <param name="strAudio"></param>
+        /// <param name="destoryTime"></param>
+        /// <returns></returns>
         //common function for loading particle effect
-        IEnumerator LoadParticleEffectMethod()
+         public  IEnumerator LoadParticleEffectMethod(float internalTime, string strPath, bool isUseCatch,
+            Vector3 particleEffectPosition, Transform tranParent, string strAudio=null, float destoryTime =0)
         {
-            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
-            GameObject PlayerBasicATKParticleEffect = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_BasicATK1", true, this.transform);
-            PlayerBasicATKParticleEffect.transform.position = this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 1f));
+            yield return new WaitForSeconds(internalTime);
+
+            GameObject PlayerBasicATKParticleEffect = ResourceMgr.GetInstance().LoadAsset(strPath, isUseCatch, this.transform);
+            PlayerBasicATKParticleEffect.transform.position = particleEffectPosition;
+            if (tranParent)
+            {
+                PlayerBasicATKParticleEffect.transform.parent = tranParent;
+            }
+
+            if(!string.IsNullOrEmpty(strAudio))
+            {
+                AudioManager.PlayAudioEffectA(strAudio);
+            }
 
             //destroy this particle object
-            Destroy(PlayerBasicATKParticleEffect, 1);
+            if(destoryTime > 0)
+            {
+                Destroy(PlayerBasicATKParticleEffect, destoryTime);
+            }
+
         }
     }
 

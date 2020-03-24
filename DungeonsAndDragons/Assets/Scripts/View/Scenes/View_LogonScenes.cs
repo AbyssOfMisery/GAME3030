@@ -85,7 +85,7 @@ namespace View {
         public void SubmitName()
         {
             //get user name
-            GlobalParaMgr.PlayerName = _UserName.name;
+            GlobalParaMgr.PlayerName = _UserName.text;
             // switch to next scenes
             //(control layers)
             Ctrl_LogonScenes.Instance.EnterNextScenes();

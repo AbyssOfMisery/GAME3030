@@ -45,6 +45,8 @@ namespace Control {
         //animation combo
         private BasicATKCombo _CurATKCombo = BasicATKCombo.BasicATK1;
 
+        //basic particle effect
+        public GameObject[] goHeroBasicParticleEffects;
         public PlayerActionState CurrentActionState {
             get => _currentActionState;
           }
@@ -166,10 +168,11 @@ namespace Control {
         /// <returns></returns>
         public IEnumerator AnimationEvent_PlayerMagicA()
         {
-            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
-            GameObject goMagicA = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_MagicA(bruceSkill)", true,this.transform);
-
-            //play audio clip
+            //StartCoroutine(LoadParticleEffectMethod(GlobalParameter.INTERVAL_TIME_0DOT1, "ParticleProps/Player_MagicA(bruceSkill)",true,transform.position,this.transform,null,0));
+            //yield break;
+            goHeroBasicParticleEffects[2].transform.position = this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 0f));
+            PoolManager.PoolsArray["_ParticleSys"].GetGameObjectByPool(goHeroBasicParticleEffects[2], goHeroBasicParticleEffects[2].transform.position, Quaternion.identity);
+            yield break;
 
         }
 
@@ -179,10 +182,12 @@ namespace Control {
         /// <returns></returns>
         public IEnumerator AnimationEvent_PlayerMagicB()
         {
-            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
-            GameObject goMagicA = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_MagicB(groundBrokeRed)", true, this.transform);
-            goMagicA.transform.position = transform.position + transform.TransformDirection(new Vector3(0f, 0f, 5f));
-            //play audio clip
+            //StartCoroutine(LoadParticleEffectMethod(GlobalParameter.INTERVAL_TIME_0DOT1,
+            //  "ParticleProps/Player_MagicB(groundBrokeRed)", true, transform.position + transform.TransformDirection(new Vector3(0f, 0f, 5f)), transform,null,0));
+            // yield break;
+            goHeroBasicParticleEffects[3].transform.position = this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 5f));
+            PoolManager.PoolsArray["_ParticleSys"].GetGameObjectByPool(goHeroBasicParticleEffects[3], goHeroBasicParticleEffects[3].transform.position, Quaternion.identity);
+            yield break;
 
         }
 
@@ -192,12 +197,16 @@ namespace Control {
         /// <returns></returns>
         public IEnumerator AnimationEvent_PlayerBasicATK_A()
         {
-            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
-            GameObject PlayerBasicATKParticleEffect = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_BasicATK1", true, this.transform);
-            PlayerBasicATKParticleEffect.transform.position = this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 1f));
+            //classic way to call a prefab
+            //StartCoroutine(LoadParticleEffectMethod(GlobalParameter.INTERVAL_TIME_0DOT1,
+            //  "ParticleProps/Player_BasicATK1", true, this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 1f)), transform, null, 1));
+            //yield break;
 
-            //destroy this particle object
-            Destroy(PlayerBasicATKParticleEffect, 1);
+            //use gameobject pool to call prefab
+            //goHeroBasicParticleEffect1
+            goHeroBasicParticleEffects[0].transform.position = this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 1f));
+            PoolManager.PoolsArray["_ParticleSys"].GetGameObjectByPool(goHeroBasicParticleEffects[0], goHeroBasicParticleEffects[0].transform.position,Quaternion.identity);
+            yield break;
         }
 
         /// <summary>
@@ -206,12 +215,13 @@ namespace Control {
         /// <returns></returns>
         public IEnumerator AnimationEvent_PlayerBasicATK_B()
         {
-            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
-            GameObject PlayerBasicATKParticleEffect = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_BasicATK2", true, this.transform);
-            PlayerBasicATKParticleEffect.transform.position = transform.position + transform.TransformDirection(new Vector3(0f, 0f, 1f));
+            //StartCoroutine(LoadParticleEffectMethod(GlobalParameter.INTERVAL_TIME_0DOT1,
+            // "ParticleProps/Player_BasicATK2", true, this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 1f)), transform, null, 1));
+            //yield break;
+            goHeroBasicParticleEffects[1].transform.position = this.transform.position + this.transform.TransformDirection(new Vector3(0f, 0f, 1f));
+            PoolManager.PoolsArray["_ParticleSys"].GetGameObjectByPool(goHeroBasicParticleEffects[1], goHeroBasicParticleEffects[1].transform.position, Quaternion.identity);
+            yield break;
 
-            //destroy this particle object
-            Destroy(PlayerBasicATKParticleEffect, 1);
         }
 
         /// <summary>
@@ -219,8 +229,9 @@ namespace Control {
         /// </summary>
         public void PlayerDisplayParticleEffect()
         {
-            GameObject SpawnEffect = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Player_Display", true, this.transform);
-            SpawnEffect.transform.parent = transform;
+            StartCoroutine(LoadParticleEffectMethod(GlobalParameter.INTERVAL_TIME_0DOT1,
+             "ParticleProps/Player_Display", true, this.transform.position, transform, null, 0));;
+
         }
 
     }

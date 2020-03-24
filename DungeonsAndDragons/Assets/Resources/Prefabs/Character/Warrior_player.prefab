@@ -1705,6 +1705,19 @@ MonoBehaviour:
   Ani_MagicTrickA: {fileID: 7400000, guid: 3fc2d715486c54f4ca2e2473d0e5d65d, type: 2}
   Ani_MagicTrickB: {fileID: 7400000, guid: e418fa65731f892449293238430dba1d, type: 2}
   AcPlayerRunning: {fileID: 8300000, guid: d6ef96f3eb55ec444ab45901a18c1470, type: 3}
+  goHeroBasicParticleEffect1: {fileID: 8911409753662850622, guid: 386023c42493e85499b0906eff72f9a5,
+    type: 3}
+  goHeroBasicParticleEffect2: {fileID: 2587726876663162891, guid: 756615e72f89dfe4a9cc71c7fd288226,
+    type: 3}
+  goHeroBasicParticleEffect3: {fileID: 100000, guid: b090a3009390b3a4ea39d2520326e85a,
+    type: 3}
+  goHeroBasicParticleEffect4: {fileID: 100002, guid: cb97c83d285042647830c4d5e5d484e9,
+    type: 3}
+  goHeroBasicParticleEffects:
+  - {fileID: 8911409753662850622, guid: 386023c42493e85499b0906eff72f9a5, type: 3}
+  - {fileID: 2587726876663162891, guid: 756615e72f89dfe4a9cc71c7fd288226, type: 3}
+  - {fileID: 100000, guid: b090a3009390b3a4ea39d2520326e85a, type: 3}
+  - {fileID: 100002, guid: cb97c83d285042647830c4d5e5d484e9, type: 3}
 --- !u!114 &4111107550962256731
 MonoBehaviour:
   m_ObjectHideFlags: 0

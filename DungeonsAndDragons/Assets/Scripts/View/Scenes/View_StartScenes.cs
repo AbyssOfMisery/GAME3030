@@ -26,7 +26,7 @@ namespace View
         //New Game
         public void ClickNewGame()
         {
-            print(GetType()+"New Game");
+           // print(GetType()+"New Game");
 
             //call control script to load new game
             Ctrl_StartScenes.instance.ClickNewGame();   
@@ -35,7 +35,7 @@ namespace View
         //Continue game
         public void ClickGameContinue()
         {
-            print(GetType() + "Continue Game");
+            //print(GetType() + "Continue Game");
 
             //call control script to continue game
             Ctrl_StartScenes.instance.ClickGameContinue();

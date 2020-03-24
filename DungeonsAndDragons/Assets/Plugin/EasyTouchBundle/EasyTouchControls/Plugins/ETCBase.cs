@@ -149,6 +149,7 @@ public abstract class ETCBase : MonoBehaviour {
 
 	#region Monobehaviour callback
 	protected virtual void Awake(){
+
 		cachedRectTransform = transform as RectTransform;
 		cachedRootCanvas = transform.parent.GetComponent<Canvas>();
 

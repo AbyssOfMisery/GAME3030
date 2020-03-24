@@ -94,7 +94,7 @@ namespace View {
 
             //player name
             // if((GlobalParaMgr.PlayerName != null) && (!GlobalParaMgr.PlayerName.Trim().Equals("")))
-            if(string.IsNullOrEmpty(GlobalParaMgr.PlayerName))
+            if(!string.IsNullOrEmpty(GlobalParaMgr.PlayerName))
             {
                 TxtPlayerName.text = GlobalParaMgr.PlayerName;
             }

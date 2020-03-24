@@ -27,7 +27,32 @@ namespace Control
         private Ctrl_PlayerProperty _PlayerProperty;        //player
         private Animator _Animator;                         //animator
         private bool _IsSingleTimes = true;                 //check if dead animation is played
-        
+
+        private void OnEnable()
+        {
+
+            StartCoroutine("PlayWarriorAnimation_A");
+
+            StartCoroutine("PlayWarriorAnimation_B");
+            
+            _IsSingleTimes = true;
+
+   
+        }
+        private void OnDisable()
+        {
+          
+            StopCoroutine("PlayWarriorAnimation_A");
+
+            StopCoroutine("PlayWarriorAnimation_B");
+
+            //change enemy animation state to idle
+            if(_Animator!=null)
+            {
+                _Animator.SetTrigger("RecoverLife");
+            }
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -40,9 +65,6 @@ namespace Control
                 _PlayerProperty = goPlayer.GetComponent<Ctrl_PlayerProperty>();
             }
 
-            StartCoroutine("PlayWarriorAnimation_A");
-
-            StartCoroutine("PlayWarriorAnimation_B");
         }
 
         /// <summary>
@@ -120,11 +142,15 @@ namespace Control
         /// <returns></returns>
         public IEnumerator AnimationEvent_WarriorHurt()
         {
-            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
-            GameObject WarriorHurt = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Enemy_HurtEffect", true, this.transform);
+            StartCoroutine(LoadParticleEffectMethod(GlobalParameter.INTERVAL_TIME_0DOT1,
+            "ParticleProps/Enemy_HurtEffect", true, this.transform.position, transform, null,1));
 
-            //destroy this particle object
-            Destroy(WarriorHurt, 1);
+            yield break; ;
+           //yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_0DOT1);
+           //GameObject WarriorHurt = ResourceMgr.GetInstance().LoadAsset("ParticleProps/Enemy_HurtEffect", true, this.transform);
+           //
+           ////destroy this particle object
+           //Destroy(WarriorHurt, 1);
         }
 
     }

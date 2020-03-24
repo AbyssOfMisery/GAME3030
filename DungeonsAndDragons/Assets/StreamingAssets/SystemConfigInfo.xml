@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Game Setting Core Value-->
+<SystemConfigInfo>
+  <!--Log core parameters -->>
+  <!--Log Path -->>
+  <LogPath>D:\DungeonsAndDragonsLog.txt</LogPath>
+  <!--Log Mode: Deleveper mode//dynamic value enter -->>
+  <LogState>Develop</LogState>
+  <!--Log max capacity -->>
+  <LogMaxCapacity>2000</LogMaxCapacity>
+  <!--Log buffer -->>
+  <LogBufferNumber>1</LogBufferNumber>
+  <!--Other Core values -->>
+</SystemConfigInfo>

@@ -82,7 +82,6 @@ namespace Kernal
             goObj.transform.position = transform.position;
             GameObject goObjClone = GameObject.Instantiate<GameObject>(goObj);
 
-            goObjClone.transform.parent = transform.parent;
             if (goObjClone == null)
             {
                 Debug.LogWarning(GetType() + "/LoadAsset/ failed, path = " + _path);

@@ -19,6 +19,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Global;
+using Kernal;
 
 namespace View
 {
@@ -31,6 +32,24 @@ namespace View
         // Start is called before the first frame update
         void Start()
         {
+            //test 
+            //test enter specify level
+            //ConfigManager configMgr = new ConfigManager(KernalParameter.SystemConfigInfo_LogPath,KernalParameter.SystemConfigInfo_LogRootNodeName);
+            //string strLogPath = configMgr.AppSetting["LogPath"];
+            //string strLogState = configMgr.AppSetting["LogState"];
+            //string strLogMaxCapacity = configMgr.AppSetting["LogMaxCapacity"];
+            //string strLogBufferNumber = configMgr.AppSetting["LogBufferNumber"];
+            //print("LogPath=" + strLogPath);
+            //print("LogState=" + strLogState);
+            //print("LogMaxCapacity=" + strLogMaxCapacity);
+            //print("LogBufferNumber=" + strLogBufferNumber);
+
+            //test log.cs file
+
+
+            //enter level one
+            GlobalParaMgr.NextScenesName = ScenesEnum.LevelOne;
+
             StartCoroutine("LoadingScenesProgress");
         }
 

@@ -49,7 +49,7 @@ namespace Control
         //click to start new game
         internal void ClickNewGame()
         {
-            print(GetType()+ "/ClickNewGame()");
+            //print(GetType()+ "/ClickNewGame()");
 
             //enter loading scenes
             StartCoroutine("EnterNextScenes");
