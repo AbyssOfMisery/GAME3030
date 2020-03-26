@@ -46,7 +46,7 @@ namespace View
 
             //test log.cs file
 
-
+            Log.Write();
             //enter level one
             GlobalParaMgr.NextScenesName = ScenesEnum.LevelOne;
 
