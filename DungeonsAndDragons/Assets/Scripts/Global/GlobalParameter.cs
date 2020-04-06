@@ -84,6 +84,8 @@ namespace Global{
         public const float INTERVAL_TIME_2 = 2.0f;
         public const float INTERVAL_TIME_2DOT = 2.5f;
         public const float INTERVAL_TIME_3 = 3.0f;
+        public const float INTERVAL_TIME_4 = 4.0f;
+        public const float INTERVAL_TIME_5 = 5.0f;
     }
 
     /*all projects tag defind*/
@@ -97,6 +99,7 @@ namespace Global{
     //scenes name enums
     public enum ScenesEnum
     {
+        TestScenes,
         StartScenes,
         LoadingScenes,
         LogonScenes,

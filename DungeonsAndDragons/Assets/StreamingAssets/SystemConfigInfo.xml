@@ -5,10 +5,10 @@
   <!--Log Path -->>
   <LogPath>D:\DungeonsAndDragonsLog.txt</LogPath>
   <!--Log Mode: Deleveper mode//dynamic value enter -->>
-  <LogState>Special</LogState>
+  <LogState>Develop</LogState>
   <!--Log max capacity -->>
   <LogMaxCapacity>3000</LogMaxCapacity>
   <!--Log buffer -->>
-  <LogBufferNumber>88</LogBufferNumber>
+  <LogBufferNumber>1</LogBufferNumber>
   <!--Other Core values -->>
 </SystemConfigInfo>

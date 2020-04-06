@@ -28,6 +28,9 @@ namespace View {
     {
         //display on screen
         public Text TxtPlayerName;               //player name
+
+        public Text TxtPlayerNameByDetailPanel; //player name
+
         public Slider SliHp;                     //Hp
         public Slider SliMp;                     //Mp
         public Text TxtCurrentLevelByScreen;     //current level
@@ -97,6 +100,7 @@ namespace View {
             if(!string.IsNullOrEmpty(GlobalParaMgr.PlayerName))
             {
                 TxtPlayerName.text = GlobalParaMgr.PlayerName;
+                TxtPlayerNameByDetailPanel.text = GlobalParaMgr.PlayerName;
             }
         }
 

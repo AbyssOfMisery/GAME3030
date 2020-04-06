@@ -1,7 +1,7 @@
 ﻿/*
  * Title:"Dungoen and dragons"
  *      
- *     View Mode: displayer character info
+ *     View layer: display character info
  *      
  * Description:
  *     displayer character infos; level, hp, mp, or etc 
@@ -23,7 +23,28 @@ namespace View
 {
     public class View_PlayerInfoResponse : MonoBehaviour
     {
+        public static View_PlayerInfoResponse Instance;     //get instance
         public GameObject goPlayerDetailInfoPanel;   //player info panel
+        public GameObject goET;                      //easy touch joystick
+
+        public GameObject goPlayerInfo;
+
+        public GameObject goBasicATK;                      //Visual Key
+        public GameObject goMagicA;                      //Visual Key
+        public GameObject goMagicB;                      //Visual Key
+        public GameObject goMagicC;                      //Visual Key
+        public GameObject goMagicD;                      //Visual Key
+        public GameObject goAddingHp;                      //Visual Key
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
+        private void Start()
+        {
+            DisplayET();
+        }
 
         /// <summary>
         /// show or hide player info panel
@@ -31,6 +52,74 @@ namespace View
         public void DisplayOrHidePlayerDetailInfoPanel()
         {
             goPlayerDetailInfoPanel.SetActive(!goPlayerDetailInfoPanel.activeSelf); 
+        }
+
+        /// <summary>
+        /// Show ET
+        /// </summary>
+        public void DisplayET()
+        {
+            goET.SetActive(true);
+        }
+
+        /// <summary>
+        /// Hide ET
+        /// </summary>
+        public void HideET()
+        {
+            goET.SetActive(false);
+        }
+
+        /// <summary>
+        /// Display Visual Key
+        /// </summary>
+        public void DisplayVisualKey()
+        {
+            goBasicATK.SetActive(true);
+            goMagicA.SetActive(true);
+            goMagicB.SetActive(true);
+            goMagicC.SetActive(true);
+            goMagicD.SetActive(true);
+            goAddingHp.SetActive(true);
+        }
+
+        /// <summary>
+        /// Hide Visual Key
+        /// </summary>
+        public void HideVisualKey()
+        {
+            goBasicATK.SetActive(false);
+            goMagicA.SetActive(false);
+            goMagicB.SetActive(false);
+            goMagicC.SetActive(false);
+            goMagicD.SetActive(false);
+            goAddingHp.SetActive(false);
+        }
+
+        public void ShowBasicAttack()
+        {
+            goBasicATK.SetActive(true);
+            goMagicA.SetActive(false);
+            goMagicB.SetActive(false);
+            goMagicC.SetActive(false);
+            goMagicD.SetActive(false);
+            goAddingHp.SetActive(false);
+        }
+
+        /// <summary>
+        /// show player info UI
+        /// </summary>
+        public void DisplayPlayerUIInfo()
+        {
+            goPlayerInfo.SetActive(true);
+        }
+
+        /// <summary>
+        /// hide player info ui
+        /// </summary>
+        public void HidePlayerUIInfo()
+        {
+            goPlayerInfo.SetActive(false);
         }
 
         public void ExitGame()

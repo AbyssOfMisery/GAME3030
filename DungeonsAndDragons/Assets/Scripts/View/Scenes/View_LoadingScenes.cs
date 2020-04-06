@@ -28,29 +28,39 @@ namespace View
         public Slider SliLoadingProgress;//Progress component control
         private float _FloProgressNumber; //Progress value
         private AsyncOperation _AsyOper;
+        public float s = 10;
 
-        // Start is called before the first frame update
-        void Start()
+        private void OnDisable()
         {
-            //test 
-            //test enter specify level
-            //ConfigManager configMgr = new ConfigManager(KernalParameter.SystemConfigInfo_LogPath,KernalParameter.SystemConfigInfo_LogRootNodeName);
-            //string strLogPath = configMgr.AppSetting["LogPath"];
-            //string strLogState = configMgr.AppSetting["LogState"];
-            //string strLogMaxCapacity = configMgr.AppSetting["LogMaxCapacity"];
-            //string strLogBufferNumber = configMgr.AppSetting["LogBufferNumber"];
-            //print("LogPath=" + strLogPath);
-            //print("LogState=" + strLogState);
-            //print("LogMaxCapacity=" + strLogMaxCapacity);
-            //print("LogBufferNumber=" + strLogBufferNumber);
+            
+        }
+        // Start is called before the first frame update
+        IEnumerator Start()
+        {
+            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
 
-            //test log.cs file
+            #region testing codes
+            //test xml mgr
+            //find file and load file
+            //Log.ClearLogFileAndBufferData();
+            //XMLDialogsDataAnalysisMgr.GetInstance().SetXMLPathAndRootNodeName(KernalParameter.GetDialogConfigXMLPath(), KernalParameter.GetDialogConfigXMLRootNodeName());
+            ////get data from file
+            //yield return new WaitForSeconds(0.5f);
+            //List<DialogDataFormat> lIDialogsDataArray = XMLDialogsDataAnalysisMgr.GetInstance().GetAllXMLDatas();
 
-            Log.Write();
-            //enter level one
-            GlobalParaMgr.NextScenesName = ScenesEnum.LevelOne;
+
+            //bool result = DialogDataMgr.GetInstance().LoadAllDialogData(lIDialogsDataArray);
+            //if (!result)
+            //{
+            //    Log.Write(GetType() + "/Start()/LoadFiled");
+            //}
+            //GlobalParaMgr.NextScenesName = ScenesEnum.LevelOne;
+
+            //StartCoroutine("LoadingScenesProgress");
+            #endregion
 
             StartCoroutine("LoadingScenesProgress");
+
         }
 
         //Asynchronous loading
@@ -65,7 +75,8 @@ namespace View
         //show progress value
         private void Update()
         {
-            if(_FloProgressNumber <=1 )
+            
+            if (_FloProgressNumber <=1 )
             {
                 _FloProgressNumber += 0.01f;
             }

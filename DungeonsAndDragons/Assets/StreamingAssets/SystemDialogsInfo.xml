@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Dialogs_ENG>
+<Dialogs DialogSecNum="1" DialogSecName="Opening Dialogue" SectionIndex="1" DialogSide="Hero" DialogPerson="Player" DialogContent="Where am I?"> </Dialogs>
+<Dialogs DialogSecNum="1" DialogSecName="Opening Dialogue" SectionIndex="2" DialogSide="NPC" DialogPerson="Luo Priest" DialogContent="Hello stranger, Here is Drak world"> </Dialogs>
+<Dialogs DialogSecNum="1" DialogSecName="Opening dialogue" SectionIndex="3" DialogSide="Hero" DialogPerson="Player" DialogContent="What!!? ... who are you?"> </Dialogs>
+<Dialogs DialogSecNum="1" DialogSecName="Introduce dialog" SectionIndex="4" DialogSide = "NPC" DialogPerson="Luo Priest" DialogContent="I'm Luo Priest, a prophet. Hehe, when you speak Before you ask more questions, let's get rid of the trouble first. "> </Dialogs>
+<Dialogs DialogSecNum="1" DialogSecName="Introduce dialog" SectionIndex="5" DialogSide = "Hero" DialogPerson="Player" DialogContent="Do you mean Goblin? They are just black and white."> </Dialogs>
+<Dialogs DialogSecNum="1" DialogSecName="Opening Dialogue" SectionIndex="6" DialogSide="NPC" DialogPerson="Luo Priest" DialogContent="Stranger, it seems you are full of confidence. So let's get familiar with the basic operations first. "> </Dialogs>
+<Dialogs DialogSecNum="2" DialogSecName="Beginner Guide dialog" SectionIndex="1" DialogSide="NPC" DialogPerson="Alice" DialogContent="Hello, I'm Alice."> </Dialogs>
+<Dialogs DialogSecNum="2" DialogSecName="Beginner Guide dialog" SectionIndex="2" DialogSide="NPC" DialogPerson="Alice" DialogContent="This is beginner's guide, we will teach you basic control and movement first"> </Dialogs>
+<Dialogs DialogSecNum="2" DialogSecName="Beginner Guide dialog" SectionIndex="3" DialogSide="NPC" DialogPerson="Alice" DialogContent="Please touch the joystick on the left side of the screen and move it back and forth"> </Dialogs>
+<Dialogs DialogSecNum="3" DialogSecName="Beginner Guide Introduce" SectionIndex="1" DialogSide="NPC" DialogPerson="Alice" DialogContent="Be careful of the enemy, click the button on the right to attack it"> </Dialogs>
+<Dialogs DialogSecNum="4" DialogSecName="Beginner Guide Introduce" SectionIndex="1" DialogSide="NPC" DialogPerson="Alice" DialogContent="Okay, the basic operation of the game is done."> </Dialogs>
+<Dialogs DialogSecNum="5" DialogSecName="NPC1 dialog" SectionIndex="1" DialogSide="NPC" DialogPerson="Moses" DialogContent="Hero! This is the underground world of the Yasland continent, how did you come here? ? "> </Dialogs>
+<Dialogs DialogSecNum="5" DialogSecName="NPC1 dialog" SectionIndex="2" DialogSide="Hero" DialogPerson="Player" DialogContent="Since the there is demon come to this world , my ancestors have ordered me to find out the disaster Oscar Warcraft and eradicate it."> </Dialogs>
+<Dialogs DialogSecNum="5" DialogSecName="NPC1 dialog" SectionIndex="3" DialogSide="NPC" DialogPerson="Moses" DialogContent="You are too arrogant, you can't defeat them now, Hurry, come back here now. "> </Dialogs>
+<Dialogs DialogSecNum="5" DialogSecName="NPC1 dialog" SectionIndex="4" DialogSide="Hero" DialogPerson="Player" DialogContent="Is the priest Luo asking you to say this?"> </Dialogs>
+<Dialogs DialogSecNum="5" DialogSecName="NPC1 dialog" SectionIndex="5" DialogSide="NPC" DialogPerson="Moses" DialogContent="Okay, since I can't convince you, please do it yourself. But I advise you Don't go to the core area of the Dark World, otherwise you will unforgettable for life time for what you have see!! "> </Dialogs>
+<Dialogs DialogSecNum="5" DialogSecName="NPC1 dialog" SectionIndex="6" DialogSide="Hero" DialogPerson="Player" DialogContent="Thanks, but I will still go!"> </Dialogs>
+<Dialogs DialogSecNum="6" DialogSecName="NPC2 dialog" SectionIndex="1" DialogSide="NPC" DialogPerson="Cross" DialogContent="Hero I heard you want to go to the core area of dark world"> </Dialogs>
+<Dialogs DialogSecNum="6" DialogSecName="NPC2 dialog" SectionIndex="2" DialogSide="Hero" DialogPerson="Player" DialogContent="Yes."> </Dialogs>
+<Dialogs DialogSecNum="6" DialogSecName="NPC2 dialog" SectionIndex="3" DialogSide="NPC" DialogPerson="Cross" DialogContent="The prophet Jialuo had told me about this, and ordered me to wait for you and to give you some items! "> </Dialogs>
+<Dialogs DialogSecNum="6" DialogSecName="NPC2 dialog" SectionIndex="4" DialogSide="Hero" DialogPerson="Player" DialogContent="What a great help, thank you in advance"> </Dialogs>
+<Dialogs DialogSecNum="6" DialogSecName="NPC2 dialog" SectionIndex="5" DialogSide="NPC" DialogPerson="Cross" DialogContent="Thanks to the Prophet Luo Priest. Please open your backpack and equip this item. "> </Dialogs>
+<Dialogs DialogSecNum="6" DialogSecName="NPC2 dialog" SectionIndex="6" DialogSide="Hero" DialogPerson="Player" DialogContent="Okay, thanks in advance!"> </Dialogs>
+</Dialogs_ENG>

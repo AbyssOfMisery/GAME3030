@@ -21,50 +21,99 @@ using System.Collections.Generic;
 using System;       //C# kernal namespace
 using System.IO;     //File read-write namespace
 using System.Threading; //Multi-threaded namespace
-
+using UnityEngine;
 
 namespace Kernal
 {
     public static class Log 
     {
         private static List<string> _LiLogArray; //log file caches
-        private static string _LogPath;         //log file path
+        private static string _LogPath = null;   //log file path
         private static State _LogState;          //log states
         private static int _LogMaxCapacity;      //log capacity
-        private static int _LogBufferMaxNumber;    //max buffer number
+        private static int _LogBufferMaxNumber;  //max buffer number
+
+        //system constant
+        //XML Header noods
+        private const string XML_CONFIG_LOG_PATH = "LogPath";//LogPath
+        private const string XML_CONFIG_LOG_STATE = "LogState";//LogState
+        private const string XML_CONFIG_LOG_MAX_CAPACITY = "LogMaxCapacity";//LogMaxCapacity
+        private const string XML_CONFIG_LOG_BUFFER_NUMBER = "LogBufferNumber";//LogBufferNumber
+
+        //Log state constant
+        //Develop
+        private const string XML_CONFIG_LOG_STATE_DEVELOP = "Develop";
+        //Special
+        private const string XML_CONFIG_LOG_STATE_SPECIAL = "Special";
+        //Deploy
+        private const string XML_CONFIG_LOG_STATE_DEPLOY = "Deploy";
+        //Stop
+        private const string XML_CONFIG_LOG_STATE_STOP = "Stop";
+
+        //Log default path
+        private const string XML_CONFIG_LOG_DEFAULT_PATH = "DungeonsAndDragonsLog.txt";
+
+        //log max capacity
+        private const int LOG_DEFAULT_MAX_CAPACITY_NUMBER = 2000;
+
+        //log max buffer
+        private const int LOG_DEFAULT_MAX_BUFFER = 1;
+
+        //log warning sign
+        private const string LOG_TIPS = "@@@ Important !!! @@@";
+
+        //Temporary field
+
+        private static string strLogState =null;//log state
+
+        private static string strLogMaxCapacity=null;//log max capacity
+
+        private static string strLogBufferMaxNumber=null;//log max buffer 
+
 
         static Log()
         {
-           
             //log array
             _LiLogArray = new List<string>();
 
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR   
             //log path
-            IConfigManager configMgr = new ConfigManager(KernalParameter.SystemConfigInfo_LogPath,KernalParameter.SystemConfigInfo_LogRootNodeName);
-            _LogPath = configMgr.AppSetting["LogPath"];
+            IConfigManager configMgr = new ConfigManager(KernalParameter.GetLogPath(), KernalParameter.GetLogRootNodeName());
+            _LogPath = configMgr.AppSetting[XML_CONFIG_LOG_PATH];
 
-            if(string.IsNullOrEmpty(_LogPath))
+            //log state
+            strLogState = configMgr.AppSetting[XML_CONFIG_LOG_STATE];
+            //log max capacity
+            strLogMaxCapacity = configMgr.AppSetting[XML_CONFIG_LOG_MAX_CAPACITY];
+            //log max buffer 
+            strLogBufferMaxNumber = configMgr.AppSetting[XML_CONFIG_LOG_BUFFER_NUMBER];
+#endif
+
+
+
+
+            if (string.IsNullOrEmpty(_LogPath))
             {
-                _LogPath = UnityEngine.Application.persistentDataPath + "\\DungeonsAndDragonLog.txt";
+                _LogPath = Application.persistentDataPath + "\\" + XML_CONFIG_LOG_DEFAULT_PATH;
 
             }
        
             //log state
-            string strLogState = configMgr.AppSetting["LogState"];
+           
             if(!string.IsNullOrEmpty(strLogState))
             {
                 switch (strLogState)
                 {
-                    case "DeDevelop":
+                    case XML_CONFIG_LOG_STATE_DEVELOP:
                         _LogState = State.Develop;
                         break;
-                    case "Special":
+                    case XML_CONFIG_LOG_STATE_SPECIAL:
                         _LogState = State.Special;
                         break;
-                    case "Deploy":
+                    case XML_CONFIG_LOG_STATE_DEPLOY:
                         _LogState = State.Deploy;
                         break;
-                    case "Stop":
+                    case XML_CONFIG_LOG_STATE_STOP:
                         _LogState = State.Stop;
                         break;
                     default:
@@ -78,27 +127,27 @@ namespace Kernal
             }
      
             //log max capacity
-            string strLogMaxCapacity = configMgr.AppSetting["LogMaxCapacity"];
+          
             if(!string.IsNullOrEmpty(strLogMaxCapacity))
             {
                 _LogMaxCapacity = Convert.ToInt32(strLogMaxCapacity);
             }
             else
             {
-                _LogMaxCapacity = 2000;
+                _LogMaxCapacity = LOG_DEFAULT_MAX_CAPACITY_NUMBER;
             }
         
             //log max buffer 
-            string strLogBufferMaxNumber = configMgr.AppSetting["LogBufferNumber"];
+          
             if(!string.IsNullOrEmpty(strLogBufferMaxNumber))
             {
                 _LogBufferMaxNumber = Convert.ToInt32(strLogBufferMaxNumber);
             }
             else
             {
-                _LogBufferMaxNumber = 1;
+                _LogBufferMaxNumber = LOG_DEFAULT_MAX_BUFFER;
             }
-            
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR           
             //create file
             if (!File.Exists(_LogPath))          //check is there a log file
             {
@@ -111,7 +160,7 @@ namespace Kernal
 
             //Synchronize the data in the log file to the log cache
             SyncFileDataToLogArray();
-
+#endif
         }//log_end
 
         //Synchronize the data in the log file to the log cache
@@ -150,28 +199,28 @@ namespace Kernal
             if(!string.IsNullOrEmpty(writeFileData))
             {
                 //save date and time when it's recorded
-                writeFileData = "Log State:" +_LogState.ToString() + "/" +DateTime.Now.ToString()+"/"+ writeFileData;
+                writeFileData = XML_CONFIG_LOG_STATE + _LogState.ToString() + "/" +DateTime.Now.ToString()+"/"+ writeFileData;
 
                 //For different "log states", write files to specific cases
                 if (level == Level.High)
                 {
-                    writeFileData = "@@@ Error or Warning Important !!! @@@" + writeFileData;
+                    writeFileData = LOG_TIPS + writeFileData;
                 }
                 switch (_LogState)
                 {
                     case State.Develop:  //Develop mode
-                        AppendDataToFile();
+                        AppendDataToFile(writeFileData);
                         break;
                     case State.Special: //special mode
                         if(level == Level.Special || level ==Level.High)
                         {
-                            AppendDataToFile();
+                            AppendDataToFile(writeFileData);
                         }
                         break;
                     case State.Deploy:  //deploy mode
                         if (level == Level.High)
                         {
-                            AppendDataToFile();
+                            AppendDataToFile(writeFileData);
                         }
                         break;
                     case State.Stop:    //stop
@@ -189,13 +238,73 @@ namespace Kernal
             Write(writeFileData, Level.Low);
         }
 
-        private static void AppendDataToFile()
+        //write data to files
+        /// <summary>
+        /// Append data to a file
+        /// </summary>
+        /// <param name="writeFileData">data that write in file</param>
+        private static void AppendDataToFile(string writeFileData)
         {
+            if(!string.IsNullOrEmpty(writeFileData))
+            {
+                //Debug information data is appended to the cache collection
+                _LiLogArray.Add(writeFileData);
+
+            }
+
+            //The number of cache collections exceeds a certain specified number
+            if (_LiLogArray.Count%_LogBufferMaxNumber == 0)
+            {
+                //Synchronize data information in cache to entity file
+                SyncLogArrayToFile();
+            }
 
         }
 
+#region important function
+        //Query all data in the log cache
+        public static List<string> QueryAllDataFromBuffer()
+        {
+            if(_LiLogArray!=null)
+            {
+                return _LiLogArray;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
-        #region Enum types of this class
+        //Clear all data in entity log files and log cache
+        public static void ClearLogFileAndBufferData()
+        {
+            if(_LiLogArray!=null)
+            {
+                _LiLogArray.Clear();
+            }
+            SyncLogArrayToFile();
+        }
+
+        /// <summary>
+        /// Synchronize data information in cache to file
+        /// </summary>
+        public static void SyncLogArrayToFile()
+        {
+            if (!string.IsNullOrEmpty(_LogPath))
+            {
+                StreamWriter sw = new StreamWriter(_LogPath);
+                foreach (string item in _LiLogArray)
+                {
+                    sw.WriteLine(item);
+                }
+                sw.Close();
+            }
+        }
+
+#endregion
+
+
+#region Enum types of this class
         /// <summary>
         /// log states
         /// </summary>
@@ -216,7 +325,7 @@ namespace Kernal
             Special,
             Low
         }
-        #endregion
+#endregion
     }
 
 }

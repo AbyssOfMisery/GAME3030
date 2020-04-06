@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/LoadingScenes.unity
+- path: Assets/Scenes/4_MajorCity.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

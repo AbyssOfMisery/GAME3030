@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Dialogs_ENG>
+  <Dialogs DialogSecNum="1" DialogSecName="Opening dialogue" SectionIndex="1" DialogSide="Hero" DialogPerson="Player" DialogContent="Where is this for me?"> </Dialogs>
+  <Dialogs DialogSecNum="1" DialogSecName="Opening Dialogue" SectionIndex="2" DialogSide="NPC" DialogPerson="Luo Priest" DialogContent="Young man, this is a paradise for adventurers. Welcome to Yasland Underground castle .. "> </Dialogs>
+  <Dialogs DialogSecNum="1" DialogSecName="Opening dialogue" SectionIndex="3" DialogSide="Hero" DialogPerson="Player" DialogContent="What, what ... who are you?"> </Dialogs>
+  <Dialogs DialogSecNum="1" DialogSecName="Introductory Dialogue" SectionIndex="4" DialogSide = "NPC" DialogPerson="Luo Priest" DialogContent="I'm Luo Priest, a prophet of the land of Yaslan. Hehe, when you speak Before you ask more questions, let's get rid of the immediate trouble. "> </Dialogs>
+  <Dialogs DialogSecNum="1" DialogSecName="Introductory dialogue" SectionIndex="5" DialogSide = "Hero" DialogPerson="Player" DialogContent="Do you mean Goblin? They are just black and white."> </Dialogs>
+  <Dialogs DialogSecNum="1" DialogSecName="Opening Dialogue" SectionIndex="6" DialogSide="NPC" DialogPerson="Luo Priest" DialogContent="Australia, it seems you are full of confidence. So let's get familiar with the basic operations first Go ahead. "> </Dialogs>
+  <Dialogs DialogSecNum="2" DialogSecName="Novice Guidance" SectionIndex="1" DialogSide="NPC" DialogPerson="Alice" DialogContent="Hello, I'm Alice."> </Dialogs>
+  <Dialogs DialogSecNum="2" DialogSecName="Novice Guide" SectionIndex="2" DialogSide="NPC" DialogPerson="Alice" DialogContent="You try the most basic operation first."> </Dialogs>
+  <Dialogs DialogSecNum="2" DialogSecName="Novice Guidance" SectionIndex="3" DialogSide="NPC" DialogPerson="Alice" DialogContent="Please touch the joystick on the left side of the screen and move it back and forth"> </Dialogs>
+  <Dialogs DialogSecNum="2" DialogSecName="Novice Guidance" SectionIndex="4" DialogSide="NPC" DialogPerson="Alice" DialogContent="Be careful of the enemy in front, click the virtual button on the right to attack it"> </Dialogs>
+  <Dialogs DialogSecNum="2" DialogSecName="Novice Guidance" SectionIndex="5" DialogSide="NPC" DialogPerson="Alice" DialogContent="Okay, the most basic operation of the game, I will introduce this first."> </Dialogs>
+  <Dialogs DialogSecNum="3" DialogSecName="NPC1 Conversation" SectionIndex="1" DialogSide="NPC" DialogPerson="Moses" DialogContent="Hero! This is the underground castle area of ​​the Yasland continent, how did you come here? ? "> </Dialogs>
+  <Dialogs DialogSecNum="3" DialogSecName="NPC1 Conversation" SectionIndex="2" DialogSide="Hero" DialogPerson="Player" DialogContent="Since the Big Bang, my ancestors have ordered me to find the source of the disaster OscarWarcraft and eradicated it."> </Dialogs>
+  <Dialogs DialogSecNum="3" DialogSecName="NPC1 Conversation" SectionIndex="3" DialogSide="NPC" DialogPerson="Moses" DialogContent="You are too arrogant, how can you do it with your own strength, you Hurry back. "> </Dialogs>
+  <Dialogs DialogSecNum="3" DialogSecName="NPC1 Conversation" SectionIndex="4" DialogSide="Hero" DialogPerson="Player" DialogContent="Is the priest Luo asking you to say this?"> </Dialogs>
+  <Dialogs DialogSecNum="3" DialogSecName="NPC1 Conversation" SectionIndex="5" DialogSide="NPC" DialogPerson="Moses" DialogContent="Okay, since I can't convince you, please do it yourself. But I advise you Don't go to the core area of ​​the underground castle in Yaslan mainland, you will die a lifetime! "> </Dialogs>
+  <Dialogs DialogSecNum="3" DialogSecName="NPC1 dialog" SectionIndex="6" DialogSide="Hero" DialogPerson="Player" DialogContent="Thanks, but I will still go!"> </Dialogs>
+  <Dialogs DialogSecNum="4" DialogSecName="NPC2 Conversation" SectionIndex="1" DialogSide="NPC" DialogPerson="Cross" DialogContent="Heroes: I heard you went to the core area of ​​the underground castle in the land of Yasland"> </Dialogs>
+  <Dialogs DialogSecNum="4" DialogSecName="NPC2 dialog" SectionIndex ="2" DialogSide="Hero" DialogPerson="Player" DialogContent="Yes."> </Dialogs>
+  <Dialogs DialogSecNum="4" DialogSecName="NPC2 Conversation" SectionIndex="3" DialogSide="NPC" DialogPerson="Cross" DialogContent="The prophet Jialuo had expected this, and ordered me to wait for you Three treasures! "> </Dialogs>
+  <Dialogs DialogSecNum="4" DialogSecName="NPC2 dialogue" SectionIndex="4" DialogSide="Hero" DialogPerson="Player" DialogContent="What a treasure, thank you in advance"> </Dialogs>
+  <Dialogs DialogSecNum="4" DialogSecName="NPC2 Conversation" SectionIndex="5" DialogSide="NPC" DialogPerson="Cross" DialogContent="Thanks to the Prophet Luo Priest. Please open your backpack and equip this Three treasures. "> </Dialogs>
+  <Dialogs DialogSecNum="4" DialogSecName="NPC2 dialog" SectionIndex="6" DialogSide="Hero" DialogPerson="Player" DialogContent="Okay, thanks in advance!"> </Dialogs>
+  <Dialogs DialogSecNum="5" DialogSecName="Test dialog section" SectionIndex="1" DialogSide="Hero" DialogPerson="Player" DialogContent="Hello, this is a test statement !!!"> </Dialogs>
+</Dialogs_ENG>

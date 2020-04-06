@@ -31,6 +31,7 @@ namespace Control
         private void Start()
         {
             _AnimCurrentAnimation = this.GetComponent<Animation>();
+            DisplayCharacterAnim(1);
         }
 
         /// <summary>
