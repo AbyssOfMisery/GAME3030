@@ -18,6 +18,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Control;
+using Kernal;
+using Global;
 
 namespace View
 {
@@ -49,10 +51,30 @@ namespace View
         /// <summary>
         /// show or hide player info panel
         /// </summary>
-        public void DisplayOrHidePlayerDetailInfoPanel()
+        //public void DisplayOrHidePlayerDetailInfoPanel()
+        //{
+        //    goPlayerDetailInfoPanel.SetActive(!goPlayerDetailInfoPanel.activeSelf); 
+        //}
+
+        public void DisplayPlayerRoles()
         {
-            goPlayerDetailInfoPanel.SetActive(!goPlayerDetailInfoPanel.activeSelf); 
+            if(goPlayerDetailInfoPanel!=null)
+            {
+                BeforeOpenWindows(goPlayerDetailInfoPanel);
+            }
+            goPlayerDetailInfoPanel.SetActive(true);
         }
+
+        public void HidePlayerRoles()
+        {
+            if (goPlayerDetailInfoPanel != null)
+            {
+                AfterCloseWindow();
+            }
+            goPlayerDetailInfoPanel.SetActive(false);
+        }
+
+
 
         /// <summary>
         /// Show ET
@@ -126,12 +148,31 @@ namespace View
         {
             Application.Quit();
         }
-//#if UNITY_ANDROID || UNITY_IPHONE
+
+        /// <summary>
+        /// before open windows pre setting
+        /// </summary>
+        private void BeforeOpenWindows(GameObject goNeedDisplayPanel)
+        {
+            //deactive easy touch
+            HideET();
+            //windows Modalization
+            this.gameObject.GetComponent<UIMaskMgr>().SetMaskWindow(goNeedDisplayPanel);
+        }
+
+        private void AfterCloseWindow()
+        {
+            //active easy touch
+            DisplayET();
+            //windows Modalization
+            this.gameObject.GetComponent<UIMaskMgr>().CancleMaskWindow();
+        }
+        //#if UNITY_ANDROID || UNITY_IPHONE
         #region response to player attack
-//public void ResponseBASICATK()
-//{
-//    Ctrl_PlayerAttackInputByET.Instance.ResponseATKByBasic();
-//}
+        //public void ResponseBASICATK()
+        //{
+        //    Ctrl_PlayerAttackInputByET.Instance.ResponseATKByBasic();
+        //}
 
 
         public void ResponseATKByMagicA()

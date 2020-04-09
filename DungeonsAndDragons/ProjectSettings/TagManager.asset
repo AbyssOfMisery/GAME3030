@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Wall
   - TagEnemy
+  - Tag_MajorCity_Up
+  - Tag_MajorCity_Down
+  - HitEfects
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - 
   - PostProcessing
   - Layer_SmallObj
-  - 
+  - Layer_UIInMajorCiry
   - 
   - 
   - 

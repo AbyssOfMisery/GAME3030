@@ -1714,6 +1714,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1845352286314540361, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352286450005187, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352286862726056, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352286898759022, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352286898759022, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1845352286899750285, guid: 28065fc3a722a0a4aa6faa4167c05747,
         type: 3}
       propertyPath: cameraTransform
@@ -1754,6 +1779,26 @@ PrefabInstance:
       propertyPath: axisY.directCharacterController
       value: 
       objectReference: {fileID: 548357044}
+    - target: {fileID: 1845352286909381723, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352286909555555, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352287094953017, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352287249585963, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1845352287335708236, guid: 28065fc3a722a0a4aa6faa4167c05747,
         type: 3}
       propertyPath: m_Name
@@ -1862,6 +1907,31 @@ PrefabInstance:
     - target: {fileID: 1845352287335708240, guid: 28065fc3a722a0a4aa6faa4167c05747,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352287536208811, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayPlayerRoles
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352287542257217, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352287542257217, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845352287588279638, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819282157550617294, guid: 28065fc3a722a0a4aa6faa4167c05747,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2082,6 +2152,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior_player
       objectReference: {fileID: 0}
+    - target: {fileID: 6992808903932512865, guid: 261ac97614b6c15409d744a14b2fce97,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 261ac97614b6c15409d744a14b2fce97, type: 3}
 --- !u!1001 &6011083564223179139
@@ -2116,6 +2191,11 @@ PrefabInstance:
       propertyPath: goUIMagicATK_D
       value: 
       objectReference: {fileID: 240309445}
+    - target: {fileID: 6011083563261984105, guid: e841b066422b4e44ca6b392ebf386461,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6011083563261984111, guid: e841b066422b4e44ca6b392ebf386461,
         type: 3}
       propertyPath: TraSpawnEnemyPosition_1.Array.data[0]

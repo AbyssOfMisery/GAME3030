@@ -263,6 +263,7 @@
     <Compile Include="Assets\Scripts\Global\GlobalParaMgr.cs" />
     <Compile Include="Assets\Scripts\Global\GlobalParameter.cs" />
     <Compile Include="Assets\Scripts\Global\SmallObjLayerControl.cs" />
+    <Compile Include="Assets\Scripts\Global\UIMaskMgr.cs" />
     <Compile Include="Assets\Scripts\Kernal\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Kernal\Dialogs\DialogDataFormat.cs" />
     <Compile Include="Assets\Scripts\Kernal\Dialogs\DialogDataMgr.cs" />
@@ -296,6 +297,8 @@
     <Compile Include="Assets\Scripts\View\Guide\TriggerOperVisualKey.cs" />
     <Compile Include="Assets\Scripts\View\Player\View_DisplayPlayerInfo.cs" />
     <Compile Include="Assets\Scripts\View\Player\View_PlayerInfoResponse.cs" />
+    <Compile Include="Assets\Scripts\View\Player\View_PlayerInfoResponse_InMajorCity.cs" />
+    <Compile Include="Assets\Scripts\View\Prop\MajorCity\UI\View_PanelSkill.cs" />
     <Compile Include="Assets\Scripts\View\Prop\UI\View_ATKBasicPress.cs" />
     <Compile Include="Assets\Scripts\View\Prop\UI\View_ATKButtomCDEffect.cs" />
     <Compile Include="Assets\Scripts\View\Scenes\View_LevelOneScenes.cs" />

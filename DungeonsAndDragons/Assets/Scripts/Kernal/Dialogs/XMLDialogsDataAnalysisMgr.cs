@@ -106,8 +106,6 @@ namespace Kernal
 
         private void InitXMLConfig(UnityWebRequest www, string rootNodeName)
         {
-            Debug.LogWarning(www.downloadHandler.text + "," + _XMLPath);
-
             if (_DialogData == null || string.IsNullOrEmpty(www.downloadHandler.text))
             {
                 Debug.LogError(GetType() + "/InitXMLConfig()/_DialogDataArray==null or rootNodeName is null!,please check!");
