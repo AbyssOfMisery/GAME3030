@@ -1,4 +1,4 @@
-# GameProduction `<this project is made with unity 2019.3.0f6>`
+# GameProduction `<this project is made with unity 2019.3.6f1>`
 
 #Jan 7
 * 1. add UI 
