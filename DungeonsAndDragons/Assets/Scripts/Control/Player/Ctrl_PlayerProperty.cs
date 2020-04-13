@@ -49,6 +49,12 @@ namespace Control
         public int IntGold = 0;                 //gold
         public int IntDiamond = 0;              //diamond
 
+        //player inventory data
+        public int IntHealthPotionNum = 0;
+        public int IntManaPotionNum = 0;
+        public int IntATKNum = 0;
+        public int IntDEFNum = 0;
+        public int IntDexNum = 0;
 
 
 
@@ -59,11 +65,13 @@ namespace Control
 
         private void Start()
         {
-             //setup default value
-              PlayerSaveDataProxy playerSaveDataProxy = new PlayerSaveDataProxy(playerCurrentHp, playerCurrentMp, playerCurrentATK,
-              playerCurrentDEF, playerCurrentDEX, playerMaxHp, playerMaxMp, playerMaxATK, playerMaxDEF, playerMaxDEX, FloATKByProp, FloDEFByProp, FloDEXByProp);
-            
-              PlayerExtenalDataProxy playerExtenalDataProxy = new PlayerExtenalDataProxy(IntEXP, IntKillNum, IntLevel, IntGold, IntDiamond);
+            //setup default value
+            PlayerSaveDataProxy playerSaveDataProxy = new PlayerSaveDataProxy(playerCurrentHp, playerCurrentMp, playerCurrentATK,
+            playerCurrentDEF, playerCurrentDEX, playerMaxHp, playerMaxMp, playerMaxATK, playerMaxDEF, playerMaxDEX, FloATKByProp, FloDEFByProp, FloDEXByProp);
+            PlayerExtenalDataProxy playerExtenalDataProxy = new PlayerExtenalDataProxy(IntEXP, IntKillNum, IntLevel, IntGold, IntDiamond);
+
+            //player inventory data set up
+            PlayerInventoryDataProxy playerInventoryDataProxy = new PlayerInventoryDataProxy(IntHealthPotionNum,IntManaPotionNum,IntATKNum,IntDEFNum,IntDexNum);
         }
 
         #region health changes

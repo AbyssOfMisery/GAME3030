@@ -16,11 +16,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Global;
+
 namespace Kernal
 {
     public class TriggerDisplayAndHide : MonoBehaviour
     {
-        public string TagNameByPlayer = "Player";
+        public string TagNameByPlayer = Tag.Player;
         public string TagNameByDisplayObject = "TagNameDisplayName";
         public string TagNameByHideObject = "TagNameHideName";
 

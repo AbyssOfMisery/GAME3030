@@ -26,11 +26,19 @@ namespace Control
     {
         public AudioClip AcBackground;      //major ciry background music
 
-        private void Start()
+        IEnumerable Start()
         {
             if(AcBackground!=null)
             {
                 AudioManager.PlayBackground(AcBackground);
+            }
+            //load player saved data
+
+            if(GlobalParaMgr.CurGameType == CurrentGameType.Continue)
+            {
+                //load game 
+                yield return new WaitForSeconds(2);
+                SaveAndLoading.GetInstance().loadingGame_PlayerData();
             }
         }
 

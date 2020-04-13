@@ -33,7 +33,10 @@ namespace Global
             _DicScenesEnumLib.Add(ScenesEnum.LogonScenes, "2_LogonScenes");
             _DicScenesEnumLib.Add(ScenesEnum.LoadingScenes, "LoadingScenes"); 
             _DicScenesEnumLib.Add(ScenesEnum.LevelOne, "3_LevelOne");
+            _DicScenesEnumLib.Add(ScenesEnum.LevelTwo, "5_LevelTwo");
+            _DicScenesEnumLib.Add(ScenesEnum.MajorCity, "4_MajorCity");
             _DicScenesEnumLib.Add(ScenesEnum.TestScenes, "100TestScenes");
+          
         }
 
         //Get examples of instances

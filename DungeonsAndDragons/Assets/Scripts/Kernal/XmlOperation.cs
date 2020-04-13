@@ -92,14 +92,15 @@ namespace Kernal
         /// <returns></returns>
         public string SerializeObject(object pObject, System.Type ty)
         {
-            string XmlizedString = null;
+            string xmlizedString = null;
             MemoryStream memoryStream = new MemoryStream();
             XmlSerializer xs = new XmlSerializer(ty);
             XmlTextWriter xmlTextWriter = new XmlTextWriter(memoryStream, Encoding.UTF8);
             xs.Serialize(xmlTextWriter, pObject);
             memoryStream = (MemoryStream)xmlTextWriter.BaseStream;
-            XmlizedString = UTF8ByteArrayToString(memoryStream.ToArray());
-            return XmlizedString;
+            xmlizedString = UTF8ByteArrayToString(memoryStream.ToArray());
+            return xmlizedString;
+
         }
 
         /// <summary> 反序列化对象

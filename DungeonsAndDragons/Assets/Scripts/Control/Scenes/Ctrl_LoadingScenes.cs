@@ -56,7 +56,7 @@ namespace Control
                     break;
                 case ScenesEnum.LevelTwo:
                     break;
-                case ScenesEnum.BaseScenes:
+                case ScenesEnum.MajorCity:
                     break;
                 default:
                     break;

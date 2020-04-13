@@ -93,9 +93,20 @@ namespace Global{
     {
         public static string Tag_Enemy = "TagEnemy";
         public static string Player = "Player";
+        public static string Tag_City_Up = "Tag_MajorCity_Up";
+        public static string Tag_City_Down = "Tag_MajorCity_Down";
+        public static string Tag_InventoryItems = "Tag_InventoryItems";
     }
 
     #region project's enum type
+
+    public enum CurrentGameType
+    {
+        None,
+        NewGame,
+        Continue
+    }
+
     //scenes name enums
     public enum ScenesEnum
     {
@@ -105,7 +116,7 @@ namespace Global{
         LogonScenes,
         LevelOne,
         LevelTwo,
-        BaseScenes
+        MajorCity
     }
 
     //player type

@@ -30,6 +30,9 @@ namespace Global
 
         //get player type
         public static PlayerType PlayerTypes = PlayerType.Warrior;
+
+        //player type(new game or continue)
+        public static CurrentGameType CurGameType = CurrentGameType.None;
     }
 }
 

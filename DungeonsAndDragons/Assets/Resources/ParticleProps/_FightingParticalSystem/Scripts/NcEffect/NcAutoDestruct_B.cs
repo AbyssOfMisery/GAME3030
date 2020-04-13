@@ -169,8 +169,7 @@ public class NcAutoDestruct_B : NcEffectBehaviour_B
 		m_fSmoothDestroyTime	/= fSpeedRate;
 	}
 
-	void AutoDestruct()
-	{
-		DestroyObject(gameObject);
-	}
+#pragma warning disable CS0618 // Type or member is obsolete
+    void AutoDestruct() => DestroyObject(gameObject);
+#pragma warning restore CS0618 // Type or member is obsolete
 }

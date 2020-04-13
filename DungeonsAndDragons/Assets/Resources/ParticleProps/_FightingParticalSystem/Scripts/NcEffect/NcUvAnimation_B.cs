@@ -140,7 +140,9 @@ public class NcUvAnimation_B : NcEffectAniBehaviour_B
         {
             OnEndAnimation();
             if (m_bAutoDestruct)
+#pragma warning disable CS0618 // Type or member is obsolete
                 DestroyObject(gameObject);
+#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 

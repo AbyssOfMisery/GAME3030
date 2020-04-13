@@ -140,6 +140,25 @@ namespace Model
             base.Gold += Mathf.Abs(GoldNumber);
         }
         /// <summary>
+        /// MinusGold gold to player
+        /// </summary>
+        public bool MinusGold(int GoldNumber)
+        {
+            bool boolHandleFlag = false;
+
+            //diamond can not be minus
+            if (GetGold() - Mathf.Abs(GoldNumber) >= 0)
+            {
+                base.Gold -= Mathf.Abs(GoldNumber);
+                boolHandleFlag = true;
+            }
+            else
+            {
+                boolHandleFlag = false;
+            }
+            return boolHandleFlag;
+        }
+        /// <summary>
         /// get current gold
         /// </summary>
         /// <returns></returns>
@@ -156,6 +175,25 @@ namespace Model
         public void AddDiamond(int DiamondNumber)
         {
            base.Diamonds += Mathf.Abs(DiamondNumber);
+        }
+        /// <summary>
+        /// Minus diamonds
+        /// </summary>
+        public bool MinusDiamond(int DiamondNumber)
+        {
+            bool boolHandleFlag = false;
+
+            //diamond can not be minus
+            if (GetDiamonds() - Mathf.Abs(DiamondNumber) >= 0)
+            {
+                base.Diamonds -= Mathf.Abs(DiamondNumber);
+                boolHandleFlag = true;
+            }
+            else
+            {
+                boolHandleFlag = false;
+            }
+            return boolHandleFlag;
         }
         /// <summary>
         /// get current diamonds

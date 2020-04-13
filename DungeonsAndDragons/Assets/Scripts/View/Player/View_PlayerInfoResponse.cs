@@ -146,7 +146,8 @@ namespace View
 
         public void ExitGame()
         {
-            Application.Quit();
+            //Application.Quit();
+            Ctrl_PlayerUIResponse.Instance.ExitGame();
         }
 
         /// <summary>

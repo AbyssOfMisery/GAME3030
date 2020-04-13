@@ -28,7 +28,6 @@ namespace View
         public Slider SliLoadingProgress;//Progress component control
         private float _FloProgressNumber; //Progress value
         private AsyncOperation _AsyOper;
-        public float s = 10;
 
         private void OnDisable()
         {
@@ -37,29 +36,29 @@ namespace View
         // Start is called before the first frame update
         IEnumerator Start()
         {
-            yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
+            //yield return new WaitForSeconds(GlobalParameter.INTERVAL_TIME_1);
 
             #region testing codes
             //test xml mgr
             //find file and load file
-            //Log.ClearLogFileAndBufferData();
-            //XMLDialogsDataAnalysisMgr.GetInstance().SetXMLPathAndRootNodeName(KernalParameter.GetDialogConfigXMLPath(), KernalParameter.GetDialogConfigXMLRootNodeName());
-            ////get data from file
-            //yield return new WaitForSeconds(0.5f);
-            //List<DialogDataFormat> lIDialogsDataArray = XMLDialogsDataAnalysisMgr.GetInstance().GetAllXMLDatas();
+            Log.ClearLogFileAndBufferData();
+            XMLDialogsDataAnalysisMgr.GetInstance().SetXMLPathAndRootNodeName(KernalParameter.GetDialogConfigXMLPath(), KernalParameter.GetDialogConfigXMLRootNodeName());
+            //get data from file
+            yield return new WaitForSeconds(0.5f);
+            List<DialogDataFormat> lIDialogsDataArray = XMLDialogsDataAnalysisMgr.GetInstance().GetAllXMLDatas();
+             
 
-
-            //bool result = DialogDataMgr.GetInstance().LoadAllDialogData(lIDialogsDataArray);
-            //if (!result)
-            //{
-            //    Log.Write(GetType() + "/Start()/LoadFiled");
-            //}
-            //GlobalParaMgr.NextScenesName = ScenesEnum.LevelOne;
-
-            //StartCoroutine("LoadingScenesProgress");
-            #endregion
+            bool result = DialogDataMgr.GetInstance().LoadAllDialogData(lIDialogsDataArray);
+            if (!result)
+            {
+                Log.Write(GetType() + "/Start()/LoadFiled");
+            }
+            GlobalParaMgr.NextScenesName = ScenesEnum.MajorCity;
 
             StartCoroutine("LoadingScenesProgress");
+            #endregion
+
+            //StartCoroutine("LoadingScenesProgress");
 
         }
 

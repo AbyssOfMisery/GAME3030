@@ -51,7 +51,7 @@ namespace Kernal
         /// <param name="path"></param>
         /// <param name="isCatch"></param>
         /// <returns></returns>
-        private T LoadResource<T>(string path, bool isCatch) where T : UnityEngine.Object
+        public T LoadResource<T>(string path, bool isCatch) where T : UnityEngine.Object
         {
             if(ht.Contains(path))
             {

@@ -28,7 +28,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,7 +37,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -249,7 +249,10 @@
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerMovingCtrlByKey.cs" />
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerMovingScript.cs" />
     <Compile Include="Assets\Scripts\Control\Player\Ctrl_PlayerProperty.cs" />
+    <Compile Include="Assets\Scripts\Control\Player\UI\Ctrl_PlayerUIResponse.cs" />
     <Compile Include="Assets\Scripts\Control\Prop\DestoryObject.cs" />
+    <Compile Include="Assets\Scripts\Control\Prop\MajorCoty\UIByMajorCity\Ctrl_PanelMission.cs" />
+    <Compile Include="Assets\Scripts\Control\Prop\MajorCoty\UIByMajorCity\Ctrl_PanelShop.cs" />
     <Compile Include="Assets\Scripts\Control\Prop\MakeObjectRotate.cs" />
     <Compile Include="Assets\Scripts\Control\Prop\RecoveredObjByTime.cs" />
     <Compile Include="Assets\Scripts\Control\Scenes\Ctrl_LevelOneScenes.cs" />
@@ -262,6 +265,7 @@
     <Compile Include="Assets\Scripts\Global\FadeInAndOut.cs" />
     <Compile Include="Assets\Scripts\Global\GlobalParaMgr.cs" />
     <Compile Include="Assets\Scripts\Global\GlobalParameter.cs" />
+    <Compile Include="Assets\Scripts\Global\SaveAndLoading.cs" />
     <Compile Include="Assets\Scripts\Global\SmallObjLayerControl.cs" />
     <Compile Include="Assets\Scripts\Global\UIMaskMgr.cs" />
     <Compile Include="Assets\Scripts\Kernal\AudioManager.cs" />
@@ -277,6 +281,7 @@
     <Compile Include="Assets\Scripts\Kernal\PoolManager\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Kernal\PoolManager\Pools.cs" />
     <Compile Include="Assets\Scripts\Kernal\ResourceMgr.cs" />
+    <Compile Include="Assets\Scripts\Kernal\Trigger\TriggerCommonEvents.cs" />
     <Compile Include="Assets\Scripts\Kernal\Trigger\TriggerDisplayAndHide.cs" />
     <Compile Include="Assets\Scripts\Kernal\UnityHelper.cs" />
     <Compile Include="Assets\Scripts\Kernal\XmlOperation.cs" />
@@ -286,8 +291,12 @@
     <Compile Include="Assets\Scripts\Model\Player\PlayerSaveData.cs" />
     <Compile Include="Assets\Scripts\Model\Player\PlayerSaveDataProxy.cs" />
     <Compile Include="Assets\Scripts\Model\Player\UpgradeRule.cs" />
+    <Compile Include="Assets\Scripts\Model\Prop\PlayerInventoryData.cs" />
+    <Compile Include="Assets\Scripts\Model\Prop\PlayerInventoryDataProxy.cs" />
+    <Compile Include="Assets\Scripts\Model\Scenes\GlobalParameterData.cs" />
     <Compile Include="Assets\Scripts\Test\TestDialogInfo.cs" />
     <Compile Include="Assets\Scripts\Test\TestDialogUI.cs" />
+    <Compile Include="Assets\Scripts\Test\TestInventory.cs" />
     <Compile Include="Assets\Scripts\Test\TestModelLayer.cs" />
     <Compile Include="Assets\Scripts\View\Guide\GuideMgr.cs" />
     <Compile Include="Assets\Scripts\View\Guide\GuideMove.cs" />
@@ -295,9 +304,17 @@
     <Compile Include="Assets\Scripts\View\Guide\TriggerDialogs.cs" />
     <Compile Include="Assets\Scripts\View\Guide\TriggerOperET.cs" />
     <Compile Include="Assets\Scripts\View\Guide\TriggerOperVisualKey.cs" />
+    <Compile Include="Assets\Scripts\View\NPC\NPC_Dialogs_MajorCity.cs" />
     <Compile Include="Assets\Scripts\View\Player\View_DisplayPlayerInfo.cs" />
     <Compile Include="Assets\Scripts\View\Player\View_PlayerInfoResponse.cs" />
     <Compile Include="Assets\Scripts\View\Player\View_PlayerInfoResponse_InMajorCity.cs" />
+    <Compile Include="Assets\Scripts\View\Prop\Inventory\ATK_Items.cs" />
+    <Compile Include="Assets\Scripts\View\Prop\Inventory\BaseInventory.cs" />
+    <Compile Include="Assets\Scripts\View\Prop\Inventory\DEF_Items.cs" />
+    <Compile Include="Assets\Scripts\View\Prop\Inventory\DEX_Items.cs" />
+    <Compile Include="Assets\Scripts\View\Prop\Inventory\View_InventoryCtrl.cs" />
+    <Compile Include="Assets\Scripts\View\Prop\MajorCity\UI\View_PanelMission.cs" />
+    <Compile Include="Assets\Scripts\View\Prop\MajorCity\UI\View_PanelShop.cs" />
     <Compile Include="Assets\Scripts\View\Prop\MajorCity\UI\View_PanelSkill.cs" />
     <Compile Include="Assets\Scripts\View\Prop\UI\View_ATKBasicPress.cs" />
     <Compile Include="Assets\Scripts\View\Prop\UI\View_ATKButtomCDEffect.cs" />

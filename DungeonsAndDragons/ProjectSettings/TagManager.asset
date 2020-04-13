@@ -9,6 +9,7 @@ TagManager:
   - Tag_MajorCity_Up
   - Tag_MajorCity_Down
   - HitEfects
+  - Tag_InventoryItems
   layers:
   - Default
   - TransparentFX

@@ -112,7 +112,7 @@ namespace Kernal
             }
 
             //reset int Index By Dialog Section
-            if (diaSectionNum> _OriginalDialogSectionNum)
+            if (diaSectionNum != _OriginalDialogSectionNum)
             {
                 _IntIndexByDialogSection = 0;
 

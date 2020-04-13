@@ -1,7 +1,7 @@
 ﻿/*
  * Title:"Dungoen and dragons"
  *      
- *       Control Layer: Start Scenes
+ *       Control Layer: start game and load game
  *      
  * Description:
  * 
@@ -60,6 +60,10 @@ namespace Control
         internal void ClickGameContinue()
         {
             print(GetType() + "/ClickGameContinue()");
+
+            //load saved game 
+
+            StartCoroutine("ContinueGame");
         }
 
         IEnumerator EnterNextScenes() // enter next scenes
@@ -68,11 +72,23 @@ namespace Control
             FadeInAndOut.Instance.SetScenesToBlack(); //fade out
             yield return new WaitForSeconds(3.0f);
             //load scenes
-            //SceneManager.LoadScene("LoadingScenes");
-            //GlobalParaMgr.NextScenesName = ScenesEnum.LogonScenes;//turn to logon scenes
-            //SceneManager.LoadScene(ConvertEnumToString.GetInstance().GetStrByEnumScenes(ScenesEnum.LoadingScenes));
             base.EnterNextScenes(ScenesEnum.LogonScenes);
         }
+
+        //load saved game 
+        IEnumerator ContinueGame()
+        {
+            //load save game data
+            SaveAndLoading.GetInstance().LoadingGame_GlobalParameter();
+
+            //Scene fades out
+            FadeInAndOut.Instance.SetScenesToBlack(); //fade out
+            yield return new WaitForSeconds(3.0f);
+            //load scenes
+            base.EnterNextScenes(GlobalParaMgr.NextScenesName);
+
+        }
+
     }
 }
 

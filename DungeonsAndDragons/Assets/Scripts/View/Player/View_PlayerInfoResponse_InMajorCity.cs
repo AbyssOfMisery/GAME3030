@@ -117,7 +117,7 @@ namespace View
         private void BeforeOpenWindows(GameObject goNeedDisplayPanel)
         {
             //deactive easy touch
-
+            View_PlayerInfoResponse.Instance.HideET();
             //windows Modalization
             this.gameObject.GetComponent<UIMaskMgr>().SetMaskWindow(goNeedDisplayPanel);
         }
@@ -125,7 +125,7 @@ namespace View
         private void AfterCloseWindow()
         {
             //active easy touch
-
+            View_PlayerInfoResponse.Instance.DisplayET();
             //windows Modalization
             this.gameObject.GetComponent<UIMaskMgr>().CancleMaskWindow();
         }

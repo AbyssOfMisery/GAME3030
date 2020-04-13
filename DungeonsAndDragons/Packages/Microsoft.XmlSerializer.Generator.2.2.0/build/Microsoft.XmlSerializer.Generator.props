@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.XmlSerializer.Generator" Version="2.2.0" />
+  </ItemGroup>
+</Project>
